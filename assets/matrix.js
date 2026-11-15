@@ -24,7 +24,7 @@ function renderChart(svgId, r, selected){
 function detailHTML(r, key){
   var pos={A:"Day — character and natural talents",B:"Month — emotional nature and inner world",
     C:"Year — life purpose and direction",D:"Centre — the lesson that ties the chart together",
-    E:"Centre — the same arcana as D in this method",F:"Top left — past heritage",
+    E:"Centre point — same arcana as D, the centre value",F:"Top left — past heritage",
     G:"Top right — talents",H:"Bottom right — material side: work and money",
     I:"Bottom left — spiritual task"}[key];
   var a=arcana(r[key]);
@@ -32,7 +32,7 @@ function detailHTML(r, key){
 }
 function tableHTML(r){
   var order=["A","B","C","D","F","G","H","I","E"];
-  var label={A:"A — Day",B:"B — Month",C:"C — Year",D:"D — Centre",E:"E — Centre",F:"F — Top left",G:"G — Top right",H:"H — Bottom right",I:"I — Bottom left"};
+  var label={A:"A — Day",B:"B — Month",C:"C — Year",D:"D — Centre",E:"E — Centre (same as D)",F:"F — Top left",G:"G — Top right",H:"H — Bottom right",I:"I — Bottom left"};
   var rows=order.map(function(k){var a=arcana(r[k]);return "<tr><td><strong>"+label[k]+"</strong></td><td>"+r[k]+"</td><td>"+a.name+"</td><td>"+a.keywords+"</td></tr>";}).join("");
   return "<table><thead><tr><th>Position</th><th>Arcana</th><th>Name</th><th>Keywords</th></tr></thead><tbody>"+rows+"</tbody></table>";
 }
@@ -45,7 +45,18 @@ function stepsHTML(y,m,d,r){
 function shareURL(dob){var u=new URL(window.location.href);u.searchParams.set("dob",dob);return u.toString();}
 function downloadPNG(svgId, filename){
   var svg=el(svgId); if(!svg) return;
-  var xml=new XMLSerializer().serializeToString(svg);
+  // Inline the chart styles: a serialised SVG carries no page CSS, so without
+  // this the PNG renders dark-on-dark (the old bug). Clone, don't mutate the page.
+  var clone=svg.cloneNode(true);
+  clone.setAttribute("width","800"); clone.setAttribute("height","800");
+  var st=document.createElementNS("http://www.w3.org/2000/svg","style");
+  st.textContent=".pos-btn circle{fill:#1a212b;stroke:#d9a441;stroke-width:1.5}"+
+    ".pos-btn.selected circle{fill:#d9a441}"+
+    ".pos-btn text{fill:#f2efe8;font-family:Montserrat,system-ui,sans-serif;font-weight:700}"+
+    ".pos-btn.selected text{fill:#171207}"+
+    ".pos-label{fill:#a8b0bc;font-size:10px;font-family:Montserrat,system-ui,sans-serif}";
+  clone.insertBefore(st, clone.firstChild);
+  var xml=new XMLSerializer().serializeToString(clone);
   var img=new Image();
   img.onload=function(){
     var c=document.createElement("canvas");c.width=800;c.height=800;
