@@ -1,0 +1,28 @@
+# SoulOcta — Destiny Matrix calculator
+
+> SoulOcta is a free Destiny Matrix chart calculator at https://soulocta.me. Enter a birth date and get a full 22-arcana octagram chart, free, no sign-up. The Destiny Matrix is self-reflection, created by Natalia Ladini in 2006. It is entertainment, not science, and not a prediction.
+
+## Method
+reduce22(n): digit-sum while n > 22; 0 becomes 22; 22 stays 22. A = day, B = month, C = digit-sum(year) reduced. Centre D = reduce22(A+B+C). F = A+B, G = B+C, H = C+D, I = D+A. Example: 14 June 1995 -> A14 B6 C6 centre 8 (Justice). Note: some sources define centre as reduce22(A+B+C+D); this site uses reduce22(A+B+C) and says so openly. On 29 November 2000 this site gives centre 6, the other method gives 3.
+
+## Pages
+- https://soulocta.me/
+- https://soulocta.me/compatibility.html
+- https://soulocta.me/portrait-zone.html
+- https://soulocta.me/money-line.html
+- https://soulocta.me/karmic-tail.html
+- https://soulocta.me/what-is-destiny-matrix.html
+- https://soulocta.me/how-to-calculate.html
+- https://soulocta.me/22-arcana.html
+- https://soulocta.me/2027-personal-year.html
+- https://soulocta.me/destiny-matrix-vs-numerology.html
+- https://soulocta.me/destiny-matrix-vs-tarot.html
+- https://soulocta.me/destiny-matrix-for-beginners.html
+- https://soulocta.me/destiny-matrix-meaning-of-7-chariot.html
+- https://soulocta.me/destiny-matrix-meaning-of-8-justice.html
+- https://soulocta.me/destiny-matrix-faq.html
+- https://soulocta.me/about.html
+- https://soulocta.me/contact.html
+- https://soulocta.me/privacy.html
+- https://soulocta.me/terms.html
+- https://soulocta.me/disclaimer.html

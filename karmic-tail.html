@@ -3,19 +3,43 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Karmic Tail Calculator — Destiny Matrix | SoulOcta</title>
-<meta name="description" content="Free karmic tail calculator for the Destiny Matrix. Enter your birth date and read the three arcana of your karmic tail: centre, material, and spiritual task.">
+<title>Karmic Tail — Destiny Matrix | SoulOcta</title>
+<meta name="description" content="Your karmic tail is the pattern you repeat. Calculate your three numbers free and read what they mean.">
 <link rel="canonical" href="https://soulocta.me/karmic-tail.html">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Karmic Tail Calculator — Destiny Matrix | SoulOcta">
-<meta property="og:description" content="Free karmic tail calculator for the Destiny Matrix. Enter your birth date and read the three arcana of your karmic tail: centre, material, and spiritual task.">
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:title" content="Karmic Tail — Destiny Matrix | SoulOcta">
+<meta property="og:description" content="Your karmic tail is the pattern you repeat. Calculate your three numbers free and read what they mean.">
 <meta property="og:url" content="https://soulocta.me/karmic-tail.html">
 <meta property="og:site_name" content="SoulOcta">
-<meta name="theme-color" content="#0b0d10">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%230b0d10'/%3E%3Cpolygon points='32,6 58,32 32,58 6,32' fill='none' stroke='%23d9a441' stroke-width='3'/%3E%3Cpolygon points='14,14 50,14 50,50 14,50' fill='none' stroke='%2337c8c3' stroke-width='2'/%3E%3Ctext x='32' y='40' font-size='22' text-anchor='middle' fill='%23d9a441' font-family='Georgia,serif' font-weight='bold'%3E8%3C/text%3E%3C/svg%3E">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+<meta property="og:image" content="https://soulocta.me/assets/og-karmic-tail.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Karmic Tail — Destiny Matrix | SoulOcta">
+<meta name="twitter:description" content="Your karmic tail is the pattern you repeat. Calculate your three numbers free and read what they mean.">
+<meta name="twitter:image" content="https://soulocta.me/assets/og-karmic-tail.png">
+<meta property="article:published_time" content="2026-11-15">
+<meta property="article:modified_time" content="2026-11-15">
+<meta property="article:author" content="Shahzaib Asif">
+<meta name="theme-color" content="#efe6d2">
+<!-- CSP (C8/S2/S3): page scripts are external, so script-src has no
+     unsafe inline scripts; inline styles are classes now, so style-src-attr
+     is gone too. object-src/worker-src 'none', upgrade-insecure-requests on.
+     img-src 'self' data: is an accepted, necessary exception: the PNG
+     download renders the chart via data:image/svg+xml -> canvas (S4).
+     NOTE (S1): no meta CSP can carry frame-ancestors — real framing
+     protection needs hosting with real headers (see README § Hosting).
+     The frame-buster below helps same-origin/older browsers only. -->
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; font-src 'self'; connect-src 'none'; object-src 'none'; worker-src 'none'; base-uri 'self'; form-action 'none'; upgrade-insecure-requests">
+<meta name="referrer" content="no-referrer">
+<script src="assets/framebuster.js"></script>
+<link rel="preload" href="assets/fonts/fraunces-500-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/fraunces-500-italic.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="manifest" href="site.webmanifest">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23efe6d2'/%3E%3Cpolygon points='32,6 58,32 32,58 6,32' fill='none' stroke='%23a04d28' stroke-width='3'/%3E%3Cpolygon points='14,14 50,14 50,50 14,50' fill='none' stroke='%238f7422' stroke-width='2'/%3E%3Ctext x='32' y='40' font-size='22' text-anchor='middle' fill='%23a04d28' font-family='Arial,sans-serif' font-weight='bold'%3E8%3C/text%3E%3C/svg%3E">
 <link rel="stylesheet" href="assets/style.css">
 <script type="application/ld+json">
 {
@@ -27,7 +51,7 @@
       "name": "What is the karmic tail in the Destiny Matrix?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "The karmic tail is the lower part of the Destiny Matrix chart, read through three positions: D, the centre; H, the material corner; and I, the spiritual task. Together they describe a repeating pattern or lesson in a person's life."
+        "text": "It is the lower part of your chart. It is read through three positions: D for the centre theme, H for the material corner, and I for the spiritual task. Together they describe the pattern this system says repeats in your life until it is understood."
       }
     },
     {
@@ -35,7 +59,7 @@
       "name": "How do I calculate my karmic tail?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Enter your birth date. The calculator works out your full chart first, then reads the tail positions D, H, and I. Each one is a number from 1 to 22, mapped to a Major Arcana, with the arithmetic shown so you can check it by hand."
+        "text": "Enter your birth date in the calculator on this page. It works out your full chart first, then reads the tail positions D, H and I together. The worked example on this page shows every step, so you can verify the three numbers by hand."
       }
     },
     {
@@ -43,7 +67,7 @@
       "name": "Does the karmic tail mean I am being punished?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "No. In this system, karma means cause and effect, not punishment. The tail describes a pattern that repeats until it is understood and handled differently. It is a prompt for honest reflection about your own habits, not a sentence passed on you."
+        "text": "No — karma here means cause and effect, not punishment. The tail describes a pattern that repeats until it is understood, and understanding it is the whole point. A pattern you can name is a pattern you can watch, and a pattern you can watch is one you can change."
       }
     },
     {
@@ -51,97 +75,148 @@
       "name": "Why do different sites give different karmic tails?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Because schools calculate the tail differently, and some use more than three numbers. This site uses the three-position reading and shows its working, so you can verify every number. If a site will not show its working, treat its result with caution."
+        "text": "Because schools calculate the tail differently, and some use more than three numbers in it. This site uses D, H and I, and shows every step of the working, so you can compare its method with another site's method side by side instead of guessing which one is right."
       }
     }
   ]
 }
 </script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Karmic Tail — Destiny Matrix | SoulOcta",
+  "description": "Your karmic tail is the pattern you repeat. Calculate your three numbers free and read what they mean.",
+  "author": {
+    "@type": "Person",
+    "name": "Shahzaib Asif",
+    "url": "https://soulocta.me/about.html"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "SoulOcta",
+    "url": "https://soulocta.me/"
+  },
+  "datePublished": "2026-11-15",
+  "dateModified": "2026-11-15",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://soulocta.me/karmic-tail.html"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://soulocta.me/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Karmic Tail — Destiny Matrix | SoulOcta",
+      "item": "https://soulocta.me/karmic-tail.html"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Karmic Tail — Destiny Matrix | SoulOcta",
+  "url": "https://soulocta.me/karmic-tail.html",
+  "speakable": {
+    "@type": "SpeakableSpecification",
+    "cssSelector": [
+      ".lede"
+    ]
+  }
+}
+</script>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
+<noscript><p class="noscript-note">This calculator needs JavaScript &mdash; the worked example below shows how the maths works.</p></noscript>
 <header class="site"><nav class="nav" aria-label="Main navigation">
-<a class="brand" href="index.html"><svg width="26" height="26" viewBox="0 0 64 64" aria-hidden="true"><polygon points="32,4 60,32 32,60 4,32" fill="none" stroke="#d9a441" stroke-width="4"/><polygon points="13,13 51,13 51,51 13,51" fill="none" stroke="#37c8c3" stroke-width="3"/><text x="32" y="41" font-size="24" text-anchor="middle" fill="#d9a441" font-family="Georgia,serif" font-weight="bold">8</text></svg>Soul<span>Octa</span></a>
-<input type="checkbox" id="nav-toggle" class="nav-toggle-input" aria-label="Toggle navigation menu">
-<label for="nav-toggle" class="nav-toggle-label" aria-hidden="true">☰</label>
-<div class="nav-links"><a href="index.html">Calculator</a><a href="compatibility.html">Compatibility</a><a href="portrait-zone.html">Portrait Zone</a><a href="money-line.html">Money Line</a><a href="karmic-tail.html" class="active">Karmic Tail</a><a href="2027-personal-year.html">2027 Year</a></div>
+<a class="brand" href="index.html"><svg width="26" height="26" viewBox="0 0 64 64" aria-hidden="true"><polygon points="32,4 60,32 32,60 4,32" fill="none" stroke="#a04d28" stroke-width="4"/><polygon points="13,13 51,13 51,51 13,51" fill="none" stroke="#8f7422" stroke-width="3"/><text x="32" y="41" font-size="24" text-anchor="middle" fill="#a04d28" font-family="Arial,sans-serif" font-weight="bold">8</text></svg>Soul<span>Octa</span></a>
+<button id="nav-toggle" class="nav-toggle-btn" aria-expanded="false" aria-controls="nav-links"><span class="nav-ic" aria-hidden="true"></span><span class="visually-hidden">Menu</span></button>
+<div class="nav-links" id="nav-links"><a href="index.html">Calculator</a><a href="compatibility.html">Compatibility</a><a href="2027-personal-year.html">Your 2027</a><a href="destiny-matrix-for-beginners.html">Guides</a><a href="about.html">About</a></div>
 </nav></header>
 <main id="main" class="wrap">
 
-<header class="hero"><p class="kicker">Long-tail guide · Patterns and lessons</p><h1>Karmic Tail Calculator</h1>
-<p class="lede">The karmic tail is the part of your Destiny Matrix chart that describes repeating patterns: the lessons, habits, and situations that keep coming back until they are faced honestly. It is read through three positions at the bottom of the chart.</p>
-<p>The word karma here does not mean punishment. It means cause and effect: the patterns you repeat, often without noticing, and the lessons that return in different forms. This page calculates your karmic tail from your birth date and explains each position in plain, honest words.</p></header>
+<header class="hero"><p class="kicker">Long-tail guide · Patterns and lessons</p><h1>Karmic Tail &mdash; Destiny Matrix: The Pattern You Keep Repeating.</h1>
+<p class="lede">Three positions at the bottom of your chart describe the lesson that keeps coming back until you face it.</p>
+<p>Karma here means cause and effect: the patterns you repeat, often without noticing. This page calculates your karmic tail from your birth date.</p>
+<figure class="content-img"><img src="assets/arcana-13.webp" width="600" height="900" loading="lazy" alt="Death — Destiny Matrix arcana card"><figcaption>Death, the arcana of this page.</figcaption></figure>
+<p class="small byline">Written by <a href="about.html">Shahzaib Asif</a> &mdash; built in Lahore, November 2026. Updated 15 November 2026.</p></header>
 <section class="card" aria-label="Calculate your karmic tail">
-<h2 style="margin-top:0;border-top:0;padding-top:0">Calculate your karmic tail</h2>
+<h2 class="lt-title">Calculate your karmic tail</h2>
 <form class="lt-form" data-kind="karmic-tail.html">
 <div class="toolbox">
-<div><label>Date of birth</label><input type="date" class="lt-dob" value="1995-06-14" min="1900-01-01" max="2026-12-31" required></div>
-<div><label>Your name (optional)</label><input type="text" class="lt-name" placeholder="e.g. Ayesha" maxlength="40"></div>
+<div><label>Date of birth</label><input type="text" class="lt-dob" placeholder="14 June 1995" autocomplete="off"><p class="date-hint">Day / Month / Year &mdash; e.g. 14 June 1995</p></div>
+<div><label>Your name (optional)</label><input type="text" class="lt-name" placeholder="e.g. Alex" maxlength="40"></div>
 </div>
-<div class="btn-row"><button type="submit" class="btn-gold">Calculate</button></div>
+<div class="btn-row"><button type="submit" class="btn-accent">Calculate</button></div>
 </form>
 <div class="lt-result" aria-live="polite"></div>
 <p class="small muted">Karmic tail = D (centre) + H (material) + I (spiritual task). Calculated in your browser; nothing is sent to a server.</p>
 </section>
 
-<h2>What is the karmic tail in the Destiny Matrix?</h2>
-<p>The karmic tail is the lower part of the octagram. It is made of three positions: D, the centre, which is the lesson that ties the chart together; H, the material corner, which shows how the pattern appears in work and money; and I, the spiritual task, which shows the quieter work underneath. Together they describe a pattern that this system says repeats across a lifetime.</p>
-<p>Different schools calculate the tail differently, and some use more than three numbers. This site uses the three-position reading because it is transparent: every number comes from the same chart, and you can check each one. If another calculator gives you a different tail, ask it to show its working. That is the fastest way to tell whether a result is honest.</p>
-<h2>How to read your karmic tail</h2>
-<p>Read the three arcana as one story. The centre tells you the theme. The material corner tells you where the theme shows up in daily life. The spiritual task tells you what the theme is asking you to learn. If the same arcana appears twice, the pattern is strong. If all three differ, the pattern is complex, and it may show up differently in work, in relationships, and in private life.</p>
-<p>Do not read the tail as a sentence. It is a question: what keeps happening, what is my part in it, and what would I do differently if I took the lesson seriously? A pattern only changes when the behaviour changes, and behaviour only changes when the pattern is seen clearly.</p>
-<h2>What the karmic tail is not</h2>
-<p>It is not a record of a past life that can be verified, and it is not a prediction of punishment. It is a framework for reflection, in the same tradition as tarot and numerology. If a reading frightens you, step back: no chart knows your life better than you do, and no pattern is unchangeable.</p>
+<h2>What is the karmic tail?</h2>
+<p>The lower part of the octagram: centre (D) for the theme, material corner (H) for where it shows up, spiritual task (I) for what it asks you to learn.</p>
+<h2>How to read it</h2>
+<p>Read the three arcana as one story. If the same arcana appears twice, the pattern is strong. It is a question, not a sentence: what keeps happening?</p>
 
+
+<h2>How the karmic tail is calculated</h2>
+<p>The karmic tail is the lower part of your chart, and it is read from three positions: centre D for the theme, material corner H for where the pattern shows up, and spiritual task I for what it asks you to learn. Some readers call the whole system the matrix of destiny, and the tail is the part they argue about most, because schools calculate it differently. Take 14 June 1995. Centre D is 8, Justice. Material H is C plus D, 6 plus 8, which is 14, Temperance. Spiritual task I is D plus A, 8 plus 14, which is 22, the Fool. The tail for this date is therefore 8, 14 and 22: a theme of fairness, a material habit of balance, and a task of beginning again without fear. This site shows every step, so if another calculator gives you a different tail, you can compare the methods side by side instead of guessing which one is right.</p>
+<h2>What karma means here</h2>
+<p>Karma here means cause and effect, not punishment. The word is often used as if the universe is keeping score, but the Destiny Matrix uses it in a simpler sense: the patterns you repeat, often without noticing, until you understand them. A person who keeps choosing the same kind of partner, the same kind of job, or the same kind of argument is not being punished. They are following a pattern, and the pattern will keep repeating until something in it changes. The karmic tail names the pattern in three words. That is all it does, and it is enough, because a pattern you can name is a pattern you can watch, and a pattern you can watch is a pattern you can change.</p>
+<h2>Reading the three numbers as one story</h2>
+<p>Read the three arcana as one sentence, not three separate fortunes. The centre is the theme, the material corner is where the theme shows up in daily life, and the spiritual task is what the theme is asking you to learn. For 14 June 1995, the story might be: fairness matters to you, it shows up in how you handle money and shared resources, and the task is to begin again without needing to be certain first. If the same arcana appears twice in your tail, the pattern is strong, and you have probably already noticed it. If the three arcana seem to disagree, that disagreement is often the most useful part, because it points to the tension you live with every day.</p>
+<h2>Three common mistakes</h2>
+<p>The first mistake is reading the tail as a sentence about your past lives. The Destiny Matrix does not prove anything about past lives, and this site does not claim that it does. The second mistake is using the tail as an excuse. A pattern explains a tendency, it does not remove your responsibility for what you do next. The third mistake is trying to fix the whole tail at once. A pattern that took years to form will not change in a weekend. Pick the smallest visible part of it, usually the material corner, because that is where the pattern is easiest to see, and change one habit there. The rest of the pattern often follows.</p>
+<h2>What the tail cannot tell you</h2>
+<p>Your karmic tail cannot tell you what happened in a past life, whether you are a good or bad person, or what will happen to you next year. It cannot tell you who to marry, whether to leave a job, or how much money you will earn. Those are decisions, and decisions belong to you, not to a chart. What the tail can do is give you a language for the pattern you already feel. If you have ever said, this keeps happening to me, the tail is a way of writing that sentence down in three numbers, and then asking what you will do differently the next time it happens.</p>
+<h2>How to work with your tail this month</h2>
+<p>Write the pattern down in one sentence, in your own words, without using the arcana names. For example: I keep saying yes to work I do not want, and then I feel resentful about it. Then write down the last three times it happened, with dates, and look for the moment where you could have said something different. That moment is the work. Tell one person you trust about the pattern, and ask them to point it out the next time they see it. A pattern you keep secret is a pattern you keep. A pattern you can name, date and discuss is already changing.</p>
+
+
+<section aria-label="Related guides"><h2>Related guides</h2>
+<p>Keep reading: <a href="destiny-matrix-vs-numerology.html">destiny matrix vs numerology</a> &middot;
+<a href="destiny-matrix-vs-tarot.html">destiny matrix vs tarot</a> &middot;
+<a href="destiny-matrix-for-beginners.html">destiny matrix for beginners</a> &middot;
+<a href="destiny-matrix-faq.html">destiny matrix FAQ</a> &middot;
+<a href="destiny-matrix-meaning-of-7-chariot.html">the Chariot, arcana 7 of the Destiny Matrix</a> &middot;
+<a href="destiny-matrix-meaning-of-8-justice.html">Justice, arcana 8 of the Destiny Matrix</a> &middot;
+<a href="compatibility.html">Destiny Matrix compatibility calculator</a> &middot;
+<a href="what-is-destiny-matrix.html">what is the Destiny Matrix</a> &middot;
+<a href="how-to-calculate.html">how to calculate the Destiny Matrix</a>.</p></section>
 <section class="faq" aria-label="Frequently asked questions"><h2>Frequently asked questions</h2>
-<h3>What is the karmic tail in the Destiny Matrix?</h3>
-<p>The karmic tail is the lower part of the Destiny Matrix chart, read through three positions: D, the centre; H, the material corner; and I, the spiritual task. Together they describe a repeating pattern or lesson in a person's life.</p>
-<h3>How do I calculate my karmic tail?</h3>
-<p>Enter your birth date. The calculator works out your full chart first, then reads the tail positions D, H, and I. Each one is a number from 1 to 22, mapped to a Major Arcana, with the arithmetic shown so you can check it by hand.</p>
-<h3>Does the karmic tail mean I am being punished?</h3>
-<p>No. In this system, karma means cause and effect, not punishment. The tail describes a pattern that repeats until it is understood and handled differently. It is a prompt for honest reflection about your own habits, not a sentence passed on you.</p>
-<h3>Why do different sites give different karmic tails?</h3>
-<p>Because schools calculate the tail differently, and some use more than three numbers. This site uses the three-position reading and shows its working, so you can verify every number. If a site will not show its working, treat its result with caution.</p>
+<details><summary>What is the karmic tail in the Destiny Matrix?</summary>
+<p>It is the lower part of your chart. It is read through three positions: D for the centre theme, H for the material corner, and I for the spiritual task. Together they describe the pattern this system says repeats in your life until it is understood.</p></details>
+<details><summary>How do I calculate my karmic tail?</summary>
+<p>Enter your birth date in the calculator on this page. It works out your full chart first, then reads the tail positions D, H and I together. The worked example on this page shows every step, so you can verify the three numbers by hand.</p></details>
+<details><summary>Does the karmic tail mean I am being punished?</summary>
+<p>No — karma here means cause and effect, not punishment. The tail describes a pattern that repeats until it is understood, and understanding it is the whole point. A pattern you can name is a pattern you can watch, and a pattern you can watch is one you can change.</p></details>
+<details><summary>Why do different sites give different karmic tails?</summary>
+<p>Because schools calculate the tail differently, and some use more than three numbers in it. This site uses D, H and I, and shows every step of the working, so you can compare its method with another site's method side by side instead of guessing which one is right.</p></details>
 </section>
 </main>
 <footer class="site"><div class="wrap">
-<p><strong>SoulOcta</strong> — a free, browser-based Destiny Matrix chart calculator. Your birth date never leaves your device: every calculation runs in your browser.</p>
-<nav class="footer-nav" aria-label="Footer navigation"><a href="index.html">Calculator</a><a href="compatibility.html">Compatibility</a><a href="portrait-zone.html">Portrait Zone</a><a href="money-line.html">Money Line</a><a href="karmic-tail.html">Karmic Tail</a><a href="2027-personal-year.html">2027 Year</a><a href="what-is-destiny-matrix.html">What Is It?</a><a href="how-to-calculate.html">How to Calculate</a><a href="22-arcana.html">22 Arcana</a><a href="about.html">About</a></nav>
-<p><a href="about.html">About</a> · <a href="contact.html">Contact</a> · <a href="privacy.html">Privacy Policy</a> · <a href="terms.html">Terms</a> · <a href="disclaimer.html">Disclaimer</a></p>
-<p class="small">The Destiny Matrix is a system of self-reflection created by Natalia Ladini in 2006. It is entertainment, not prediction, and not medical, financial, or legal advice.</p>
+<p><strong>SoulOcta</strong> — a free Destiny Matrix calculator.</p>
+<p class="small">Built in November 2026, in Lahore.</p>
+<p>Find us: <a rel="me" href="https://www.pinterest.com/soulocta/">Pinterest</a> &middot; <a rel="me" href="https://www.tiktok.com/@duaasif253">TikTok</a></p>
+<nav class="footer-nav" aria-label="Footer navigation"><a href="portrait-zone.html">Portrait Zone — how others see you</a><a href="money-line.html">Money Line — work and money</a><a href="karmic-tail.html">Karmic Tail — your repeating pattern</a><a href="compatibility.html">Destiny Matrix Compatibility Calculator</a><a href="2027-personal-year.html">2027 Personal Year Calculator</a><a href="what-is-destiny-matrix.html">What Is the Destiny Matrix?</a><a href="how-to-calculate.html">How to Calculate the Destiny Matrix</a><a href="22-arcana.html">22 Arcana</a><a href="destiny-matrix-vs-numerology.html">Destiny Matrix vs Numerology</a><a href="destiny-matrix-vs-tarot.html">Destiny Matrix vs Tarot</a><a href="destiny-matrix-for-beginners.html">Destiny Matrix for Beginners</a><a href="destiny-matrix-faq.html">Destiny Matrix FAQ</a><a href="destiny-matrix-meaning-of-7-chariot.html">The Chariot — Arcana 7 of the Destiny Matrix</a><a href="destiny-matrix-meaning-of-8-justice.html">Justice — Arcana 8 of the Destiny Matrix</a><a href="about.html">About</a><a href="contact.html">Contact</a><a href="privacy.html">Privacy</a><a href="terms.html">Terms of Use</a><a href="disclaimer.html">Disclaimer</a></nav>
+<p class="small">The Destiny Matrix is self-reflection, created by Natalia Ladini in 2006. Entertainment, not prediction — and not medical, financial, or legal advice.</p>
 </div></footer>
 <script src="assets/matrix.js"></script>
-
-<script>
-(function(){
-  var DM = window.DestinyMatrix;
-  document.querySelectorAll('.lt-form').forEach(function(form){
-    form.addEventListener('submit', function(e){
-      e.preventDefault();
-      var iso = form.querySelector('.lt-dob').value; if(!iso) return;
-      var p = iso.split('-').map(Number);
-      var r = DM.calcMatrix(p[0], p[1], p[2]);
-      var kind = form.getAttribute('data-kind');
-      var out = form.parentElement.querySelector('.lt-result');
-      var html = '';
-      if (kind === 'portrait-zone.html') {
-        html = '<h3>Your portrait zone</h3>' + DM.tableHTML({A:r.A,B:r.B,C:r.C,D:r.D,E:r.D,F:r.F,G:r.G,H:r.H,I:r.I}) +
-        '<p>Your portrait zone is the upper part of your chart: day ' + r.A + ' (' + DM.arcana(r.A).name + '), month ' + r.B + ' (' + DM.arcana(r.B).name + '), year ' + r.C + ' (' + DM.arcana(r.C).name + '), with heritage ' + r.F + ' and talents ' + r.G + '. Read these five together: they describe how you come across to the world.</p>';
-      } else if (kind === 'money-line.html') {
-        html = '<h3>Your money line</h3><p><strong>C — Year ' + r.C + ' · ' + DM.arcana(r.C).name + '</strong> — direction and purpose.</p>' +
-        '<p><strong>G — Talents ' + r.G + ' · ' + DM.arcana(r.G).name + '</strong> — what earns well for you.</p>' +
-        '<p><strong>H — Material ' + r.H + ' · ' + DM.arcana(r.H).name + '</strong> — how money behaves in your life.</p>' +
-        '<p>Money focus arcana: ' + DM.arcana(r.G).name + ' (' + r.G + '). Read C, G, and H together: direction, talent, and material result.</p>';
-      } else if (kind === 'karmic-tail.html') {
-        html = '<h3>Your karmic tail</h3><p><strong>D — Centre ' + r.D + ' · ' + DM.arcana(r.D).name + '</strong> — the central lesson.</p>' +
-        '<p><strong>H — Material ' + r.H + ' · ' + DM.arcana(r.H).name + '</strong> and <strong>I — Spiritual task ' + r.I + ' · ' + DM.arcana(r.I).name + '</strong> complete the tail.</p>' +
-        '<p>Read D, H, and I together. They describe the pattern this system says repeats until it is faced honestly.</p>';
-      }
-      out.innerHTML = html;
-    });
-  });
-})();
-</script>
-
+<script src="assets/longtail.js" defer></script>
 </body>
 </html>

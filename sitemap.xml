@@ -1,17 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://soulocta.me/index.html</loc><lastmod>2026-11-15</lastmod><changefreq>monthly</changefreq></url>
-  <url><loc>https://soulocta.me/compatibility.html</loc><lastmod>2026-11-14</lastmod><changefreq>monthly</changefreq></url>
-  <url><loc>https://soulocta.me/portrait-zone.html</loc><lastmod>2026-11-15</lastmod><changefreq>monthly</changefreq></url>
-  <url><loc>https://soulocta.me/money-line.html</loc><lastmod>2026-11-14</lastmod><changefreq>monthly</changefreq></url>
-  <url><loc>https://soulocta.me/karmic-tail.html</loc><lastmod>2026-11-15</lastmod><changefreq>monthly</changefreq></url>
-  <url><loc>https://soulocta.me/what-is-destiny-matrix.html</loc><lastmod>2026-11-14</lastmod><changefreq>monthly</changefreq></url>
-  <url><loc>https://soulocta.me/how-to-calculate.html</loc><lastmod>2026-11-15</lastmod><changefreq>monthly</changefreq></url>
-  <url><loc>https://soulocta.me/22-arcana.html</loc><lastmod>2026-11-14</lastmod><changefreq>monthly</changefreq></url>
-  <url><loc>https://soulocta.me/2027-personal-year.html</loc><lastmod>2026-11-15</lastmod><changefreq>monthly</changefreq></url>
-  <url><loc>https://soulocta.me/about.html</loc><lastmod>2026-11-14</lastmod><changefreq>monthly</changefreq></url>
-  <url><loc>https://soulocta.me/contact.html</loc><lastmod>2026-11-15</lastmod><changefreq>monthly</changefreq></url>
-  <url><loc>https://soulocta.me/privacy.html</loc><lastmod>2026-11-14</lastmod><changefreq>monthly</changefreq></url>
-  <url><loc>https://soulocta.me/terms.html</loc><lastmod>2026-11-15</lastmod><changefreq>monthly</changefreq></url>
-  <url><loc>https://soulocta.me/disclaimer.html</loc><lastmod>2026-11-14</lastmod><changefreq>monthly</changefreq></url>
+  <url><loc>https://soulocta.me/</loc><lastmod>2026-11-15</lastmod><changefreq>monthly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://soulocta.me/compatibility.html</loc><lastmod>2026-11-15</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://soulocta.me/portrait-zone.html</loc><lastmod>2026-11-15</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://soulocta.me/money-line.html</loc><lastmod>2026-11-15</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://soulocta.me/karmic-tail.html</loc><lastmod>2026-11-15</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://soulocta.me/what-is-destiny-matrix.html</loc><lastmod>2026-11-15</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://soulocta.me/how-to-calculate.html</loc><lastmod>2026-11-15</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://soulocta.me/22-arcana.html</loc><lastmod>2026-11-14</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://soulocta.me/2027-personal-year.html</loc><lastmod>2026-11-15</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://soulocta.me/destiny-matrix-vs-numerology.html</loc><lastmod>2026-11-15</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://soulocta.me/destiny-matrix-vs-tarot.html</loc><lastmod>2026-11-15</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://soulocta.me/destiny-matrix-for-beginners.html</loc><lastmod>2026-11-15</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://soulocta.me/destiny-matrix-meaning-of-7-chariot.html</loc><lastmod>2026-11-15</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://soulocta.me/destiny-matrix-meaning-of-8-justice.html</loc><lastmod>2026-11-15</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://soulocta.me/destiny-matrix-faq.html</loc><lastmod>2026-11-15</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://soulocta.me/about.html</loc><lastmod>2026-11-15</lastmod><changefreq>monthly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://soulocta.me/contact.html</loc><lastmod>2026-11-14</lastmod><changefreq>monthly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://soulocta.me/privacy.html</loc><lastmod>2026-11-15</lastmod><changefreq>monthly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://soulocta.me/terms.html</loc><lastmod>2026-11-15</lastmod><changefreq>monthly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://soulocta.me/disclaimer.html</loc><lastmod>2026-11-15</lastmod><changefreq>monthly</changefreq><priority>0.3</priority></url>
 </urlset>

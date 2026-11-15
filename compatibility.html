@@ -3,19 +3,43 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Destiny Matrix Compatibility Calculator — Free Combined Chart</title>
-<meta name="description" content="Free Destiny Matrix compatibility calculator. Enter two birth dates and get a combined chart showing where you match, where you differ, and what the relationship asks of you.">
+<title>Destiny Matrix Compatibility Calculator — Free</title>
+<meta name="description" content="Two birth dates, one shared chart. See your comfort zone, love and money lines, and karmic tail together — free.">
 <link rel="canonical" href="https://soulocta.me/compatibility.html">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Destiny Matrix Compatibility Calculator — Free Combined Chart">
-<meta property="og:description" content="Free Destiny Matrix compatibility calculator. Enter two birth dates and get a combined chart showing where you match, where you differ, and what the relationship asks of you.">
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:title" content="Destiny Matrix Compatibility Calculator — Free">
+<meta property="og:description" content="Two birth dates, one shared chart. See your comfort zone, love and money lines, and karmic tail together — free.">
 <meta property="og:url" content="https://soulocta.me/compatibility.html">
 <meta property="og:site_name" content="SoulOcta">
-<meta name="theme-color" content="#0b0d10">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%230b0d10'/%3E%3Cpolygon points='32,6 58,32 32,58 6,32' fill='none' stroke='%23d9a441' stroke-width='3'/%3E%3Cpolygon points='14,14 50,14 50,50 14,50' fill='none' stroke='%2337c8c3' stroke-width='2'/%3E%3Ctext x='32' y='40' font-size='22' text-anchor='middle' fill='%23d9a441' font-family='Georgia,serif' font-weight='bold'%3E8%3C/text%3E%3C/svg%3E">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+<meta property="og:image" content="https://soulocta.me/assets/og-compatibility.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Destiny Matrix Compatibility Calculator — Free">
+<meta name="twitter:description" content="Two birth dates, one shared chart. See your comfort zone, love and money lines, and karmic tail together — free.">
+<meta name="twitter:image" content="https://soulocta.me/assets/og-compatibility.png">
+<meta property="article:published_time" content="2026-11-15">
+<meta property="article:modified_time" content="2026-11-15">
+<meta property="article:author" content="Shahzaib Asif">
+<meta name="theme-color" content="#efe6d2">
+<!-- CSP (C8/S2/S3): page scripts are external, so script-src has no
+     unsafe inline scripts; inline styles are classes now, so style-src-attr
+     is gone too. object-src/worker-src 'none', upgrade-insecure-requests on.
+     img-src 'self' data: is an accepted, necessary exception: the PNG
+     download renders the chart via data:image/svg+xml -> canvas (S4).
+     NOTE (S1): no meta CSP can carry frame-ancestors — real framing
+     protection needs hosting with real headers (see README § Hosting).
+     The frame-buster below helps same-origin/older browsers only. -->
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; font-src 'self'; connect-src 'none'; object-src 'none'; worker-src 'none'; base-uri 'self'; form-action 'none'; upgrade-insecure-requests">
+<meta name="referrer" content="no-referrer">
+<script src="assets/framebuster.js"></script>
+<link rel="preload" href="assets/fonts/fraunces-500-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/fraunces-500-italic.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="manifest" href="site.webmanifest">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23efe6d2'/%3E%3Cpolygon points='32,6 58,32 32,58 6,32' fill='none' stroke='%23a04d28' stroke-width='3'/%3E%3Cpolygon points='14,14 50,14 50,50 14,50' fill='none' stroke='%238f7422' stroke-width='2'/%3E%3Ctext x='32' y='40' font-size='22' text-anchor='middle' fill='%23a04d28' font-family='Arial,sans-serif' font-weight='bold'%3E8%3C/text%3E%3C/svg%3E">
 <link rel="stylesheet" href="assets/style.css">
 <script type="application/ld+json">
 {
@@ -27,7 +51,7 @@
       "name": "How is Destiny Matrix compatibility calculated?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Each person's chart is calculated first, from their own birth date. Then the two arcana at each position are added together and reduced to 22 or less. For example, if one person's centre is 8 and the other's is 9, the combined centre is 17. The result is a shared chart with nine positions, just like an individual chart."
+        "text": "Each person's chart is calculated first, from their own birth date. Then the two arcana at each position are added and reduced to 22 or less."
       }
     },
     {
@@ -35,7 +59,7 @@
       "name": "What does a matching centre arcana mean?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "It usually means the two people want similar things from life and understand each other's priorities quickly. A different centre does not mean a bad match. It often means the two people bring different strengths, and the relationship works when both are respected."
+        "text": "It usually means the two people want similar things from life. A different centre is not a bad match — it often means different strengths."
       }
     },
     {
@@ -43,7 +67,7 @@
       "name": "Is compatibility a score or a percentage?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "No, and any site that gives you a single percentage is making it up. Compatibility is a pattern across nine positions: where you match, where you differ, and where the differences are useful. Read the whole chart, not one number."
+        "text": "No — any site giving a single percentage is making it up. Compatibility is a pattern across nine positions, not one number."
       }
     },
     {
@@ -51,7 +75,7 @@
       "name": "Can I calculate compatibility for a friend or family member?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Yes. The method is exactly the same for any two people: a partner, a friend, a parent, or a child. You only need their two dates of birth. The reading describes the relationship between those two people, whatever that relationship happens to be."
+        "text": "Yes — the method is the same for any two people. You only need their two dates of birth."
       }
     },
     {
@@ -59,126 +83,185 @@
       "name": "Is Destiny Matrix compatibility scientific?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "No. It is a system of self-reflection and entertainment, created in 2006, and it has not been tested by scientific studies. Use it to start honest conversations with someone close to you, not to decide on your own whether a relationship should continue or end."
+        "text": "No — it is self-reflection and entertainment, not science. Use it to start honest conversations, not to end a relationship."
       }
     }
   ]
 }
 </script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Destiny Matrix Compatibility Calculator — Free",
+  "description": "Two birth dates, one shared chart. See your comfort zone, love and money lines, and karmic tail together — free.",
+  "author": {
+    "@type": "Person",
+    "name": "Shahzaib Asif",
+    "url": "https://soulocta.me/about.html"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "SoulOcta",
+    "url": "https://soulocta.me/"
+  },
+  "datePublished": "2026-11-15",
+  "dateModified": "2026-11-15",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://soulocta.me/compatibility.html"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://soulocta.me/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Destiny Matrix Compatibility Calculator — Free",
+      "item": "https://soulocta.me/compatibility.html"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Destiny Matrix Compatibility Calculator — Free",
+  "url": "https://soulocta.me/compatibility.html",
+  "speakable": {
+    "@type": "SpeakableSpecification",
+    "cssSelector": [
+      ".lede"
+    ]
+  }
+}
+</script>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
+<noscript><p class="noscript-note">This calculator needs JavaScript &mdash; the worked example below shows how the maths works.</p></noscript>
 <header class="site"><nav class="nav" aria-label="Main navigation">
-<a class="brand" href="index.html"><svg width="26" height="26" viewBox="0 0 64 64" aria-hidden="true"><polygon points="32,4 60,32 32,60 4,32" fill="none" stroke="#d9a441" stroke-width="4"/><polygon points="13,13 51,13 51,51 13,51" fill="none" stroke="#37c8c3" stroke-width="3"/><text x="32" y="41" font-size="24" text-anchor="middle" fill="#d9a441" font-family="Georgia,serif" font-weight="bold">8</text></svg>Soul<span>Octa</span></a>
-<input type="checkbox" id="nav-toggle" class="nav-toggle-input" aria-label="Toggle navigation menu">
-<label for="nav-toggle" class="nav-toggle-label" aria-hidden="true">☰</label>
-<div class="nav-links"><a href="index.html">Calculator</a><a href="compatibility.html" class="active">Compatibility</a><a href="portrait-zone.html">Portrait Zone</a><a href="money-line.html">Money Line</a><a href="karmic-tail.html">Karmic Tail</a><a href="2027-personal-year.html">2027 Year</a></div>
+<a class="brand" href="index.html"><svg width="26" height="26" viewBox="0 0 64 64" aria-hidden="true"><polygon points="32,4 60,32 32,60 4,32" fill="none" stroke="#a04d28" stroke-width="4"/><polygon points="13,13 51,13 51,51 13,51" fill="none" stroke="#8f7422" stroke-width="3"/><text x="32" y="41" font-size="24" text-anchor="middle" fill="#a04d28" font-family="Arial,sans-serif" font-weight="bold">8</text></svg>Soul<span>Octa</span></a>
+<button id="nav-toggle" class="nav-toggle-btn" aria-expanded="false" aria-controls="nav-links"><span class="nav-ic" aria-hidden="true"></span><span class="visually-hidden">Menu</span></button>
+<div class="nav-links" id="nav-links"><a href="index.html">Calculator</a><a href="compatibility.html" class="active">Compatibility</a><a href="2027-personal-year.html">Your 2027</a><a href="destiny-matrix-for-beginners.html">Guides</a><a href="about.html">About</a></div>
 </nav></header>
 <main id="main" class="wrap">
 
 <header class="hero">
 <p class="kicker">Two dates · One combined chart · Free</p>
-<h1>Destiny Matrix Compatibility Calculator</h1>
-<p class="lede">Enter two birth dates and get a combined Destiny Matrix compatibility chart. Each position of the shared chart is the sum of the two people's arcana at that position, reduced to 22 or less — so you can see where you match, where you differ, and where the relationship asks for work.</p>
-<p>Compatibility here is not a score. Two people with the same centre arcana will often understand each other quickly, while two people with opposite arcana may challenge each other more. Both can work. What matters is whether you can talk about the differences honestly.</p>
+<h1>Destiny Matrix Compatibility &mdash; You + Them</h1>
+<p class="hero-poetic">What your numbers say together.</p>
+<p class="lede">Enter two birth dates and see where you match, where you differ, and what the relationship asks of you.</p>
+<figure class="content-img"><img src="assets/arcana-06.webp" width="600" height="900" loading="lazy" alt="VI — The Lovers, Destiny Matrix arcana card"><figcaption>The Lovers, the arcana of choice and connection.</figcaption></figure>
+<p class="small byline">Written by <a href="about.html">Shahzaib Asif</a> &mdash; built in Lahore, November 2026. Updated 15 November 2026.</p>
 </header>
 
 <section class="card" aria-label="Compatibility calculator">
 <form id="compat-form">
 <div class="toolbox">
-<div><label for="dob1">First person's date of birth</label><input type="date" id="dob1" value="1995-06-14" min="1900-01-01" max="2026-12-31" required></div>
-<div><label for="dob2">Second person's date of birth</label><input type="date" id="dob2" value="1990-03-14" min="1900-01-01" max="2026-12-31" required></div>
+<div><label for="dob1">First person's date of birth</label><input type="text" id="dob1" placeholder="14 June 1995" autocomplete="off"><p class="date-hint">Day / Month / Year &mdash; e.g. 14 June 1995</p></div>
+<div><label for="dob2">Second person's date of birth</label><input type="text" id="dob2" placeholder="14 March 1990" autocomplete="off"><p class="date-hint">Day / Month / Year &mdash; e.g. 14 March 1990</p></div>
 </div>
-<div class="btn-row"><button type="submit" class="btn-gold">Calculate compatibility</button>
+<div class="btn-row"><button type="submit" class="btn-accent">Calculate compatibility</button>
 <button type="button" class="btn-ghost" id="download-png2">Download chart as PNG</button></div>
-<p class="small muted">Example shown: 14 June 1995 and 14 March 1990. Both dates are calculated in your browser and never leave your device.</p>
+<p class="small muted" id="compat-note">Enter both dates above and press Calculate. Both dates are calculated in your browser and never leave your device.</p>
+<button type="button" class="btn-text" id="show-example-compat">See an example &mdash; 14 June 1995 and 14 March 1990</button>
+<p class="small" id="png-error" hidden></p>
 </form>
 </section>
 
 <section>
-<h2>Combined chart — 14 June 1995 and 14 March 1990</h2>
-<p class="lede" id="compat-line">Combined centre: <strong>17 · The Star</strong>. Person one centre 8 (Justice), person two centre 9 (The Hermit).</p>
+<h2 id="compat-heading">Combined chart</h2>
+<p class="lede" id="compat-line">Enter both dates to calculate compatibility.</p>
 <div class="chart-wrap">
 <svg id="chart2" viewBox="0 0 400 400" role="img" aria-label="Destiny Matrix octagram chart" xmlns="http://www.w3.org/2000/svg">
-<rect width="400" height="400" fill="#0b0d10"></rect>
-<polygon points="60,200 200,60 340,200 200,340" fill="none" stroke="#d9a441" stroke-width="1.2" opacity="0.55"></polygon>
-<polygon points="101,101 299,101 299,299 101,299" fill="none" stroke="#37c8c3" stroke-width="1.2" opacity="0.55"></polygon>
-<line x1="200" y1="60" x2="200" y2="340" stroke="#a8b0bc" stroke-width="1" opacity="0.35"></line>
-<line x1="60" y1="200" x2="340" y2="200" stroke="#a8b0bc" stroke-width="1" opacity="0.35"></line>
-<line x1="60" y1="200" x2="101" y2="101" stroke="#a8b0bc" stroke-width="0.6" opacity="0.25"></line>
-<line x1="101" y1="101" x2="200" y2="60" stroke="#a8b0bc" stroke-width="0.6" opacity="0.25"></line>
-<line x1="200" y1="60" x2="299" y2="101" stroke="#a8b0bc" stroke-width="0.6" opacity="0.25"></line>
-<line x1="299" y1="101" x2="340" y2="200" stroke="#a8b0bc" stroke-width="0.6" opacity="0.25"></line>
-<line x1="340" y1="200" x2="299" y2="299" stroke="#a8b0bc" stroke-width="0.6" opacity="0.25"></line>
-<line x1="299" y1="299" x2="200" y2="340" stroke="#a8b0bc" stroke-width="0.6" opacity="0.25"></line>
-<line x1="200" y1="340" x2="101" y2="299" stroke="#a8b0bc" stroke-width="0.6" opacity="0.25"></line>
-<line x1="101" y1="299" x2="60" y2="200" stroke="#a8b0bc" stroke-width="0.6" opacity="0.25"></line>
-<g class="pos-btn" data-pos="A" tabindex="0" role="button" aria-label="Position A: arcana 10, Wheel of Fortune"><circle cx="60" cy="200" r="26"></circle><text class="num" x="60" y="206" text-anchor="middle" font-size="17">10</text><text class="pos-label" x="60" y="162" text-anchor="middle">A · Day</text></g><g class="pos-btn" data-pos="B" tabindex="0" role="button" aria-label="Position B: arcana 9, The Hermit"><circle cx="200" cy="60" r="26"></circle><text class="num" x="200" y="66" text-anchor="middle" font-size="17">9</text><text class="pos-label" x="200" y="22" text-anchor="middle">B · Month</text></g><g class="pos-btn" data-pos="C" tabindex="0" role="button" aria-label="Position C: arcana 7, The Chariot"><circle cx="340" cy="200" r="26"></circle><text class="num" x="340" y="206" text-anchor="middle" font-size="17">7</text><text class="pos-label" x="340" y="162" text-anchor="middle">C · Year</text></g><g class="pos-btn selected" data-pos="D" tabindex="0" role="button" aria-label="Position D: arcana 17, The Star"><circle cx="200" cy="340" r="26"></circle><text class="num" x="200" y="346" text-anchor="middle" font-size="17">17</text><text class="pos-label" x="200" y="302" text-anchor="middle">D · Centre</text></g>
-<g class="pos-btn" data-pos="F" tabindex="0" role="button" aria-label="Position F: arcana 10, Wheel of Fortune"><circle cx="101" cy="101" r="24"></circle><text class="num" x="101" y="107" text-anchor="middle" font-size="17">10</text><text class="pos-label" x="101" y="65" text-anchor="middle">F</text></g><g class="pos-btn" data-pos="G" tabindex="0" role="button" aria-label="Position G: arcana 7, The Chariot"><circle cx="299" cy="101" r="24"></circle><text class="num" x="299" y="107" text-anchor="middle" font-size="17">7</text><text class="pos-label" x="299" y="65" text-anchor="middle">G</text></g><g class="pos-btn" data-pos="H" tabindex="0" role="button" aria-label="Position H: arcana 6, The Lovers"><circle cx="299" cy="299" r="24"></circle><text class="num" x="299" y="305" text-anchor="middle" font-size="17">6</text><text class="pos-label" x="299" y="263" text-anchor="middle">H</text></g><g class="pos-btn" data-pos="I" tabindex="0" role="button" aria-label="Position I: arcana 9, The Hermit"><circle cx="101" cy="299" r="24"></circle><text class="num" x="101" y="305" text-anchor="middle" font-size="17">9</text><text class="pos-label" x="101" y="263" text-anchor="middle">I</text></g>
-<g class="pos-btn" data-pos="E" tabindex="0" role="button" aria-label="Position E: arcana 17, The Star"><circle cx="200" cy="200" r="32"></circle><text class="num" x="200" y="206" text-anchor="middle" font-size="17">17</text><text class="pos-label" x="200" y="156" text-anchor="middle">E · Centre — same</text></g>
+<rect width="400" height="400" fill="none"></rect>
+<polygon points="60,200 200,60 340,200 200,340" fill="none" stroke="#b39b6a" stroke-width="1.2" opacity="0.6"></polygon>
+<polygon points="101,101 299,101 299,299 101,299" fill="none" stroke="#b39b6a" stroke-width="1.2" opacity="0.6"></polygon>
+<line x1="200" y1="60" x2="200" y2="340" stroke="#c9b78f" stroke-width="1" opacity="0.7"></line>
+<line x1="60" y1="200" x2="340" y2="200" stroke="#c9b78f" stroke-width="1" opacity="0.7"></line>
+<line x1="60" y1="200" x2="101" y2="101" stroke="#c9b78f" stroke-width="0.6" opacity="0.5"></line>
+<line x1="101" y1="101" x2="200" y2="60" stroke="#c9b78f" stroke-width="0.6" opacity="0.5"></line>
+<line x1="200" y1="60" x2="299" y2="101" stroke="#c9b78f" stroke-width="0.6" opacity="0.5"></line>
+<line x1="299" y1="101" x2="340" y2="200" stroke="#c9b78f" stroke-width="0.6" opacity="0.5"></line>
+<line x1="340" y1="200" x2="299" y2="299" stroke="#c9b78f" stroke-width="0.6" opacity="0.5"></line>
+<line x1="299" y1="299" x2="200" y2="340" stroke="#c9b78f" stroke-width="0.6" opacity="0.5"></line>
+<line x1="200" y1="340" x2="101" y2="299" stroke="#c9b78f" stroke-width="0.6" opacity="0.5"></line>
+<line x1="101" y1="299" x2="60" y2="200" stroke="#c9b78f" stroke-width="0.6" opacity="0.5"></line>
+<g class="pos-btn" data-pos="A" tabindex="0" role="button" aria-label="Position A: not calculated yet"><circle cx="60" cy="200" r="26"></circle><text class="num" x="60" y="206" text-anchor="middle" font-size="17">?</text><text class="pos-label" x="60" y="158" text-anchor="middle">A · Day</text></g><g class="pos-btn" data-pos="B" tabindex="0" role="button" aria-label="Position B: not calculated yet"><circle cx="200" cy="60" r="26"></circle><text class="num" x="200" y="66" text-anchor="middle" font-size="17">?</text><text class="pos-label" x="200" y="18" text-anchor="middle">B · Month</text></g><g class="pos-btn" data-pos="C" tabindex="0" role="button" aria-label="Position C: not calculated yet"><circle cx="340" cy="200" r="26"></circle><text class="num" x="340" y="206" text-anchor="middle" font-size="17">?</text><text class="pos-label" x="340" y="158" text-anchor="middle">C · Year</text></g><g class="pos-btn selected" data-pos="D" tabindex="0" role="button" aria-label="Position D: not calculated yet"><circle cx="200" cy="340" r="26"></circle><text class="num" x="200" y="346" text-anchor="middle" font-size="17">?</text><text class="pos-label" x="200" y="298" text-anchor="middle">D · Centre</text></g>
+<g class="pos-btn" data-pos="F" tabindex="0" role="button" aria-label="Position F: not calculated yet"><circle cx="101" cy="101" r="24"></circle><text class="num" x="101" y="107" text-anchor="middle" font-size="17">?</text><text class="pos-label" x="101" y="61" text-anchor="middle">F · Heritage</text></g><g class="pos-btn" data-pos="G" tabindex="0" role="button" aria-label="Position G: not calculated yet"><circle cx="299" cy="101" r="24"></circle><text class="num" x="299" y="107" text-anchor="middle" font-size="17">?</text><text class="pos-label" x="299" y="61" text-anchor="middle">G · Talents</text></g><g class="pos-btn" data-pos="H" tabindex="0" role="button" aria-label="Position H: not calculated yet"><circle cx="299" cy="299" r="24"></circle><text class="num" x="299" y="305" text-anchor="middle" font-size="17">?</text><text class="pos-label" x="299" y="259" text-anchor="middle">H · Material corner</text></g><g class="pos-btn" data-pos="I" tabindex="0" role="button" aria-label="Position I: not calculated yet"><circle cx="101" cy="299" r="24"></circle><text class="num" x="101" y="305" text-anchor="middle" font-size="17">?</text><text class="pos-label" x="101" y="259" text-anchor="middle">I · Spiritual task</text></g>
+<g class="pos-btn" data-pos="E" tabindex="0" role="button" aria-label="Position E: not calculated yet"><circle cx="200" cy="200" r="32"></circle><text class="num" x="200" y="206" text-anchor="middle" font-size="17">?</text><text class="pos-label" x="200" y="152" text-anchor="middle">E · Centre</text></g>
 </svg>
-<div class="card" style="margin:0;flex:1;min-width:260px">
+<div class="card card-flat">
 <h3>How to read this chart</h3>
-<p>Start with the combined centre. It describes the theme of the relationship itself: what you are building together, and what keeps coming up between you.</p>
-<p>Then compare the two individual centres. If they are the same arcana, you will often want the same things. If they are different, ask what each person brings that the other lacks. The corners show shared talents, shared material life, and the shared spiritual task.</p>
-<p>A mismatch is not a verdict. It is a conversation starter: this is where we are different, so how do we handle it?</p>
+<p>Start with the combined centre — the theme of the relationship. A mismatch is not a verdict; it is a conversation starter.</p>
+<p class="chart-legend">A day &middot; B month &middot; C year &middot; D centre &middot; F heritage &middot; G talents &middot; H material corner &middot; I spiritual task &mdash; tap any number.</p>
 </div>
+</div>
+<div id="compat-detail" class="card detail-card">
+<h3>Enter both dates</h3>
+<p class="muted">The combined chart will appear here once both birth dates are valid.</p>
 </div>
 </section>
 
 <section>
 <h2>Combined positions</h2>
-<table><thead><tr><th>Position</th><th>Arcana</th><th>Name</th><th>Keywords</th></tr></thead><tbody><tr><td><strong>A — Day</strong></td><td>10</td><td>Wheel of Fortune</td><td>change, cycles, luck</td></tr>
-<tr><td><strong>B — Month</strong></td><td>9</td><td>The Hermit</td><td>solitude, wisdom, search</td></tr>
-<tr><td><strong>C — Year</strong></td><td>7</td><td>The Chariot</td><td>drive, focus, victory</td></tr>
-<tr><td><strong>D — Centre</strong></td><td>17</td><td>The Star</td><td>hope, healing, guidance</td></tr>
-<tr><td><strong>F — Top left</strong></td><td>10</td><td>Wheel of Fortune</td><td>change, cycles, luck</td></tr>
-<tr><td><strong>G — Top right</strong></td><td>7</td><td>The Chariot</td><td>drive, focus, victory</td></tr>
-<tr><td><strong>H — Bottom right</strong></td><td>6</td><td>The Lovers</td><td>choice, love, values</td></tr>
-<tr><td><strong>I — Bottom left</strong></td><td>9</td><td>The Hermit</td><td>solitude, wisdom, search</td></tr>
-<tr><td><strong>E — Centre (same as D)</strong></td><td>17</td><td>The Star</td><td>hope, healing, guidance</td></tr>
-</tbody></table>
+<div id="compat-table"><p class="muted">Combined positions will appear here.</p></div>
 <h2>How the combined chart is calculated</h2>
-<p>First, calculate each person's chart separately, using the same rule as the main calculator. Then add the two arcana at each position and reduce the total to 22 or less. For the example: person one centre 8, person two centre 9, so the combined centre is 8 + 9 = 17, the Star. Person one day 14 and person two day 14 give a combined day of 14 + 14 = 28, which reduces to 10, the Wheel of Fortune.</p>
+<p>Calculate each person's chart, then add the two arcana at each position and reduce to 22 or less.</p>
+<details class="maths-details"><summary>See a worked example</summary>
 <div class="steps">Person one (14 Jun 1995): A 14, B 6, C 6, centre 8.<br>Person two (14 Mar 1990): A 14, B 3, C 19, centre 9.<br>Combined A = 14 + 14 = 28 → 10. Combined B = 6 + 3 = 9. Combined C = 6 + 19 = 25 → 7. Combined centre = 8 + 9 = 17.</div>
-<p class="small muted">Other schools combine compatibility differently — some compare the two charts side by side instead of adding them. This site adds them, and says so, so you can check every number.</p>
+</details>
 </section>
+
+<h2>How compatibility is calculated</h2>
+<p>Compatibility in the Destiny Matrix is calculated in two steps, and both steps are shown on this page so you can check them. First, each person's chart is calculated from their own birth date, using the same rule as the main calculator: day is A, month is B, year digit sum is C, and the centre is the reduced sum of A, B and C. Then the two arcana at each position are added together and reduced to 22 or less. Take the worked example on this page: 14 June 1995 gives A 14, B 6, C 6 and centre 8, Justice. 14 March 1990 gives A 14, B 3, C 19 and centre 9, the Hermit. The combined centre is 8 plus 9, which is 17, the Star. The combined A is 14 plus 14, which is 28, reduced to 10, the Wheel of Fortune. Every other position is added the same way. The result is a third chart, the combined chart, which describes the relationship itself rather than either person alone.</p>
+<h2>What the combined centre means</h2>
+<p>Some readers search for this as the matrix destiny compatibility chart, which is the same system with the words in the other order. Start with the combined centre, because it is the theme of the relationship. A combined centre of 17, the Star, suggests a relationship built on hope and honesty, where both people are recovering from something hard and trying to build something better. A combined centre of 6, the Lovers, suggests a relationship built on choice and values, where the important moments are decisions made together. A combined centre of 15, the Devil, suggests a relationship with a strong pull, where desire or habit is doing more of the work than either person admits. None of these is a verdict. A theme is a description of what the relationship asks of you, and the same theme can be lived well or badly. Two people with a difficult combined centre who talk honestly will do better than two people with an easy centre who never talk at all.</p>
+<h2>Where you match, and where you differ</h2>
+<p>After the centre, read the nine positions one by one and look for matches and differences. A match at a position means you want similar things there. A difference means you bring different strengths, and the relationship will need a conversation about that position. The most useful differences are often in the material corner and the talents, because those are the positions that decide how you handle money, work and daily life. The most useful matches are often in the centre and the day, because those decide what you value and how you act on an ordinary day. Write the matches and the differences down in two columns. Most couples are surprised by how much is in the match column, because they have been focusing on one difference for months.</p>
+<h2>Three common mistakes</h2>
+<p>The first mistake is turning compatibility into a score. Any site that gives you a single percentage for a relationship is making it up. A relationship is a pattern across nine positions, not one number, and a percentage hides the one position that actually needs work. The second mistake is using a chart to end a relationship. A chart can start a conversation, and it can name a pattern, but it cannot decide for you whether to stay or go. That decision belongs to the two people in it. The third mistake is calculating compatibility for someone without their knowledge and then treating the result as a fact about them. A chart is a tool for two people to use together, not a way of judging someone from a distance.</p>
+<h2>Compatibility and the love line</h2>
+<p>People often ask about the love line, which is the part of the chart that deals with relationships and affection. In the Destiny Matrix, love is read through the same nine positions, with extra attention to the Lovers arcana wherever it appears and to the combined centre. If the Lovers appears in either person's centre, love and choice are central to how that person lives. If it appears in the combined chart, the relationship itself is asking both people to choose, honestly, what they value. The love line is not a separate calculator on this site yet, and any site that sells you a love score from one number is selling you a shortcut that does not exist.</p>
+<h2>What a good compatibility reading looks like</h2>
+<p>A good compatibility reading is specific, not flattering. It names one position where you match well, one position where you differ, and one practical thing to try this week. If the reading could apply to any couple, it is not a reading, it is a horoscope, and you should ignore it. The combined chart on this page is specific by construction: it is calculated from two real dates, and every number in it can be checked by hand. That specificity is what makes it useful, and it is also what makes it falsifiable. If the combined centre does not feel like your relationship at all, say so, check the dates, and trust your own experience over the chart.</p>
+<h2>How to use a compatibility chart together</h2>
+<p>Calculate both charts separately first, and let each person read their own centre before you look at the combined chart. Then look at the combined centre together and ask one question: does this feel like us? If it does, ask what it asks of you both this month. If it does not, check the dates first, because a wrong date gives a wrong chart, and then talk about what the chart missed. The best use of a compatibility chart is not to prove that you match. It is to give you words for the conversation you have been avoiding, and to make that conversation easier to start.</p>
+<h2>Keep reading</h2>
+<p>Read your own chart first in the <a href="index.html">Destiny Matrix calculator</a>, then the <a href="destiny-matrix-for-beginners.html">destiny matrix for beginners</a> guide, the <a href="destiny-matrix-faq.html">destiny matrix FAQ</a>, and <a href="destiny-matrix-vs-tarot.html">destiny matrix vs tarot</a> to see what the shared cards do and do not mean.</p>
 <section class="faq" aria-label="Frequently asked questions"><h2>Frequently asked questions</h2>
-<h3>How is Destiny Matrix compatibility calculated?</h3>
-<p>Each person's chart is calculated first, from their own birth date. Then the two arcana at each position are added together and reduced to 22 or less. For example, if one person's centre is 8 and the other's is 9, the combined centre is 17. The result is a shared chart with nine positions, just like an individual chart.</p>
-<h3>What does a matching centre arcana mean?</h3>
-<p>It usually means the two people want similar things from life and understand each other's priorities quickly. A different centre does not mean a bad match. It often means the two people bring different strengths, and the relationship works when both are respected.</p>
-<h3>Is compatibility a score or a percentage?</h3>
-<p>No, and any site that gives you a single percentage is making it up. Compatibility is a pattern across nine positions: where you match, where you differ, and where the differences are useful. Read the whole chart, not one number.</p>
-<h3>Can I calculate compatibility for a friend or family member?</h3>
-<p>Yes. The method is exactly the same for any two people: a partner, a friend, a parent, or a child. You only need their two dates of birth. The reading describes the relationship between those two people, whatever that relationship happens to be.</p>
-<h3>Is Destiny Matrix compatibility scientific?</h3>
-<p>No. It is a system of self-reflection and entertainment, created in 2006, and it has not been tested by scientific studies. Use it to start honest conversations with someone close to you, not to decide on your own whether a relationship should continue or end.</p>
+<details><summary>How is Destiny Matrix compatibility calculated?</summary>
+<p>Each person's chart is calculated first, from their own birth date. Then the two arcana at each position are added and reduced to 22 or less.</p></details>
+<details><summary>What does a matching centre arcana mean?</summary>
+<p>It usually means the two people want similar things from life. A different centre is not a bad match — it often means different strengths.</p></details>
+<details><summary>Is compatibility a score or a percentage?</summary>
+<p>No — any site giving a single percentage is making it up. Compatibility is a pattern across nine positions, not one number.</p></details>
+<details><summary>Can I calculate compatibility for a friend or family member?</summary>
+<p>Yes — the method is the same for any two people. You only need their two dates of birth.</p></details>
+<details><summary>Is Destiny Matrix compatibility scientific?</summary>
+<p>No — it is self-reflection and entertainment, not science. Use it to start honest conversations, not to end a relationship.</p></details>
 </section>
 </main>
 <footer class="site"><div class="wrap">
-<p><strong>SoulOcta</strong> — a free, browser-based Destiny Matrix chart calculator. Your birth date never leaves your device: every calculation runs in your browser.</p>
-<nav class="footer-nav" aria-label="Footer navigation"><a href="index.html">Calculator</a><a href="compatibility.html">Compatibility</a><a href="portrait-zone.html">Portrait Zone</a><a href="money-line.html">Money Line</a><a href="karmic-tail.html">Karmic Tail</a><a href="2027-personal-year.html">2027 Year</a><a href="what-is-destiny-matrix.html">What Is It?</a><a href="how-to-calculate.html">How to Calculate</a><a href="22-arcana.html">22 Arcana</a><a href="about.html">About</a></nav>
-<p><a href="about.html">About</a> · <a href="contact.html">Contact</a> · <a href="privacy.html">Privacy Policy</a> · <a href="terms.html">Terms</a> · <a href="disclaimer.html">Disclaimer</a></p>
-<p class="small">The Destiny Matrix is a system of self-reflection created by Natalia Ladini in 2006. It is entertainment, not prediction, and not medical, financial, or legal advice.</p>
+<p><strong>SoulOcta</strong> — a free Destiny Matrix calculator.</p>
+<p class="small">Built in November 2026, in Lahore.</p>
+<p>Find us: <a rel="me" href="https://www.pinterest.com/soulocta/">Pinterest</a> &middot; <a rel="me" href="https://www.tiktok.com/@duaasif253">TikTok</a></p>
+<nav class="footer-nav" aria-label="Footer navigation"><a href="portrait-zone.html">Portrait Zone — how others see you</a><a href="money-line.html">Money Line — work and money</a><a href="karmic-tail.html">Karmic Tail — your repeating pattern</a><a href="compatibility.html">Destiny Matrix Compatibility Calculator</a><a href="2027-personal-year.html">2027 Personal Year Calculator</a><a href="what-is-destiny-matrix.html">What Is the Destiny Matrix?</a><a href="how-to-calculate.html">How to Calculate the Destiny Matrix</a><a href="22-arcana.html">22 Arcana</a><a href="destiny-matrix-vs-numerology.html">Destiny Matrix vs Numerology</a><a href="destiny-matrix-vs-tarot.html">Destiny Matrix vs Tarot</a><a href="destiny-matrix-for-beginners.html">Destiny Matrix for Beginners</a><a href="destiny-matrix-faq.html">Destiny Matrix FAQ</a><a href="destiny-matrix-meaning-of-7-chariot.html">The Chariot — Arcana 7 of the Destiny Matrix</a><a href="destiny-matrix-meaning-of-8-justice.html">Justice — Arcana 8 of the Destiny Matrix</a><a href="about.html">About</a><a href="contact.html">Contact</a><a href="privacy.html">Privacy</a><a href="terms.html">Terms of Use</a><a href="disclaimer.html">Disclaimer</a></nav>
+<p class="small">The Destiny Matrix is self-reflection, created by Natalia Ladini in 2006. Entertainment, not prediction — and not medical, financial, or legal advice.</p>
 </div></footer>
 <script src="assets/matrix.js"></script>
-
-<script>
-(function(){
-  var DM = window.DestinyMatrix;
-  document.getElementById('compat-form').addEventListener('submit', function(e){
-    e.preventDefault();
-    function read(id){ var p = document.getElementById(id).value.split('-').map(Number); return DM.calcMatrix(p[0], p[1], p[2]); }
-    var r1 = read('dob1'), r2 = read('dob2');
-    var comb = {}; ['A','B','C','D','E','F','G','H','I'].forEach(function(k){ comb[k] = DM.reduce22(r1[k] + r2[k]); });
-    DM.renderChart('chart2', comb, 'D');
-    var c = DM.arcana(comb.D);
-    document.getElementById('compat-line').innerHTML = 'Combined centre: <strong>' + comb.D + ' · ' + c.name + '</strong>. Person one centre ' + r1.D + ' (' + DM.arcana(r1.D).name + '), person two centre ' + r2.D + ' (' + DM.arcana(r2.D).name + ').';
-  });
-  document.getElementById('download-png2').addEventListener('click', function(){ DM.downloadPNG('chart2', 'destiny-matrix-compatibility.png'); });
-})();
-</script>
-
+<script src="assets/compat.js" defer></script>
 </body>
 </html>

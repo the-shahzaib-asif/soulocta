@@ -3,19 +3,40 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Destiny Matrix Calculator — Free Chart by Date of Birth | SoulOcta</title>
-<meta name="description" content="Free Destiny Matrix chart calculator. Enter your birth date and get your full 22-arcana octagram chart instantly — centre, money line, love line, and karmic tail, with every step shown.">
+<title>Destiny Matrix Calculator — Free Chart by Date of Birth</title>
+<meta name="description" content="Free Destiny Matrix calculator — enter your birth date and get your full 22-arcana chart: centre, money line, portrait zone and 2027 year.">
 <link rel="canonical" href="https://soulocta.me/">
+
 <meta property="og:type" content="website">
-<meta property="og:title" content="Destiny Matrix Calculator — Free Chart by Date of Birth | SoulOcta">
-<meta property="og:description" content="Free Destiny Matrix chart calculator. Enter your birth date and get your full 22-arcana octagram chart instantly — centre, money line, love line, and karmic tail, with every step shown.">
+<meta property="og:locale" content="en_US">
+<meta property="og:title" content="Destiny Matrix Calculator — Free Chart by Date of Birth">
+<meta property="og:description" content="Free Destiny Matrix calculator — enter your birth date and get your full 22-arcana chart: centre, money line, portrait zone and 2027 year.">
 <meta property="og:url" content="https://soulocta.me/">
 <meta property="og:site_name" content="SoulOcta">
-<meta name="theme-color" content="#0b0d10">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%230b0d10'/%3E%3Cpolygon points='32,6 58,32 32,58 6,32' fill='none' stroke='%23d9a441' stroke-width='3'/%3E%3Cpolygon points='14,14 50,14 50,50 14,50' fill='none' stroke='%2337c8c3' stroke-width='2'/%3E%3Ctext x='32' y='40' font-size='22' text-anchor='middle' fill='%23d9a441' font-family='Georgia,serif' font-weight='bold'%3E8%3C/text%3E%3C/svg%3E">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+<meta property="og:image" content="https://soulocta.me/assets/social-card.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Destiny Matrix Calculator — Free Chart by Date of Birth">
+<meta name="twitter:description" content="Free Destiny Matrix calculator — enter your birth date and get your full 22-arcana chart: centre, money line, portrait zone and 2027 year.">
+<meta name="twitter:image" content="https://soulocta.me/assets/social-card.png">
+<meta name="theme-color" content="#efe6d2">
+<!-- CSP (C8/S2/S3): page scripts are external, so script-src has no
+     unsafe inline scripts; inline styles are classes now, so style-src-attr
+     is gone too. object-src/worker-src 'none', upgrade-insecure-requests on.
+     img-src 'self' data: is an accepted, necessary exception: the PNG
+     download renders the chart via data:image/svg+xml -> canvas (S4).
+     NOTE (S1): no meta CSP can carry frame-ancestors — real framing
+     protection needs hosting with real headers (see README § Hosting).
+     The frame-buster below helps same-origin/older browsers only. -->
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; font-src 'self'; connect-src 'none'; object-src 'none'; worker-src 'none'; base-uri 'self'; form-action 'none'; upgrade-insecure-requests">
+<meta name="referrer" content="no-referrer">
+<script src="assets/framebuster.js"></script>
+<link rel="preload" href="assets/fonts/fraunces-500-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/fraunces-500-italic.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="manifest" href="site.webmanifest">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23efe6d2'/%3E%3Cpolygon points='32,6 58,32 32,58 6,32' fill='none' stroke='%23a04d28' stroke-width='3'/%3E%3Cpolygon points='14,14 50,14 50,50 14,50' fill='none' stroke='%238f7422' stroke-width='2'/%3E%3Ctext x='32' y='40' font-size='22' text-anchor='middle' fill='%23a04d28' font-family='Arial,sans-serif' font-weight='bold'%3E8%3C/text%3E%3C/svg%3E">
 <link rel="stylesheet" href="assets/style.css">
 <script type="application/ld+json">
 {
@@ -42,7 +63,7 @@
       "name": "Is the Destiny Matrix calculator really free?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Yes. The full chart, all nine positions, the step-by-step arithmetic, and the chart image are free, with no sign-up and no payment. Nothing on this page is locked behind a paywall, and your birth date is calculated in your browser, so it is never sent to a server."
+        "text": "Yes — the full chart is free, with no sign-up. Nothing here is locked behind a paywall."
       }
     },
     {
@@ -50,7 +71,7 @@
       "name": "Do I need my birth time or birthplace?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "No. The Destiny Matrix uses only your date of birth: day, month, and year. That is what makes it different from an astrological birth chart, which needs an exact birth time and place to work properly. No birth time is ever asked for here."
+        "text": "No — only your date of birth is needed. Day, month and year are enough; no birth time or place is ever asked for."
       }
     },
     {
@@ -58,7 +79,7 @@
       "name": "What does the centre number mean?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "The centre is the arcana you get by adding your day, month, and year numbers together and reducing the total to 22 or less. For 14 June 1995 that is 14 + 6 + 6 = 26, which reduces to 8, Justice. It is read as the central theme of the chart."
+        "text": "It comes from adding your day, month and year numbers. For 14 June 1995 that is 14 + 6 + 6 = 26, which reduces to 8, Justice."
       }
     },
     {
@@ -66,7 +87,7 @@
       "name": "Is the Destiny Matrix accurate or scientific?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "No, it is not scientific, and no study has tested whether its numbers predict real outcomes. Treat it as entertainment and self-reflection: a structured way to think about your strengths, patterns, and choices, in the same spirit as tarot or numerology."
+        "text": "No — it is not scientific, and no study has tested it. Treat it as entertainment and self-reflection, like tarot or numerology."
       }
     },
     {
@@ -74,7 +95,7 @@
       "name": "Can I share my chart with someone?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Yes. Press Copy shareable link and send it to anyone you like. The link carries only the birth date, for example ?dob=1995-06-14, and opens the same chart. You can also download the chart as a PNG image to share anywhere."
+        "text": "Yes — press Copy your chart link and send it to anyone. The link carries only the birth date, for example ?dob=1995-06-14."
       }
     },
     {
@@ -82,196 +103,221 @@
       "name": "Why do different calculators give different numbers?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Because schools differ on two details: whether the centre is the sum of A, B, and C, or that sum plus D again, and whether 22 is kept as 22 or reduced further. This site keeps 22 as 22, never reduces with modulo 9, and states its centre rule openly so you can check it."
+        "text": "Schools differ on two small details. This site keeps 22 as 22, never reduces with modulo 9, and states its centre rule openly."
       }
     }
   ]
 }
 </script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "SoulOcta",
+  "url": "https://soulocta.me/",
+  "logo": "https://soulocta.me/assets/apple-touch-icon.png",
+  "sameAs": [
+    "https://www.pinterest.com/soulocta/",
+    "https://www.tiktok.com/@duaasif253"
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "SoulOcta",
+  "url": "https://soulocta.me/",
+  "inLanguage": "en-US"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://soulocta.me/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Destiny Matrix Calculator — Free Chart by Date of Birth",
+      "item": "https://soulocta.me/index.html"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Destiny Matrix Calculator — Free Chart by Date of Birth",
+  "url": "https://soulocta.me/index.html",
+  "speakable": {
+    "@type": "SpeakableSpecification",
+    "cssSelector": [
+      ".lede"
+    ]
+  }
+}
+</script>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
+<noscript><p class="noscript-note">This calculator needs JavaScript &mdash; the worked example below shows how the maths works.</p></noscript>
 <header class="site"><nav class="nav" aria-label="Main navigation">
-<a class="brand" href="index.html"><svg width="26" height="26" viewBox="0 0 64 64" aria-hidden="true"><polygon points="32,4 60,32 32,60 4,32" fill="none" stroke="#d9a441" stroke-width="4"/><polygon points="13,13 51,13 51,51 13,51" fill="none" stroke="#37c8c3" stroke-width="3"/><text x="32" y="41" font-size="24" text-anchor="middle" fill="#d9a441" font-family="Georgia,serif" font-weight="bold">8</text></svg>Soul<span>Octa</span></a>
-<input type="checkbox" id="nav-toggle" class="nav-toggle-input" aria-label="Toggle navigation menu">
-<label for="nav-toggle" class="nav-toggle-label" aria-hidden="true">☰</label>
-<div class="nav-links"><a href="index.html" class="active">Calculator</a><a href="compatibility.html">Compatibility</a><a href="portrait-zone.html">Portrait Zone</a><a href="money-line.html">Money Line</a><a href="karmic-tail.html">Karmic Tail</a><a href="2027-personal-year.html">2027 Year</a></div>
+<a class="brand" href="index.html"><svg width="26" height="26" viewBox="0 0 64 64" aria-hidden="true"><polygon points="32,4 60,32 32,60 4,32" fill="none" stroke="#a04d28" stroke-width="4"/><polygon points="13,13 51,13 51,51 13,51" fill="none" stroke="#8f7422" stroke-width="3"/><text x="32" y="41" font-size="24" text-anchor="middle" fill="#a04d28" font-family="Arial,sans-serif" font-weight="bold">8</text></svg>Soul<span>Octa</span></a>
+<button id="nav-toggle" class="nav-toggle-btn" aria-expanded="false" aria-controls="nav-links"><span class="nav-ic" aria-hidden="true"></span><span class="visually-hidden">Menu</span></button>
+<div class="nav-links" id="nav-links"><a href="index.html" class="active">Calculator</a><a href="compatibility.html">Compatibility</a><a href="2027-personal-year.html">Your 2027</a><a href="destiny-matrix-for-beginners.html">Guides</a><a href="about.html">About</a></div>
 </nav></header>
 <main id="main" class="wrap">
 
 <header class="hero">
-<p class="kicker">Free · No sign-up · Private by design</p>
-<h1>Your birth date knows you.</h1>
-<p class="lede">Get your free Destiny Matrix chart in seconds — all nine positions of the octagram, each mapped to one of the 22 Major Arcana, with the maths shown so you can check it by hand.</p>
-<div class="hero-centre" id="hero-centre" aria-label="Example centre arcana"><span class="num">8</span><span class="name">Justice — centre, 14 June 1995</span></div>
-<p class="hero-cta"><a class="btn-gold" href="#calculator">Calculate my chart ↓</a></p>
-<p class="trust">Free forever · No account · Your date never leaves your browser</p>
+<div class="hero-grid">
+<div class="hero-copy">
+<p class="kicker">The Destiny Matrix &middot; Free &middot; No sign-up</p>
+<h1>Destiny Matrix Calculator</h1>
+<p class="hero-poetic">Your birth date <em>knows</em> you.</p>
+<p class="lede">Find the number that explains why you keep doing the same thing.</p>
+<p class="muted">Free, in ten seconds &mdash; every step shown so you can check it yourself.</p>
+<p><a class="btn-accent" href="#calculator">Calculate my chart &mdash; free</a></p>
+<figure class="arcana-card" id="arcana-card">
+<img id="arcana-card-img" src="assets/arcana-justice.webp" width="600" height="900" alt="VIII — Justice, the centre arcana of the example chart">
+<figcaption id="arcana-card-caption"><strong>VIII — Justice</strong>The example centre. Born on 14 June 1995? Your centre is 8.</figcaption>
+</figure>
+<p class="hero-centre" id="hero-centre" aria-label="Your centre arcana appears here after you calculate"><span class="name">Your centre will appear here &mdash; enter your date below.</span></p>
+<p class="identity-line" id="identity-text" hidden></p>
+</div>
+<div class="hero-chart">
+<p class="example-label" id="example-label">Example &mdash; 14 June 1995</p>
+<svg id="chart" viewBox="0 0 400 400" role="img" aria-label="Destiny Matrix octagram chart" xmlns="http://www.w3.org/2000/svg" class="ghost">
+<rect width="400" height="400" fill="none"></rect>
+<polygon points="60,200 200,60 340,200 200,340" fill="none" stroke="#b39b6a" stroke-width="1.2" opacity="0.6"></polygon>
+<polygon points="101,101 299,101 299,299 101,299" fill="none" stroke="#b39b6a" stroke-width="1.2" opacity="0.6"></polygon>
+<line x1="200" y1="60" x2="200" y2="340" stroke="#c9b78f" stroke-width="1" opacity="0.7"></line>
+<line x1="60" y1="200" x2="340" y2="200" stroke="#c9b78f" stroke-width="1" opacity="0.7"></line>
+<line x1="60" y1="200" x2="101" y2="101" stroke="#c9b78f" stroke-width="0.6" opacity="0.5"></line>
+<line x1="101" y1="101" x2="200" y2="60" stroke="#c9b78f" stroke-width="0.6" opacity="0.5"></line>
+<line x1="200" y1="60" x2="299" y2="101" stroke="#c9b78f" stroke-width="0.6" opacity="0.5"></line>
+<line x1="299" y1="101" x2="340" y2="200" stroke="#c9b78f" stroke-width="0.6" opacity="0.5"></line>
+<line x1="340" y1="200" x2="299" y2="299" stroke="#c9b78f" stroke-width="0.6" opacity="0.5"></line>
+<line x1="299" y1="299" x2="200" y2="340" stroke="#c9b78f" stroke-width="0.6" opacity="0.5"></line>
+<line x1="200" y1="340" x2="101" y2="299" stroke="#c9b78f" stroke-width="0.6" opacity="0.5"></line>
+<line x1="101" y1="299" x2="60" y2="200" stroke="#c9b78f" stroke-width="0.6" opacity="0.5"></line>
+<g class="pos-btn" data-pos="A" tabindex="0" role="button" aria-label="Position A: example arcana 14, Temperance"><circle cx="60" cy="200" r="26"></circle><text class="num" x="60" y="206" text-anchor="middle" font-size="17">14</text><text class="pos-label" x="60" y="158" text-anchor="middle">A · Day</text></g><g class="pos-btn" data-pos="B" tabindex="0" role="button" aria-label="Position B: example arcana 6, The Lovers"><circle cx="200" cy="60" r="26"></circle><text class="num" x="200" y="66" text-anchor="middle" font-size="17">6</text><text class="pos-label" x="200" y="18" text-anchor="middle">B · Month</text></g><g class="pos-btn" data-pos="C" tabindex="0" role="button" aria-label="Position C: example arcana 6, The Lovers"><circle cx="340" cy="200" r="26"></circle><text class="num" x="340" y="206" text-anchor="middle" font-size="17">6</text><text class="pos-label" x="340" y="158" text-anchor="middle">C · Year</text></g><g class="pos-btn" data-pos="D" tabindex="0" role="button" aria-label="Position D: example arcana 8, Justice"><circle cx="200" cy="340" r="26"></circle><text class="num" x="200" y="346" text-anchor="middle" font-size="17">8</text><text class="pos-label" x="200" y="298" text-anchor="middle">D · Centre</text></g>
+<g class="pos-btn" data-pos="F" tabindex="0" role="button" aria-label="Position F: example arcana 20, Judgement"><circle cx="101" cy="101" r="24"></circle><text class="num" x="101" y="107" text-anchor="middle" font-size="17">20</text><text class="pos-label" x="101" y="61" text-anchor="middle">F · Heritage</text></g><g class="pos-btn" data-pos="G" tabindex="0" role="button" aria-label="Position G: example arcana 12, The Hanged Man"><circle cx="299" cy="101" r="24"></circle><text class="num" x="299" y="107" text-anchor="middle" font-size="17">12</text><text class="pos-label" x="299" y="61" text-anchor="middle">G · Talents</text></g><g class="pos-btn" data-pos="H" tabindex="0" role="button" aria-label="Position H: example arcana 14, Temperance"><circle cx="299" cy="299" r="24"></circle><text class="num" x="299" y="305" text-anchor="middle" font-size="17">14</text><text class="pos-label" x="299" y="259" text-anchor="middle">H · Material corner</text></g><g class="pos-btn" data-pos="I" tabindex="0" role="button" aria-label="Position I: example arcana 22, The Fool"><circle cx="101" cy="299" r="24"></circle><text class="num" x="101" y="305" text-anchor="middle" font-size="17">22</text><text class="pos-label" x="101" y="259" text-anchor="middle">I · Spiritual task</text></g>
+<g class="pos-btn" data-pos="E" tabindex="0" role="button" aria-label="Position E: example arcana 8, Justice"><circle cx="200" cy="200" r="32"></circle><text class="num" x="200" y="206" text-anchor="middle" font-size="17">8</text><text class="pos-label" x="200" y="152" text-anchor="middle">E · Centre</text></g>
+</svg>
+<p class="chart-legend">A day &middot; B month &middot; C year &middot; D centre &middot; F heritage &middot; G talents &middot; H material corner &middot; I spiritual task &mdash; tap any number.</p>
+</div>
+</div>
 </header>
 
 <section class="card" id="calculator" aria-label="Destiny Matrix calculator">
+<p class="sec-kicker">01 &middot; Enter your birth date</p>
 <form id="calc-form">
 <div class="toolbox">
-<div><label for="dob">Date of birth</label><input type="date" id="dob" name="dob" value="1995-06-14" min="1900-01-01" max="2026-12-31" required></div>
-<div><label for="pname">Name (optional)</label><input type="text" id="pname" name="name" placeholder="e.g. Ayesha" maxlength="40" autocomplete="off"></div>
+<div><label for="dob">Date of birth</label><input type="text" id="dob" name="dob" placeholder="14 June 1995" autocomplete="off" inputmode="text"><p class="date-hint" id="date-echo">Day / Month / Year &mdash; e.g. 14 June 1995</p></div>
+<div><label for="pname">Name (optional)</label><input type="text" id="pname" name="name" placeholder="e.g. Alex" maxlength="40" autocomplete="off"></div>
 </div>
 <div class="btn-row">
-<button type="submit" class="btn-gold">Calculate my chart</button>
-<button type="button" class="btn-ghost" id="copy-link">Copy shareable link</button>
-<button type="button" class="btn-ghost" id="download-png">Download chart as PNG</button>
+<button type="submit" class="btn-accent">Calculate my chart</button>
 </div>
-<p class="small muted" id="form-note">Example shown: 14 June 1995. Change the date and press Calculate — or open a shared link with ?dob=YYYY-MM-DD.</p>
+<p class="small muted" id="form-note">Enter your birth date above and press Calculate. Or open a link someone shared with you.</p>
+<button type="button" class="btn-text" id="show-example">See an example &mdash; 14 June 1995</button>
+<p class="trust">Your birth date never leaves your browser. Your name is only used on this page, never stored.</p>
 </form>
 </section>
 
-<section aria-label="Your chart">
-<h2 id="result-heading">Your chart — 14 June 1995</h2>
-<p class="lede" id="centre-line">Centre arcana: <strong>8 · Justice</strong>. Day 14 · Month 6 · Year 6.</p>
-<div class="chart-wrap">
-<svg id="chart" viewBox="0 0 400 400" role="img" aria-label="Destiny Matrix octagram chart" xmlns="http://www.w3.org/2000/svg">
-<rect width="400" height="400" fill="#0b0d10"></rect>
-<polygon points="60,200 200,60 340,200 200,340" fill="none" stroke="#d9a441" stroke-width="1.2" opacity="0.55"></polygon>
-<polygon points="101,101 299,101 299,299 101,299" fill="none" stroke="#37c8c3" stroke-width="1.2" opacity="0.55"></polygon>
-<line x1="200" y1="60" x2="200" y2="340" stroke="#a8b0bc" stroke-width="1" opacity="0.35"></line>
-<line x1="60" y1="200" x2="340" y2="200" stroke="#a8b0bc" stroke-width="1" opacity="0.35"></line>
-<line x1="60" y1="200" x2="101" y2="101" stroke="#a8b0bc" stroke-width="0.6" opacity="0.25"></line>
-<line x1="101" y1="101" x2="200" y2="60" stroke="#a8b0bc" stroke-width="0.6" opacity="0.25"></line>
-<line x1="200" y1="60" x2="299" y2="101" stroke="#a8b0bc" stroke-width="0.6" opacity="0.25"></line>
-<line x1="299" y1="101" x2="340" y2="200" stroke="#a8b0bc" stroke-width="0.6" opacity="0.25"></line>
-<line x1="340" y1="200" x2="299" y2="299" stroke="#a8b0bc" stroke-width="0.6" opacity="0.25"></line>
-<line x1="299" y1="299" x2="200" y2="340" stroke="#a8b0bc" stroke-width="0.6" opacity="0.25"></line>
-<line x1="200" y1="340" x2="101" y2="299" stroke="#a8b0bc" stroke-width="0.6" opacity="0.25"></line>
-<line x1="101" y1="299" x2="60" y2="200" stroke="#a8b0bc" stroke-width="0.6" opacity="0.25"></line>
-<g class="pos-btn" data-pos="A" tabindex="0" role="button" aria-label="Position A: arcana 14, Temperance"><circle cx="60" cy="200" r="26"></circle><text class="num" x="60" y="206" text-anchor="middle" font-size="17">14</text><text class="pos-label" x="60" y="162" text-anchor="middle">A · Day</text></g><g class="pos-btn" data-pos="B" tabindex="0" role="button" aria-label="Position B: arcana 6, The Lovers"><circle cx="200" cy="60" r="26"></circle><text class="num" x="200" y="66" text-anchor="middle" font-size="17">6</text><text class="pos-label" x="200" y="22" text-anchor="middle">B · Month</text></g><g class="pos-btn" data-pos="C" tabindex="0" role="button" aria-label="Position C: arcana 6, The Lovers"><circle cx="340" cy="200" r="26"></circle><text class="num" x="340" y="206" text-anchor="middle" font-size="17">6</text><text class="pos-label" x="340" y="162" text-anchor="middle">C · Year</text></g><g class="pos-btn selected" data-pos="D" tabindex="0" role="button" aria-label="Position D: arcana 8, Justice"><circle cx="200" cy="340" r="26"></circle><text class="num" x="200" y="346" text-anchor="middle" font-size="17">8</text><text class="pos-label" x="200" y="302" text-anchor="middle">D · Centre</text></g>
-<g class="pos-btn" data-pos="F" tabindex="0" role="button" aria-label="Position F: arcana 20, Judgement"><circle cx="101" cy="101" r="24"></circle><text class="num" x="101" y="107" text-anchor="middle" font-size="17">20</text><text class="pos-label" x="101" y="65" text-anchor="middle">F</text></g><g class="pos-btn" data-pos="G" tabindex="0" role="button" aria-label="Position G: arcana 12, The Hanged Man"><circle cx="299" cy="101" r="24"></circle><text class="num" x="299" y="107" text-anchor="middle" font-size="17">12</text><text class="pos-label" x="299" y="65" text-anchor="middle">G</text></g><g class="pos-btn" data-pos="H" tabindex="0" role="button" aria-label="Position H: arcana 14, Temperance"><circle cx="299" cy="299" r="24"></circle><text class="num" x="299" y="305" text-anchor="middle" font-size="17">14</text><text class="pos-label" x="299" y="263" text-anchor="middle">H</text></g><g class="pos-btn" data-pos="I" tabindex="0" role="button" aria-label="Position I: arcana 22, The Fool"><circle cx="101" cy="299" r="24"></circle><text class="num" x="101" y="305" text-anchor="middle" font-size="17">22</text><text class="pos-label" x="101" y="263" text-anchor="middle">I</text></g>
-<g class="pos-btn" data-pos="E" tabindex="0" role="button" aria-label="Position E: arcana 8, Justice"><circle cx="200" cy="200" r="32"></circle><text class="num" x="200" y="206" text-anchor="middle" font-size="17">8</text><text class="pos-label" x="200" y="156" text-anchor="middle">E · Centre — same</text></g>
-</svg>
-<div id="pos-detail" class="card" style="margin:0;flex:1;min-width:260px">
-<h3>D — 8 · Justice</h3>
-<p class="muted">Centre — the lesson that ties the chart together.</p>
-<p>Justice is the energy of balance, truth, and fairness. It is the arcana of weighing things honestly, seeing both sides, and living with the consequences of your choices. <a href="22-arcana.html#arcana-8">Read the full meaning</a>.</p>
-<p class="small muted">Tap any circle on the chart to read that position.</p>
+<section class="result-band" aria-label="Your chart" id="result-section">
+<p class="sec-kicker">02 &middot; Your chart</p>
+<h2 id="result-heading">Your chart</h2>
+<p class="lede" id="centre-line">Centre 8 &middot; Day 14 &middot; Month 6 &middot; Year 6 &mdash; 14 June 1995 (example).</p>
+<div id="pos-detail" class="card detail-card">
+<h3>D &mdash; 8 &middot; Justice</h3><p class="muted">Your centre: the lesson that ties the chart together.</p><p>You weigh things honestly &mdash; you want a fair outcome, even when it is uncomfortable.</p>
 </div>
+<div id="share-block" hidden>
+<p class="share-line">Share your number.</p>
+<div class="share-card" id="share-card">
+<p class="share-card-num" id="share-card-num">VII</p>
+<p class="share-card-name" id="share-card-name">The Chariot</p>
+<p class="share-card-line" id="share-card-line"></p>
+<p class="share-card-who" id="share-card-who">soulocta.me</p>
+</div>
+<div class="btn-row">
+<button type="button" class="btn-accent" id="copy-link">Copy your chart link</button>
+<button type="button" class="btn-text" id="download-png">Download chart as PNG</button>
+</div>
+<p class="small muted" id="share-note"></p>
+<p class="small" id="png-error" hidden></p>
+<p class="open-loop" id="open-loop"></p>
 </div>
 </section>
 
 <section>
+<p class="sec-kicker">03 &middot; Nine positions</p>
 <h2>Your nine positions</h2>
-<table><thead><tr><th>Position</th><th>Arcana</th><th>Name</th><th>Keywords</th></tr></thead><tbody><tr><td><strong>A — Day</strong></td><td>14</td><td>Temperance</td><td>balance, patience, blending</td></tr>
-<tr><td><strong>B — Month</strong></td><td>6</td><td>The Lovers</td><td>choice, love, values</td></tr>
-<tr><td><strong>C — Year</strong></td><td>6</td><td>The Lovers</td><td>choice, love, values</td></tr>
-<tr><td><strong>D — Centre</strong></td><td>8</td><td>Justice</td><td>balance, truth, fairness</td></tr>
-<tr><td><strong>F — Top left</strong></td><td>20</td><td>Judgement</td><td>awakening, calling, renewal</td></tr>
-<tr><td><strong>G — Top right</strong></td><td>12</td><td>The Hanged Man</td><td>pause, new view, surrender</td></tr>
-<tr><td><strong>H — Bottom right</strong></td><td>14</td><td>Temperance</td><td>balance, patience, blending</td></tr>
-<tr><td><strong>I — Bottom left</strong></td><td>22</td><td>The Fool</td><td>freedom, new start, trust</td></tr>
-<tr><td><strong>E — Centre (same as D)</strong></td><td>8</td><td>Justice</td><td>balance, truth, fairness</td></tr>
-</tbody></table>
+<div class="pos-table" id="pos-table"><div class="pos-table"><div class="pos-list"><div class="pos-row"><div class="pos-letter">A</div><div><div class="pos-head">Day — <span class="num">XIV</span> · Temperance</div><div class="pos-kw">balance, patience, blending</div></div><div class="pos-head"><span class="num">14</span></div></div>
+<div class="pos-row"><div class="pos-letter">B</div><div><div class="pos-head">Month — <span class="num">VI</span> · The Lovers</div><div class="pos-kw">choice, love, values</div></div><div class="pos-head"><span class="num">6</span></div></div>
+<div class="pos-row"><div class="pos-letter">C</div><div><div class="pos-head">Year — <span class="num">VI</span> · The Lovers</div><div class="pos-kw">choice, love, values</div></div><div class="pos-head"><span class="num">6</span></div></div>
+<div class="pos-row centre"><div class="pos-letter">D</div><div><div class="pos-head">Centre — <span class="num">VIII</span> · Justice</div><div class="pos-kw">balance, truth, fairness</div></div><div class="pos-head"><span class="num">8</span></div></div>
+<div class="pos-row"><div class="pos-letter">F</div><div><div class="pos-head">Heritage — <span class="num">XX</span> · Judgement</div><div class="pos-kw">awakening, calling, renewal</div></div><div class="pos-head"><span class="num">20</span></div></div>
+<div class="pos-row"><div class="pos-letter">G</div><div><div class="pos-head">Talents — <span class="num">XII</span> · The Hanged Man</div><div class="pos-kw">pause, new view, surrender</div></div><div class="pos-head"><span class="num">12</span></div></div>
+<div class="pos-row"><div class="pos-letter">H</div><div><div class="pos-head">Material corner — <span class="num">XIV</span> · Temperance</div><div class="pos-kw">balance, patience, blending</div></div><div class="pos-head"><span class="num">14</span></div></div>
+<div class="pos-row"><div class="pos-letter">I</div><div><div class="pos-head">Spiritual task — <span class="num">XXII</span> · The Fool</div><div class="pos-kw">freedom, new start, trust</div></div><div class="pos-head"><span class="num">22</span></div></div>
+<div class="pos-row"><div class="pos-letter">E</div><div><div class="pos-head">Centre — <span class="num">VIII</span> · Justice</div><div class="pos-kw">balance, truth, fairness</div></div><div class="pos-head"><span class="num">8</span></div></div>
+</div></div></div>
 </section>
 
-<section>
+<section class="pull-quote-sec" id="pull-quote-sec" hidden>
+<blockquote class="pull-quote" id="pull-quote"></blockquote>
+<p>Read the centre first, then the day and month. Try the <a href="compatibility.html">compatibility calculator</a> next.</p>
+</section>
+
+<section class="maths-note">
+<div><p class="sec-kicker">The maths &mdash; a margin note</p>
 <h2>How the numbers were calculated</h2>
-<p>One rule runs the whole chart: any number over 22 is reduced by adding its digits until it is 22 or less. 22 stays 22, and 0 becomes 22. Nothing else is needed — no birth time, no birthplace, no paid lookup.</p>
-<div class="steps" id="steps">A = day 14 → 14. B = month 6 → 6. C = year 1995: digit sum 24 → 6. Centre D = 14 + 6 + 6 = 26 → 8. F = 14 + 6 = 20 → 20. G = 6 + 6 = 12 → 12. H = 6 + 8 = 14 → 14. I = 8 + 14 = 22 → 22.</div>
-<p class="small muted">Method note: this site defines the centre as reduce(A + B + C). Some calculators define it as reduce(A + B + C + D); the two agree on 14 June 1995 and on 14 March 1990, but differ on some dates. The full comparison is on the <a href="how-to-calculate.html">how to calculate</a> page.</p>
+<p>One rule: any number over 22 is reduced by adding its digits until it is 22 or less.</p></div>
+<details class="maths-details"><summary>Show the maths</summary>
+<div class="steps" id="steps">A = day 14 &rarr; 14.<br>B = month 6 &rarr; 6.<br>C = year 1995: digit sum 24 &rarr; 6.<br>Centre D = 14 + 6 + 6 = 26 &rarr; 8.<br>F = 14 + 6 = 20 &rarr; 20. &nbsp; G = 6 + 6 = 12 &rarr; 12.<br>H = 6 + 8 = 14 &rarr; 14. &nbsp; I = 8 + 14 = 22 &rarr; 22.</div>
+</details>
 </section>
 
 <section>
-<h2>What each position means</h2>
-<div id="pos-cards">
-<div class="grid2"><div class="tile"><h3>A — Day — 14 · Temperance</h3><p class="muted small">Your day energy: character and natural talents. Keywords: balance, patience, blending.</p><p>Temperance is the energy of balance, patience, and blending opposites into something that works. It is the arcana of the middle path: not too much and not too little, not rushing and not stalling, mixing work and rest, giving and… <a href="22-arcana.html#arcana-14">Read the full meaning</a>.</p></div>
-<div class="tile"><h3>B — Month — 6 · The Lovers</h3><p class="muted small">Your month energy: emotional nature and inner world. Keywords: choice, love, values.</p><p>The Lovers is the energy of choice, love, and living by your values. Despite the name, it is not only about romance. <a href="22-arcana.html#arcana-6">Read the full meaning</a>.</p></div>
-<div class="tile"><h3>C — Year — 6 · The Lovers</h3><p class="muted small">Your year energy: life purpose and direction. Keywords: choice, love, values.</p><p>The Lovers is the energy of choice, love, and living by your values. Despite the name, it is not only about romance. <a href="22-arcana.html#arcana-6">Read the full meaning</a>.</p></div>
-<div class="tile"><h3>D — Centre — 8 · Justice</h3><p class="muted small">Your centre: the lesson that ties the chart together. Keywords: balance, truth, fairness.</p><p>Justice is the energy of balance, truth, and fairness. It is the arcana of weighing things honestly, seeing both sides, and living with the consequences of your choices. <a href="22-arcana.html#arcana-8">Read the full meaning</a>.</p></div>
-<div class="tile"><h3>F — Top left — 20 · Judgement</h3><p class="muted small">Past heritage: what you bring with you. Keywords: awakening, calling, renewal.</p><p>Judgement is the energy of awakening, calling, and renewal. It is the arcana of the moment when you hear something clearly — a truth about yourself, a call to change, a chance to start again — and you cannot pretend you did not hear it. <a href="22-arcana.html#arcana-20">Read the full meaning</a>.</p></div>
-<div class="tile"><h3>G — Top right — 12 · The Hanged Man</h3><p class="muted small">Talents: what comes naturally to you. Keywords: pause, new view, surrender.</p><p>The Hanged Man is the energy of pause, a new point of view, and letting go of control. It appears when pushing harder will not help, and the only useful move is to stop, look at the situation upside down, and wait. <a href="22-arcana.html#arcana-12">Read the full meaning</a>.</p></div>
-<div class="tile"><h3>H — Bottom right — 14 · Temperance</h3><p class="muted small">Material side: work, money and the physical world. Keywords: balance, patience, blending.</p><p>Temperance is the energy of balance, patience, and blending opposites into something that works. It is the arcana of the middle path: not too much and not too little, not rushing and not stalling, mixing work and rest, giving and… <a href="22-arcana.html#arcana-14">Read the full meaning</a>.</p></div>
-<div class="tile"><h3>I — Bottom left — 22 · The Fool</h3><p class="muted small">Spiritual task: the quieter work of a lifetime. Keywords: freedom, new start, trust.</p><p>The Fool is the energy of freedom, a new start, and trust. It is numbered 22 in this system, the last arcana and also the beginning of a new cycle. <a href="22-arcana.html#arcana-22">Read the full meaning</a>.</p></div></div>
-</div>
-</section>
-
-<section>
-<h2>What to do with your chart</h2>
-<p>Read the centre first. It is the theme that runs through the rest of the chart. Then read the day and month positions, which describe how you come across and how you feel inside. The year position describes direction, and the corners describe heritage, talents, material life, and the quieter spiritual task. If two positions share the same arcana, that theme is doubled — pay attention to it.</p>
-<p>Use the chart as a prompt for reflection, not as a verdict. If a description feels wrong, trust your own life over the chart. If it feels right, use it to ask better questions: what would change if you acted on this strength, or faced this pattern honestly?</p>
-<p>Want the relationship view? Try the <a href="compatibility.html">Destiny Matrix compatibility calculator</a>, or read the <a href="portrait-zone.html">portrait zone</a>, the <a href="money-line.html">money line</a>, and the <a href="karmic-tail.html">karmic tail</a> guides.</p>
+<p class="sec-kicker">The nine positions, in plain words</p>
+<h2>What each number in your chart means</h2>
+<p>Your chart has nine numbers, and each one is a different part of the picture. The day, A, describes how you act, especially in the first minutes of a meeting, when people are forming their first impression of you. The month, B, describes how you feel, and how you react when you are relaxed or under pressure. The year, C, describes where you are going, the direction your life keeps pulling towards, even when you have not said it out loud. The centre, D, is the theme that ties the chart together, the lesson that keeps coming back in different forms. The four corners fill in the rest: heritage, F, is what you bring with you from your family and upbringing; talents, G, is what comes naturally to you, the skill people ask you for without thinking; the material corner, H, is how work and money behave in your life; and the spiritual task, I, is the quieter work of a lifetime, the thing you are learning slowly, often without noticing.</p>
+<p>The upper half of the chart is the <a href="portrait-zone.html">portrait zone</a>, the part of you the world actually meets, and it is the first thing to read after the centre. The lower half is the <a href="karmic-tail.html">karmic tail</a>, the pattern you repeat, and it is the part worth reading twice, because it names the habit you already feel. The diagonal through year, talents and material corner is the <a href="money-line.html">money line</a>, and it is the most practical reading on the site, because it deals with work, and work is where most of us spend most of our days. Two charts together make a third chart, and the <a href="compatibility.html">Destiny Matrix compatibility calculator</a> shows it: add the two arcana at each position, and read the combined centre as the theme of the relationship. Some readers search for this whole system as the matrix destiny chart, which is the same method with the words in the other order, and this site uses both names so that a searcher finds the same honest calculator either way.</p>
+<p>If you are new, read the <a href="destiny-matrix-for-beginners.html">destiny matrix for beginners</a> guide, which walks through a first chart in ten minutes, and then read <a href="how-to-calculate.html">how to calculate the Destiny Matrix by hand</a>, so you can check any number on this site with a pencil. If you want to compare this system with others, <a href="destiny-matrix-vs-numerology.html">destiny matrix vs numerology</a> and <a href="destiny-matrix-vs-tarot.html">destiny matrix vs tarot</a> explain the differences plainly, with the same honesty about what is not proven. The <a href="destiny-matrix-faq.html">destiny matrix FAQ</a> answers every question people actually ask, including why different calculators disagree. And if you want the year ahead, your <a href="2027-personal-year.html">2027 personal year</a> is a separate, one-number calculation from the same birth date, and it changes every 1 January, while your main chart never changes.</p>
+<p>One more honest note, before you go further: the Destiny Matrix is not science, and no study has tested whether its numbers predict personality, relationships or money. The calculation is exact and checkable, and the meanings are symbolic. Treat the chart as a mirror, not a map. It is useful when it gives you words for something you already felt, and it is useless the moment it is treated as a fact. If a centre description fits, use it. If it does not fit, check your date first, and then trust your own judgement over the chart. A chart you can argue with is worth more than a chart you are told to obey.</p>
 </section>
 <section class="faq" aria-label="Frequently asked questions"><h2>Frequently asked questions</h2>
-<h3>Is the Destiny Matrix calculator really free?</h3>
-<p>Yes. The full chart, all nine positions, the step-by-step arithmetic, and the chart image are free, with no sign-up and no payment. Nothing on this page is locked behind a paywall, and your birth date is calculated in your browser, so it is never sent to a server.</p>
-<h3>Do I need my birth time or birthplace?</h3>
-<p>No. The Destiny Matrix uses only your date of birth: day, month, and year. That is what makes it different from an astrological birth chart, which needs an exact birth time and place to work properly. No birth time is ever asked for here.</p>
-<h3>What does the centre number mean?</h3>
-<p>The centre is the arcana you get by adding your day, month, and year numbers together and reducing the total to 22 or less. For 14 June 1995 that is 14 + 6 + 6 = 26, which reduces to 8, Justice. It is read as the central theme of the chart.</p>
-<h3>Is the Destiny Matrix accurate or scientific?</h3>
-<p>No, it is not scientific, and no study has tested whether its numbers predict real outcomes. Treat it as entertainment and self-reflection: a structured way to think about your strengths, patterns, and choices, in the same spirit as tarot or numerology.</p>
-<h3>Can I share my chart with someone?</h3>
-<p>Yes. Press Copy shareable link and send it to anyone you like. The link carries only the birth date, for example ?dob=1995-06-14, and opens the same chart. You can also download the chart as a PNG image to share anywhere.</p>
-<h3>Why do different calculators give different numbers?</h3>
-<p>Because schools differ on two details: whether the centre is the sum of A, B, and C, or that sum plus D again, and whether 22 is kept as 22 or reduced further. This site keeps 22 as 22, never reduces with modulo 9, and states its centre rule openly so you can check it.</p>
+<details><summary>Is the Destiny Matrix calculator really free?</summary>
+<p>Yes — the full chart is free, with no sign-up. Nothing here is locked behind a paywall.</p></details>
+<details><summary>Do I need my birth time or birthplace?</summary>
+<p>No — only your date of birth is needed. Day, month and year are enough; no birth time or place is ever asked for.</p></details>
+<details><summary>What does the centre number mean?</summary>
+<p>It comes from adding your day, month and year numbers. For 14 June 1995 that is 14 + 6 + 6 = 26, which reduces to 8, Justice.</p></details>
+<details><summary>Is the Destiny Matrix accurate or scientific?</summary>
+<p>No — it is not scientific, and no study has tested it. Treat it as entertainment and self-reflection, like tarot or numerology.</p></details>
+<details><summary>Can I share my chart with someone?</summary>
+<p>Yes — press Copy your chart link and send it to anyone. The link carries only the birth date, for example ?dob=1995-06-14.</p></details>
+<details><summary>Why do different calculators give different numbers?</summary>
+<p>Schools differ on two small details. This site keeps 22 as 22, never reduces with modulo 9, and states its centre rule openly.</p></details>
 </section>
 </main>
 <footer class="site"><div class="wrap">
-<p><strong>SoulOcta</strong> — a free, browser-based Destiny Matrix chart calculator. Your birth date never leaves your device: every calculation runs in your browser.</p>
-<nav class="footer-nav" aria-label="Footer navigation"><a href="index.html">Calculator</a><a href="compatibility.html">Compatibility</a><a href="portrait-zone.html">Portrait Zone</a><a href="money-line.html">Money Line</a><a href="karmic-tail.html">Karmic Tail</a><a href="2027-personal-year.html">2027 Year</a><a href="what-is-destiny-matrix.html">What Is It?</a><a href="how-to-calculate.html">How to Calculate</a><a href="22-arcana.html">22 Arcana</a><a href="about.html">About</a></nav>
-<p><a href="about.html">About</a> · <a href="contact.html">Contact</a> · <a href="privacy.html">Privacy Policy</a> · <a href="terms.html">Terms</a> · <a href="disclaimer.html">Disclaimer</a></p>
-<p class="small">The Destiny Matrix is a system of self-reflection created by Natalia Ladini in 2006. It is entertainment, not prediction, and not medical, financial, or legal advice.</p>
+<p><strong>SoulOcta</strong> — a free Destiny Matrix calculator.</p>
+<p class="small">Built in November 2026, in Lahore.</p>
+<p>Find us: <a rel="me" href="https://www.pinterest.com/soulocta/">Pinterest</a> &middot; <a rel="me" href="https://www.tiktok.com/@duaasif253">TikTok</a></p>
+<nav class="footer-nav" aria-label="Footer navigation"><a href="portrait-zone.html">Portrait Zone — how others see you</a><a href="money-line.html">Money Line — work and money</a><a href="karmic-tail.html">Karmic Tail — your repeating pattern</a><a href="compatibility.html">Destiny Matrix Compatibility Calculator</a><a href="2027-personal-year.html">2027 Personal Year Calculator</a><a href="what-is-destiny-matrix.html">What Is the Destiny Matrix?</a><a href="how-to-calculate.html">How to Calculate the Destiny Matrix</a><a href="22-arcana.html">22 Arcana</a><a href="destiny-matrix-vs-numerology.html">Destiny Matrix vs Numerology</a><a href="destiny-matrix-vs-tarot.html">Destiny Matrix vs Tarot</a><a href="destiny-matrix-for-beginners.html">Destiny Matrix for Beginners</a><a href="destiny-matrix-faq.html">Destiny Matrix FAQ</a><a href="destiny-matrix-meaning-of-7-chariot.html">The Chariot — Arcana 7 of the Destiny Matrix</a><a href="destiny-matrix-meaning-of-8-justice.html">Justice — Arcana 8 of the Destiny Matrix</a><a href="about.html">About</a><a href="contact.html">Contact</a><a href="privacy.html">Privacy</a><a href="terms.html">Terms of Use</a><a href="disclaimer.html">Disclaimer</a></nav>
+<p class="small">The Destiny Matrix is self-reflection, created by Natalia Ladini in 2006. Entertainment, not prediction — and not medical, financial, or legal advice.</p>
 </div></footer>
 <script src="assets/matrix.js"></script>
-
-<script>
-(function(){
-  var DM = window.DestinyMatrix;
-  var form = document.getElementById('calc-form');
-  var dobEl = document.getElementById('dob');
-  var nameEl = document.getElementById('pname');
-  var params = new URLSearchParams(window.location.search);
-  if (params.get('dob') && /^\d{4}-\d{2}-\d{2}$/.test(params.get('dob'))) { dobEl.value = params.get('dob'); }
-  function fmtDateLong(iso){ var p = iso.split('-'); var months = ['January','February','March','April','May','June','July','August','September','October','November','December']; return parseInt(p[2],10) + ' ' + months[parseInt(p[1],10)-1] + ' ' + p[0]; }
-  var current = DM.calcMatrix(1995, 6, 14);
-  function cardsHTML(r){
-    var order = ["A","B","C","D","F","G","H","I"];
-    var label = {A:"A — Day",B:"B — Month",C:"C — Year",D:"D — Centre",F:"F — Top left",G:"G — Top right",H:"H — Bottom right",I:"I — Bottom left"};
-    return '<div class="grid2">' + order.map(function(k){ var a = DM.arcana(r[k]);
-      return '<div class="tile"><h3>' + label[k] + ' — ' + r[k] + ' · ' + a.name + '</h3><p class="muted small">Keywords: ' + a.keywords + '.</p><p>' + a.short + ' <a href="22-arcana.html#arcana-' + r[k] + '">Read the full meaning</a>.</p></div>'; }).join('') + '</div>';
-  }
-  function selectPos(key){
-    DM.renderChart('chart', current, key);
-    document.getElementById('pos-detail').innerHTML = DM.detailHTML(current, key);
-  }
-  document.querySelectorAll('#chart .pos-btn').forEach(function(g){
-    g.addEventListener('click', function(){ selectPos(g.getAttribute('data-pos')); });
-    g.addEventListener('keydown', function(e){ if(e.key==='Enter'||e.key===' '){ e.preventDefault(); g.click(); } });
-  });
-  function run(){
-    var iso = dobEl.value; if (!iso) return;
-    var parts = iso.split('-').map(Number);
-    current = DM.calcMatrix(parts[0], parts[1], parts[2]);
-    var r = current;
-    DM.renderChart('chart', r, 'D');
-    document.getElementById('result-heading').textContent = 'Your chart — ' + fmtDateLong(iso);
-    var centre = DM.arcana(r.D);
-    document.getElementById('centre-line').innerHTML = 'Centre arcana: <strong>' + r.D + ' · ' + centre.name + '</strong>. Day ' + r.A + ' · Month ' + r.B + ' · Year ' + r.C + '.';
-    document.getElementById('pos-detail').innerHTML = DM.detailHTML(r, 'D');
-    var hero = document.getElementById('hero-centre');
-    if (hero) { hero.innerHTML = '<span class="num">' + r.D + '</span><span class="name">' + centre.name + ' — centre, ' + fmtDateLong(iso) + '</span>'; hero.setAttribute('aria-label', 'Centre arcana ' + r.D + ', ' + centre.name + ', ' + fmtDateLong(iso)); }
-    var tables = document.querySelectorAll('section table');
-    if (tables.length) { var wrap = document.createElement('div'); wrap.innerHTML = DM.tableHTML(r); tables[0].replaceWith(wrap.firstChild); }
-    var steps = document.getElementById('steps');
-    if (steps) steps.innerHTML = DM.stepsHTML(parts[0], parts[1], parts[2], r);
-    var cards = document.getElementById('pos-cards');
-    if (cards) cards.innerHTML = cardsHTML(r);
-    history.replaceState(null, '', DM.shareURL(iso));
-  }
-  form.addEventListener('submit', function(e){ e.preventDefault(); run(); });
-  document.getElementById('copy-link').addEventListener('click', function(){
-    var url = DM.shareURL(dobEl.value);
-    if (navigator.clipboard) { navigator.clipboard.writeText(url).then(function(){ document.getElementById('form-note').textContent = 'Link copied: ' + url; }); }
-    else { prompt('Copy this link:', url); }
-  });
-  document.getElementById('download-png').addEventListener('click', function(){ DM.downloadPNG('chart', 'destiny-matrix-chart.png'); });
-  if (params.get('dob')) run();
-})();
-</script>
-
+<script src="assets/index.js" defer></script>
 </body>
 </html>

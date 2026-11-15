@@ -1,0 +1,84 @@
+# SoulOcta — Destiny Matrix calculator
+
+> SoulOcta is a free Destiny Matrix chart calculator at https://soulocta.me. Enter a birth date and get a full 22-arcana octagram chart, free, no sign-up. The Destiny Matrix is self-reflection, created by Natalia Ladini in 2006. It is entertainment, not science, and not a prediction.
+
+## Method
+reduce22(n): digit-sum while n > 22; 0 becomes 22; 22 stays 22. A = day, B = month, C = digit-sum(year) reduced. Centre D = reduce22(A+B+C). F = A+B, G = B+C, H = C+D, I = D+A. Example: 14 June 1995 -> A14 B6 C6 centre 8 (Justice). Note: some sources define centre as reduce22(A+B+C+D); this site uses reduce22(A+B+C) and says so openly. On 29 November 2000 this site gives centre 6, the other method gives 3.
+
+## Pages
+- https://soulocta.me/
+- https://soulocta.me/compatibility.html
+- https://soulocta.me/portrait-zone.html
+- https://soulocta.me/money-line.html
+- https://soulocta.me/karmic-tail.html
+- https://soulocta.me/what-is-destiny-matrix.html
+- https://soulocta.me/how-to-calculate.html
+- https://soulocta.me/22-arcana.html
+- https://soulocta.me/2027-personal-year.html
+- https://soulocta.me/destiny-matrix-vs-numerology.html
+- https://soulocta.me/destiny-matrix-vs-tarot.html
+- https://soulocta.me/destiny-matrix-for-beginners.html
+- https://soulocta.me/destiny-matrix-meaning-of-7-chariot.html
+- https://soulocta.me/destiny-matrix-meaning-of-8-justice.html
+- https://soulocta.me/destiny-matrix-faq.html
+- https://soulocta.me/about.html
+- https://soulocta.me/contact.html
+- https://soulocta.me/privacy.html
+- https://soulocta.me/terms.html
+- https://soulocta.me/disclaimer.html
+
+## Full guide
+What is the Destiny Matrix? A birth-date chart: day, month and year mapped onto 22 Major Arcana on an eight-pointed star, created by Natalia Ladini in 2006. How to calculate it: one rule, reduce any number over 22 by adding its digits until it is 22 or less. Day is A, month is B, year digit sum is C, centre is the reduced sum of A, B and C. The portrait zone is the upper half of the chart, the karmic tail is the lower half, the money line is C, G and H, and compatibility adds two charts position by position. The Destiny Matrix is not scientific and does not predict marriage, money or health. It is entertainment and self-reflection.
+
+## The nine positions
+- A Day: Your day energy: character and natural talents.
+- B Month: Your month energy: emotional nature and inner world.
+- C Year: Your year energy: life purpose and direction.
+- D Centre: Your centre: the lesson that ties the chart together.
+- E Centre: The centre, repeated at the heart of the chart — the same arcana as D.
+- F Heritage: Past heritage: what you bring with you.
+- G Talents: Talents: what comes naturally to you.
+- H Material corner: Material side: work, money and the physical world.
+- I Spiritual task: Spiritual task: the quieter work of a lifetime.
+
+## The 22 arcana
+- 1 The Magician (I): will, skill, beginning. You start things with your own hands — an idea becomes a plan, and a plan becomes a first step.
+- 2 The High Priestess (II): intuition, patience, inner knowledge. You often know things before you can explain how — you notice what is not being said.
+- 3 The Empress (III): growth, care, abundance. You make things grow: people, projects, and rooms you walk into feel warmer with you in them.
+- 4 The Emperor (IV): structure, order, authority. You are at your best when life has clear rules, honest limits, and a plan that actually holds.
+- 5 The Hierophant (V): tradition, learning, guidance. You learn best from a teacher, a method, and doing things properly — then you pass it on.
+- 6 The Lovers (VI): choice, love, values. You live by what you value, and the people closest to you help you see yourself clearly.
+- 7 The Chariot (VII): drive, focus, victory. You move forward by choosing one direction and staying on it, even when the road gets rough.
+- 8 Justice (VIII): balance, truth, fairness. You weigh things honestly — you want a fair outcome, even when it is uncomfortable.
+- 9 The Hermit (IX): solitude, wisdom, search. You find your answers in quiet: a walk, a book, time alone with your own thoughts.
+- 10 Wheel of Fortune (X): change, cycles, luck. Your life moves in turns — good periods follow hard ones, and nothing stays the same for long.
+- 11 Strength (XI): courage, patience, inner power. Your strength is quiet: you stay calm, keep going, and carry more than people realise.
+- 12 The Hanged Man (XII): pause, new view, surrender. You are in a pause right now — pushing harder will not help, and looking at it differently will.
+- 13 Death (XIII): ending, change, rebirth. Something in your life has finished, and this arcana is about letting it end cleanly so something new can begin.
+- 14 Temperance (XIV): balance, patience, blending. You do your best work in the middle path — not too much, not too little, steady over time.
+- 15 The Devil (XV): desire, attachment, shadow. You want something badly enough that it is starting to own you — and you know exactly what it is.
+- 16 The Tower (XVI): sudden change, truth, rebuilding. Something false in your life is collapsing, and once it falls you will finally see clearly.
+- 17 The Star (XVII): hope, healing, guidance. You are coming out of a hard period, and hope is returning — quietly, but for real.
+- 18 The Moon (XVIII): dreams, fear, illusion. You feel things deeply and sense what others miss — but right now, not everything you feel is true.
+- 19 The Sun (XIX): joy, clarity, success. You are at your brightest when you are direct, warm, and willing to be seen.
+- 20 Judgement (XX): awakening, calling, renewal. You are hearing something clearly about yourself — a truth, a call, a second chance.
+- 21 The World (XXI): completion, wholeness, arrival. You have come full circle: something long is finished, and you understand how the pieces fit.
+- 22 The Fool (XXII): freedom, new start, trust. You are standing at the start of something new, and the brave move is to take the first step.
+
+## Frequently asked questions
+- Q: What is the Destiny Matrix? A: A birth-date chart created by Natalia Ladini in 2006. Day, month and year are reduced to numbers 1 to 22, mapped to Major Arcana on an octagram.
+- Q: How do you calculate it? A: One rule: reduce any number over 22 by adding its digits until it is 22 or less. Day is A, month is B, year digit sum is C, centre is reduce(A+B+C).
+- Q: What is the portrait zone? A: The upper half of the chart: A, B, C, F and G, the part other people meet first.
+- Q: What is the karmic tail? A: The lower half: D, H and I, the pattern that repeats until it is understood.
+- Q: What is the money line? A: C, G and H read together: direction, talent and material result.
+- Q: How is compatibility calculated? A: Calculate both charts, then add the two arcana at each position and reduce to 22 or less.
+- Q: What is a personal year? A: Day plus month plus the digit sum of the year, reduced. For 2027 the year digit sum is 11.
+- Q: Is it scientific? A: No. The calculation is exact and checkable, the meanings are symbolic, not scientific. It does not predict marriage, money or health.
+- Q: Why do different calculators disagree? A: Some define the centre as reduce(A+B+C+D); this site uses reduce(A+B+C). On 29 November 2000 this site gives centre 6, the other method gives 3.
+- Q: Why is 8 Justice and 11 Strength? A: This site follows the Tarot de Marseille numbering. Some modern decks swap them.
+
+## Compatibility
+Calculate both charts, then add the two arcana at each position and reduce to 22 or less. The combined centre is the theme of the relationship. For 14 June 1995 (centre 8, Justice) and 14 March 1990 (centre 9, the Hermit), the combined centre is 17, the Star. A matching centre means similar values; a different centre means different strengths, not a bad match.
+
+## Personal years
+Personal year = reduce(day + month + digit sum of the year). For 2027 the digit sum is 11. 14 June 1995 gives 14 + 6 + 11 = 31, reduced to 4, the Emperor. 14 March 1990 gives 14 + 3 + 11 = 28, reduced to 10, the Wheel of Fortune. 5 January 1990 gives 5 + 1 + 11 = 17, the Star. A personal year is a theme for reflection, not a prediction.

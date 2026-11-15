@@ -4,53 +4,77 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Privacy Policy — SoulOcta</title>
-<meta name="description" content="Privacy policy for SoulOcta: your birth date is calculated in your browser and never sent to a server.">
+<meta name="description" content="Privacy policy for SoulOcta: your birth date is calculated in your browser and never sent to a server. No account, no tracking.">
 <link rel="canonical" href="https://soulocta.me/privacy.html">
+
 <meta property="og:type" content="website">
+<meta property="og:locale" content="en_US">
 <meta property="og:title" content="Privacy Policy — SoulOcta">
-<meta property="og:description" content="Privacy policy for SoulOcta: your birth date is calculated in your browser and never sent to a server.">
+<meta property="og:description" content="Privacy policy for SoulOcta: your birth date is calculated in your browser and never sent to a server. No account, no tracking.">
 <meta property="og:url" content="https://soulocta.me/privacy.html">
 <meta property="og:site_name" content="SoulOcta">
-<meta name="theme-color" content="#0b0d10">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%230b0d10'/%3E%3Cpolygon points='32,6 58,32 32,58 6,32' fill='none' stroke='%23d9a441' stroke-width='3'/%3E%3Cpolygon points='14,14 50,14 50,50 14,50' fill='none' stroke='%2337c8c3' stroke-width='2'/%3E%3Ctext x='32' y='40' font-size='22' text-anchor='middle' fill='%23d9a441' font-family='Georgia,serif' font-weight='bold'%3E8%3C/text%3E%3C/svg%3E">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+<meta property="og:image" content="https://soulocta.me/assets/social-card.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Privacy Policy — SoulOcta">
+<meta name="twitter:description" content="Privacy policy for SoulOcta: your birth date is calculated in your browser and never sent to a server. No account, no tracking.">
+<meta name="twitter:image" content="https://soulocta.me/assets/social-card.png">
+<meta name="theme-color" content="#efe6d2">
+<!-- CSP (C8/S2/S3): page scripts are external, so script-src has no
+     unsafe inline scripts; inline styles are classes now, so style-src-attr
+     is gone too. object-src/worker-src 'none', upgrade-insecure-requests on.
+     img-src 'self' data: is an accepted, necessary exception: the PNG
+     download renders the chart via data:image/svg+xml -> canvas (S4).
+     NOTE (S1): no meta CSP can carry frame-ancestors — real framing
+     protection needs hosting with real headers (see README § Hosting).
+     The frame-buster below helps same-origin/older browsers only. -->
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; font-src 'self'; connect-src 'none'; object-src 'none'; worker-src 'none'; base-uri 'self'; form-action 'none'; upgrade-insecure-requests">
+<meta name="referrer" content="no-referrer">
+<script src="assets/framebuster.js"></script>
+<link rel="preload" href="assets/fonts/fraunces-500-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/fraunces-500-italic.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="manifest" href="site.webmanifest">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23efe6d2'/%3E%3Cpolygon points='32,6 58,32 32,58 6,32' fill='none' stroke='%23a04d28' stroke-width='3'/%3E%3Cpolygon points='14,14 50,14 50,50 14,50' fill='none' stroke='%238f7422' stroke-width='2'/%3E%3Ctext x='32' y='40' font-size='22' text-anchor='middle' fill='%23a04d28' font-family='Arial,sans-serif' font-weight='bold'%3E8%3C/text%3E%3C/svg%3E">
 <link rel="stylesheet" href="assets/style.css">
 
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
+<noscript><p class="noscript-note">This calculator needs JavaScript &mdash; the worked example below shows how the maths works.</p></noscript>
 <header class="site"><nav class="nav" aria-label="Main navigation">
-<a class="brand" href="index.html"><svg width="26" height="26" viewBox="0 0 64 64" aria-hidden="true"><polygon points="32,4 60,32 32,60 4,32" fill="none" stroke="#d9a441" stroke-width="4"/><polygon points="13,13 51,13 51,51 13,51" fill="none" stroke="#37c8c3" stroke-width="3"/><text x="32" y="41" font-size="24" text-anchor="middle" fill="#d9a441" font-family="Georgia,serif" font-weight="bold">8</text></svg>Soul<span>Octa</span></a>
-<input type="checkbox" id="nav-toggle" class="nav-toggle-input" aria-label="Toggle navigation menu">
-<label for="nav-toggle" class="nav-toggle-label" aria-hidden="true">☰</label>
-<div class="nav-links"><a href="index.html">Calculator</a><a href="compatibility.html">Compatibility</a><a href="portrait-zone.html">Portrait Zone</a><a href="money-line.html">Money Line</a><a href="karmic-tail.html">Karmic Tail</a><a href="2027-personal-year.html">2027 Year</a></div>
+<a class="brand" href="index.html"><svg width="26" height="26" viewBox="0 0 64 64" aria-hidden="true"><polygon points="32,4 60,32 32,60 4,32" fill="none" stroke="#a04d28" stroke-width="4"/><polygon points="13,13 51,13 51,51 13,51" fill="none" stroke="#8f7422" stroke-width="3"/><text x="32" y="41" font-size="24" text-anchor="middle" fill="#a04d28" font-family="Arial,sans-serif" font-weight="bold">8</text></svg>Soul<span>Octa</span></a>
+<button id="nav-toggle" class="nav-toggle-btn" aria-expanded="false" aria-controls="nav-links"><span class="nav-ic" aria-hidden="true"></span><span class="visually-hidden">Menu</span></button>
+<div class="nav-links" id="nav-links"><a href="index.html">Calculator</a><a href="compatibility.html">Compatibility</a><a href="2027-personal-year.html">Your 2027</a><a href="destiny-matrix-for-beginners.html">Guides</a><a href="about.html">About</a></div>
 </nav></header>
 <main id="main" class="wrap">
 <header class="hero"><h1>Privacy Policy</h1><p class="lede">Short version: we do not collect your birth date.</p></header>
 
 <p><em>Last updated: 14 November 2026.</em></p>
 <h2>What we collect</h2>
-<p>We do not collect your birth date. Every Destiny Matrix calculation on this site runs in your browser, in JavaScript, on your own device. The date you enter is never sent to our server, stored in a database, or shared with anyone.</p>
-<p>We do not require an account, and we do not ask for your name, email address, or any other personal information to use the calculator. A name field is offered on the calculator purely so your chart can be labelled on screen; it is not sent anywhere.</p>
+<p>We do not collect your birth date. Every calculation runs in your browser, on your own device. It is never sent to our server, stored, or shared.</p>
 <h2>Cookies and advertising</h2>
-<p>This site may in future show ads through Google AdSense. Google and its partners use cookies to serve ads based on your visits to this and other websites. You can opt out of personalised advertising at any time by visiting <a href="https://www.google.com/settings/ads">Google Ads Settings</a>. You can also opt out of a third-party vendor's use of cookies for personalised advertising by visiting <a href="https://optout.aboutads.info/">aboutads.info</a>.</p>
-<p>At the time of writing, no advertising is live on this site and no advertising cookies are set by us. This policy will be updated before any advertising is enabled, and the advertising disclosure above will remain in place.</p>
-<h2>Analytics and logs</h2>
-<p>Our hosting provider may keep standard server logs, such as the pages requested, the time of the request, and a general location derived from your internet address, for security and for keeping the site running. Those logs are not used to identify individual visitors or to build profiles.</p>
+<p>This site may in future show ads through Google AdSense. Google and its partners use cookies to serve ads; you can opt out at <a href="https://www.google.com/settings/ads">Google Ads Settings</a>. No advertising is live yet, and no advertising cookies are set by us.</p>
+<h2>Questions about this policy</h2>
+<p>If you have a question about this policy, see the <a href="contact.html">contact page</a> for how to reach SoulOcta.</p>
+<h2>Data retention</h2>
+<p>Because we do not collect your birth date or any account data, there is nothing to retain and nothing to delete. If you contact us through a social platform, that platform keeps your message under its own policy, not ours. If we ever add a contact form or an email mailbox, this page will say so, and it will say exactly what is kept and for how long.</p>
+<h2>Third parties</h2>
+<p>The rules for using the site, including the no-warranty statement, are in the <a href="terms.html">terms of use</a>.</p>
+<p>Two third parties are involved in this site today. GitHub hosts the pages and the public source code, and Cloudflare may host them in future; both see the usual server logs, such as the pages requested and the time of the request, and neither receives your birth date, because the calculation never leaves your browser. Google AdSense is not live on this site yet, and no advertising cookies are set by us. If advertising is added, this page will name the provider and link to its opt-out, as the cookies section above already explains.</p>
 <h2>Children</h2>
 <p>This site is intended for adults. It is not directed at children under 13, and we do not knowingly collect information from children.</p>
-<h2>Changes</h2>
-<p>If this policy changes, the new version will be posted on this page with a new last-updated date. If you have questions about this policy, use the <a href="contact.html">contact page</a>.</p>
 
 </main>
 <footer class="site"><div class="wrap">
-<p><strong>SoulOcta</strong> — a free, browser-based Destiny Matrix chart calculator. Your birth date never leaves your device: every calculation runs in your browser.</p>
-<nav class="footer-nav" aria-label="Footer navigation"><a href="index.html">Calculator</a><a href="compatibility.html">Compatibility</a><a href="portrait-zone.html">Portrait Zone</a><a href="money-line.html">Money Line</a><a href="karmic-tail.html">Karmic Tail</a><a href="2027-personal-year.html">2027 Year</a><a href="what-is-destiny-matrix.html">What Is It?</a><a href="how-to-calculate.html">How to Calculate</a><a href="22-arcana.html">22 Arcana</a><a href="about.html">About</a></nav>
-<p><a href="about.html">About</a> · <a href="contact.html">Contact</a> · <a href="privacy.html">Privacy Policy</a> · <a href="terms.html">Terms</a> · <a href="disclaimer.html">Disclaimer</a></p>
-<p class="small">The Destiny Matrix is a system of self-reflection created by Natalia Ladini in 2006. It is entertainment, not prediction, and not medical, financial, or legal advice.</p>
+<p><strong>SoulOcta</strong> — a free Destiny Matrix calculator.</p>
+<p class="small">Built in November 2026, in Lahore.</p>
+<p>Find us: <a rel="me" href="https://www.pinterest.com/soulocta/">Pinterest</a> &middot; <a rel="me" href="https://www.tiktok.com/@duaasif253">TikTok</a></p>
+<nav class="footer-nav" aria-label="Footer navigation"><a href="portrait-zone.html">Portrait Zone — how others see you</a><a href="money-line.html">Money Line — work and money</a><a href="karmic-tail.html">Karmic Tail — your repeating pattern</a><a href="compatibility.html">Destiny Matrix Compatibility Calculator</a><a href="2027-personal-year.html">2027 Personal Year Calculator</a><a href="what-is-destiny-matrix.html">What Is the Destiny Matrix?</a><a href="how-to-calculate.html">How to Calculate the Destiny Matrix</a><a href="22-arcana.html">22 Arcana</a><a href="destiny-matrix-vs-numerology.html">Destiny Matrix vs Numerology</a><a href="destiny-matrix-vs-tarot.html">Destiny Matrix vs Tarot</a><a href="destiny-matrix-for-beginners.html">Destiny Matrix for Beginners</a><a href="destiny-matrix-faq.html">Destiny Matrix FAQ</a><a href="destiny-matrix-meaning-of-7-chariot.html">The Chariot — Arcana 7 of the Destiny Matrix</a><a href="destiny-matrix-meaning-of-8-justice.html">Justice — Arcana 8 of the Destiny Matrix</a><a href="about.html">About</a><a href="contact.html">Contact</a><a href="privacy.html">Privacy</a><a href="terms.html">Terms of Use</a><a href="disclaimer.html">Disclaimer</a></nav>
+<p class="small">The Destiny Matrix is self-reflection, created by Natalia Ladini in 2006. Entertainment, not prediction — and not medical, financial, or legal advice.</p>
 </div></footer>
 <script src="assets/matrix.js"></script>
+
 </body>
 </html>

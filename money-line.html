@@ -3,19 +3,43 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Money Line Destiny Matrix Calculator — Free | SoulOcta</title>
-<meta name="description" content="Free money line Destiny Matrix calculator. Enter your birth date and read the money channel of your chart: direction, talents, and material results.">
+<title>Money Line — Destiny Matrix | SoulOcta</title>
+<meta name="description" content="Your money line shows how you earn, hold and spend. Calculate it free from your birth date.">
 <link rel="canonical" href="https://soulocta.me/money-line.html">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Money Line Destiny Matrix Calculator — Free | SoulOcta">
-<meta property="og:description" content="Free money line Destiny Matrix calculator. Enter your birth date and read the money channel of your chart: direction, talents, and material results.">
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:title" content="Money Line — Destiny Matrix | SoulOcta">
+<meta property="og:description" content="Your money line shows how you earn, hold and spend. Calculate it free from your birth date.">
 <meta property="og:url" content="https://soulocta.me/money-line.html">
 <meta property="og:site_name" content="SoulOcta">
-<meta name="theme-color" content="#0b0d10">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%230b0d10'/%3E%3Cpolygon points='32,6 58,32 32,58 6,32' fill='none' stroke='%23d9a441' stroke-width='3'/%3E%3Cpolygon points='14,14 50,14 50,50 14,50' fill='none' stroke='%2337c8c3' stroke-width='2'/%3E%3Ctext x='32' y='40' font-size='22' text-anchor='middle' fill='%23d9a441' font-family='Georgia,serif' font-weight='bold'%3E8%3C/text%3E%3C/svg%3E">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+<meta property="og:image" content="https://soulocta.me/assets/og-money-line.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Money Line — Destiny Matrix | SoulOcta">
+<meta name="twitter:description" content="Your money line shows how you earn, hold and spend. Calculate it free from your birth date.">
+<meta name="twitter:image" content="https://soulocta.me/assets/og-money-line.png">
+<meta property="article:published_time" content="2026-11-15">
+<meta property="article:modified_time" content="2026-11-15">
+<meta property="article:author" content="Shahzaib Asif">
+<meta name="theme-color" content="#efe6d2">
+<!-- CSP (C8/S2/S3): page scripts are external, so script-src has no
+     unsafe inline scripts; inline styles are classes now, so style-src-attr
+     is gone too. object-src/worker-src 'none', upgrade-insecure-requests on.
+     img-src 'self' data: is an accepted, necessary exception: the PNG
+     download renders the chart via data:image/svg+xml -> canvas (S4).
+     NOTE (S1): no meta CSP can carry frame-ancestors — real framing
+     protection needs hosting with real headers (see README § Hosting).
+     The frame-buster below helps same-origin/older browsers only. -->
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; font-src 'self'; connect-src 'none'; object-src 'none'; worker-src 'none'; base-uri 'self'; form-action 'none'; upgrade-insecure-requests">
+<meta name="referrer" content="no-referrer">
+<script src="assets/framebuster.js"></script>
+<link rel="preload" href="assets/fonts/fraunces-500-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/fraunces-500-italic.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="manifest" href="site.webmanifest">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23efe6d2'/%3E%3Cpolygon points='32,6 58,32 32,58 6,32' fill='none' stroke='%23a04d28' stroke-width='3'/%3E%3Cpolygon points='14,14 50,14 50,50 14,50' fill='none' stroke='%238f7422' stroke-width='2'/%3E%3Ctext x='32' y='40' font-size='22' text-anchor='middle' fill='%23a04d28' font-family='Arial,sans-serif' font-weight='bold'%3E8%3C/text%3E%3C/svg%3E">
 <link rel="stylesheet" href="assets/style.css">
 <script type="application/ld+json">
 {
@@ -27,7 +51,7 @@
       "name": "What is the money line in the Destiny Matrix?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "The money line is the channel of the chart that deals with work and money. On this site it is read through three positions: C, your year position, which gives direction; G, your talents corner; and H, your material corner, which describes how money behaves in your life."
+        "text": "It is the channel of the chart that deals with work and money. It is read through three positions: C for direction, G for talents, and H for material result. Together they describe what work suits you, what you are good at, and how money behaves in your life."
       }
     },
     {
@@ -35,7 +59,7 @@
       "name": "How do I calculate my money line?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Enter your birth date. The calculator works out your full chart, then reads the money line positions C, G, and H. Each one is a number from 1 to 22, mapped to a Major Arcana, and the arithmetic is shown so you can verify every step."
+        "text": "Enter your birth date in the calculator on this page. It works out your full chart first, then reads positions C, G and H together. The three arcana it shows are your money line, and the worked example on this page shows every step of the maths."
       }
     },
     {
@@ -43,7 +67,7 @@
       "name": "Can the money line predict my income?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "No. It cannot predict income, a job offer, or an investment result. It is a tool for reflection: it helps you think about your talents, your direction, and your money habits. Financial decisions should be based on facts, advice, and your own situation, not on a chart."
+        "text": "No — it cannot predict your income, a job offer or an investment result. Any site that says it can is selling something. It is a tool for reflection: three words to think with about direction, talent and habits, not a forecast of what you will earn."
       }
     },
     {
@@ -51,96 +75,148 @@
       "name": "What if my money line arcana seem to disagree?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "That is common, and it is often the most useful result. Disagreement between direction, talent, and material result points to the tension in your working life. Read it as a question: what would change if your work used your talents more, or if your money habits matched your direction?"
+        "text": "That is common, and often the most useful result you can get. Disagreement between direction, talent and material result points to the tension in your working life, and naming that tension is the first step to doing something about it."
       }
     }
   ]
 }
 </script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Money Line — Destiny Matrix | SoulOcta",
+  "description": "Your money line shows how you earn, hold and spend. Calculate it free from your birth date.",
+  "author": {
+    "@type": "Person",
+    "name": "Shahzaib Asif",
+    "url": "https://soulocta.me/about.html"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "SoulOcta",
+    "url": "https://soulocta.me/"
+  },
+  "datePublished": "2026-11-15",
+  "dateModified": "2026-11-15",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://soulocta.me/money-line.html"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://soulocta.me/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Money Line — Destiny Matrix | SoulOcta",
+      "item": "https://soulocta.me/money-line.html"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Money Line — Destiny Matrix | SoulOcta",
+  "url": "https://soulocta.me/money-line.html",
+  "speakable": {
+    "@type": "SpeakableSpecification",
+    "cssSelector": [
+      ".lede"
+    ]
+  }
+}
+</script>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
+<noscript><p class="noscript-note">This calculator needs JavaScript &mdash; the worked example below shows how the maths works.</p></noscript>
 <header class="site"><nav class="nav" aria-label="Main navigation">
-<a class="brand" href="index.html"><svg width="26" height="26" viewBox="0 0 64 64" aria-hidden="true"><polygon points="32,4 60,32 32,60 4,32" fill="none" stroke="#d9a441" stroke-width="4"/><polygon points="13,13 51,13 51,51 13,51" fill="none" stroke="#37c8c3" stroke-width="3"/><text x="32" y="41" font-size="24" text-anchor="middle" fill="#d9a441" font-family="Georgia,serif" font-weight="bold">8</text></svg>Soul<span>Octa</span></a>
-<input type="checkbox" id="nav-toggle" class="nav-toggle-input" aria-label="Toggle navigation menu">
-<label for="nav-toggle" class="nav-toggle-label" aria-hidden="true">☰</label>
-<div class="nav-links"><a href="index.html">Calculator</a><a href="compatibility.html">Compatibility</a><a href="portrait-zone.html">Portrait Zone</a><a href="money-line.html" class="active">Money Line</a><a href="karmic-tail.html">Karmic Tail</a><a href="2027-personal-year.html">2027 Year</a></div>
+<a class="brand" href="index.html"><svg width="26" height="26" viewBox="0 0 64 64" aria-hidden="true"><polygon points="32,4 60,32 32,60 4,32" fill="none" stroke="#a04d28" stroke-width="4"/><polygon points="13,13 51,13 51,51 13,51" fill="none" stroke="#8f7422" stroke-width="3"/><text x="32" y="41" font-size="24" text-anchor="middle" fill="#a04d28" font-family="Arial,sans-serif" font-weight="bold">8</text></svg>Soul<span>Octa</span></a>
+<button id="nav-toggle" class="nav-toggle-btn" aria-expanded="false" aria-controls="nav-links"><span class="nav-ic" aria-hidden="true"></span><span class="visually-hidden">Menu</span></button>
+<div class="nav-links" id="nav-links"><a href="index.html">Calculator</a><a href="compatibility.html">Compatibility</a><a href="2027-personal-year.html">Your 2027</a><a href="destiny-matrix-for-beginners.html">Guides</a><a href="about.html">About</a></div>
 </nav></header>
 <main id="main" class="wrap">
 
-<header class="hero"><p class="kicker">Long-tail guide · Work and money</p><h1>Money Line Destiny Matrix Calculator</h1>
-<p class="lede">The money line is the channel of your Destiny Matrix chart that deals with work, income, and the material side of life. It runs through your year position, your talents, and your material corner — direction, ability, and result, read together.</p>
-<p>Money questions are usually practical: what work suits me, why does money behave the way it does, and what should I change? The money line does not answer those questions with a prediction. It gives you three arcana to think with, and a way to ask better questions about how you earn, spend, and save. This page calculates your money line from your birth date and explains each position honestly.</p></header>
+<header class="hero"><p class="kicker">Long-tail guide · Work and money</p><h1>Money Line &mdash; Destiny Matrix: What Your Birth Date Says About Work and Money.</h1>
+<p class="lede">Three positions, read together: direction, talent, and material result. Start with your talents — work that uses them tends to pay better.</p>
+<p>Money questions are usually practical: what work suits me, and what should I change? The money line gives you three arcana to think with — not a prediction.</p>
+<figure class="content-img"><img src="assets/arcana-04.webp" width="600" height="900" loading="lazy" alt="The Emperor — Destiny Matrix arcana card"><figcaption>The Emperor, the arcana of this page.</figcaption></figure>
+<p class="small byline">Written by <a href="about.html">Shahzaib Asif</a> &mdash; built in Lahore, November 2026. Updated 15 November 2026.</p></header>
 <section class="card" aria-label="Calculate your money line">
-<h2 style="margin-top:0;border-top:0;padding-top:0">Calculate your money line</h2>
+<h2 class="lt-title">Calculate your money line</h2>
 <form class="lt-form" data-kind="money-line.html">
 <div class="toolbox">
-<div><label>Date of birth</label><input type="date" class="lt-dob" value="1995-06-14" min="1900-01-01" max="2026-12-31" required></div>
-<div><label>Your name (optional)</label><input type="text" class="lt-name" placeholder="e.g. Ayesha" maxlength="40"></div>
+<div><label>Date of birth</label><input type="text" class="lt-dob" placeholder="14 June 1995" autocomplete="off"><p class="date-hint">Day / Month / Year &mdash; e.g. 14 June 1995</p></div>
+<div><label>Your name (optional)</label><input type="text" class="lt-name" placeholder="e.g. Alex" maxlength="40"></div>
 </div>
-<div class="btn-row"><button type="submit" class="btn-gold">Calculate</button></div>
+<div class="btn-row"><button type="submit" class="btn-accent">Calculate</button></div>
 </form>
 <div class="lt-result" aria-live="polite"></div>
 <p class="small muted">Money line = C (year, direction) + G (talents) + H (material result). Calculated in your browser; nothing is sent to a server.</p>
 </section>
 
-<h2>What is the money line in the Destiny Matrix?</h2>
-<p>The money line is a diagonal reading of the chart. It starts at the year position (C) on the right, which describes purpose and direction, moves to the talents corner (G) at the top right, which describes what comes naturally, and ends at the material corner (H) at the bottom right, which describes how money and physical life behave. Read together, the three arcana describe a story: where you are headed, what you are good at, and what actually happens with money.</p>
-<h2>How to read your money line</h2>
-<p>Start with the talents corner (G). This is the most practical position: work that uses this arcana tends to feel easier and to pay better, because you are working with your nature instead of against it. Then read the year position (C): does your current direction use that talent, or does it ignore it? Finally, read the material corner (H): this describes the pattern of your material life — steady or changeable, generous or careful, easy or effortful.</p>
-<p>If the three arcana agree, money questions are usually straightforward. If they disagree, the tension is the point: for example, a talent for careful work paired with a material pattern of sudden change suggests that systems and savings matter more than chasing the next opportunity.</p>
-<h2>What the money line cannot tell you</h2>
-<p>It cannot tell you how much money you will make, when you will get a job, or whether an investment will succeed. Anyone who claims that is selling you something. What it can do is help you think clearly about your strengths, your habits, and the direction of your work — and clear thinking is worth more than a prediction.</p>
+<h2>What is the money line?</h2>
+<p>A diagonal reading of the chart: year (C) for direction, talents (G) for what comes naturally, material corner (H) for how money behaves.</p>
+<h2>How to read it</h2>
+<p>Start with talents (G): work that uses this arcana tends to feel easier and pay better. Then check whether your direction (C) uses that talent.</p>
 
+
+<h2>How the money line is calculated</h2>
+<p>The money line is a diagonal reading of your chart, and some readers call the whole system the matrix of destiny, so you will see both names for the same method. It uses three positions: year C for direction, talents G for what comes naturally, and material corner H for how money behaves in your life. Take 14 June 1995. Year 1995 has a digit sum of 24, which reduces to 6, so C is 6, the Lovers. Talents G is B plus C, 6 plus 6, which is 12, the Hanged Man. Material H is C plus D, 6 plus 8, which is 14, Temperance. The money line for this date is therefore 6, 12 and 14: direction through values and relationships, talent through patience and a different point of view, and material result through balance and steady habits. None of those numbers is a prediction of income. They are three words to think with.</p>
+<h2>Direction first: what C means for work</h2>
+<p>Start with direction, not with money. The year arcana C describes the kind of work that feels like it matters to you, even when it is hard. A person with the Emperor as C wants to build something that lasts, and is unhappy in work that disappears the moment it is done. A person with the Star as C wants work that helps someone, and will leave a well-paid job that feels empty. A person with the Magician as C wants to make things and be seen making them. When direction and daily work disagree, the result is usually boredom, not failure. You can be good at a job and still feel wrong in it, and the money line is one way of naming that gap before it becomes a crisis.</p>
+<h2>Talents: what earns well for you</h2>
+<p>Talents G is the most practical position in the money line, because it points to work that feels easier for you than for other people. Ease is not laziness. It is the sign that you are using a real strength, and work that uses a real strength usually pays better over time, because you get better at it faster and people notice. The mistake is to read talents as a job title. The Hanged Man does not mean you should become a monk. It means you are good at pausing, seeing a problem from the other side, and waiting for the right moment, and there are jobs that pay for exactly that. Translate the arcana into a skill, then translate the skill into work that someone will pay for.</p>
+<h2>The material corner: how money behaves</h2>
+<p>Material corner H describes your habits with money, not your income. Temperance here usually means steady habits: you save a little, spend a little, and rarely panic. The Devil here usually means a strong pull towards something expensive, whether that is a habit, a status symbol or a person. The Tower here usually means sudden changes, good and bad, and a need for a buffer. Read H honestly and without shame. It is describing a pattern, and patterns can be changed with a budget, a rule and a friend who will ask you about it once a month. No arcana makes you good or bad with money. It only names the habit you need to watch.</p>
+<h2>Three common mistakes</h2>
+<p>The first mistake is asking the money line to predict income, a job offer or an investment result. It cannot, and any site that says it can is selling something. The second mistake is reading only one of the three positions. Direction without talent is a dream, talent without direction is a hobby, and both without material habits is a plan that never gets funded. The third mistake is comparing your money line with someone else's. Two people with the same centre can have different money lines, and two people with the same money line can earn very different amounts, because income depends on where you live, what you studied, who you know and what the market pays for. The chart is a mirror for your working life, not a salary table.</p>
+<h2>What to do with your money line this month</h2>
+<p>Pick one practical step. If your direction and talents disagree, spend one evening writing down the work you would do if money were not the issue, and then ask what part of that work someone would pay for today. If your material corner points to a habit, set one rule for the month, such as saving a fixed amount on payday before you spend anything, and tell one person about it. If your talents arcana is one you have never used at work, find one small way to use it this week, even in a side project. A chart that does not change what you do is only a story. A chart that changes one habit is a tool.</p>
+
+
+<section aria-label="Related guides"><h2>Related guides</h2>
+<p>Keep reading: <a href="destiny-matrix-vs-numerology.html">destiny matrix vs numerology</a> &middot;
+<a href="destiny-matrix-vs-tarot.html">destiny matrix vs tarot</a> &middot;
+<a href="destiny-matrix-for-beginners.html">destiny matrix for beginners</a> &middot;
+<a href="destiny-matrix-faq.html">destiny matrix FAQ</a> &middot;
+<a href="destiny-matrix-meaning-of-7-chariot.html">the Chariot, arcana 7 of the Destiny Matrix</a> &middot;
+<a href="destiny-matrix-meaning-of-8-justice.html">Justice, arcana 8 of the Destiny Matrix</a> &middot;
+<a href="compatibility.html">Destiny Matrix compatibility calculator</a> &middot;
+<a href="what-is-destiny-matrix.html">what is the Destiny Matrix</a> &middot;
+<a href="how-to-calculate.html">how to calculate the Destiny Matrix</a>.</p></section>
 <section class="faq" aria-label="Frequently asked questions"><h2>Frequently asked questions</h2>
-<h3>What is the money line in the Destiny Matrix?</h3>
-<p>The money line is the channel of the chart that deals with work and money. On this site it is read through three positions: C, your year position, which gives direction; G, your talents corner; and H, your material corner, which describes how money behaves in your life.</p>
-<h3>How do I calculate my money line?</h3>
-<p>Enter your birth date. The calculator works out your full chart, then reads the money line positions C, G, and H. Each one is a number from 1 to 22, mapped to a Major Arcana, and the arithmetic is shown so you can verify every step.</p>
-<h3>Can the money line predict my income?</h3>
-<p>No. It cannot predict income, a job offer, or an investment result. It is a tool for reflection: it helps you think about your talents, your direction, and your money habits. Financial decisions should be based on facts, advice, and your own situation, not on a chart.</p>
-<h3>What if my money line arcana seem to disagree?</h3>
-<p>That is common, and it is often the most useful result. Disagreement between direction, talent, and material result points to the tension in your working life. Read it as a question: what would change if your work used your talents more, or if your money habits matched your direction?</p>
+<details><summary>What is the money line in the Destiny Matrix?</summary>
+<p>It is the channel of the chart that deals with work and money. It is read through three positions: C for direction, G for talents, and H for material result. Together they describe what work suits you, what you are good at, and how money behaves in your life.</p></details>
+<details><summary>How do I calculate my money line?</summary>
+<p>Enter your birth date in the calculator on this page. It works out your full chart first, then reads positions C, G and H together. The three arcana it shows are your money line, and the worked example on this page shows every step of the maths.</p></details>
+<details><summary>Can the money line predict my income?</summary>
+<p>No — it cannot predict your income, a job offer or an investment result. Any site that says it can is selling something. It is a tool for reflection: three words to think with about direction, talent and habits, not a forecast of what you will earn.</p></details>
+<details><summary>What if my money line arcana seem to disagree?</summary>
+<p>That is common, and often the most useful result you can get. Disagreement between direction, talent and material result points to the tension in your working life, and naming that tension is the first step to doing something about it.</p></details>
 </section>
 </main>
 <footer class="site"><div class="wrap">
-<p><strong>SoulOcta</strong> — a free, browser-based Destiny Matrix chart calculator. Your birth date never leaves your device: every calculation runs in your browser.</p>
-<nav class="footer-nav" aria-label="Footer navigation"><a href="index.html">Calculator</a><a href="compatibility.html">Compatibility</a><a href="portrait-zone.html">Portrait Zone</a><a href="money-line.html">Money Line</a><a href="karmic-tail.html">Karmic Tail</a><a href="2027-personal-year.html">2027 Year</a><a href="what-is-destiny-matrix.html">What Is It?</a><a href="how-to-calculate.html">How to Calculate</a><a href="22-arcana.html">22 Arcana</a><a href="about.html">About</a></nav>
-<p><a href="about.html">About</a> · <a href="contact.html">Contact</a> · <a href="privacy.html">Privacy Policy</a> · <a href="terms.html">Terms</a> · <a href="disclaimer.html">Disclaimer</a></p>
-<p class="small">The Destiny Matrix is a system of self-reflection created by Natalia Ladini in 2006. It is entertainment, not prediction, and not medical, financial, or legal advice.</p>
+<p><strong>SoulOcta</strong> — a free Destiny Matrix calculator.</p>
+<p class="small">Built in November 2026, in Lahore.</p>
+<p>Find us: <a rel="me" href="https://www.pinterest.com/soulocta/">Pinterest</a> &middot; <a rel="me" href="https://www.tiktok.com/@duaasif253">TikTok</a></p>
+<nav class="footer-nav" aria-label="Footer navigation"><a href="portrait-zone.html">Portrait Zone — how others see you</a><a href="money-line.html">Money Line — work and money</a><a href="karmic-tail.html">Karmic Tail — your repeating pattern</a><a href="compatibility.html">Destiny Matrix Compatibility Calculator</a><a href="2027-personal-year.html">2027 Personal Year Calculator</a><a href="what-is-destiny-matrix.html">What Is the Destiny Matrix?</a><a href="how-to-calculate.html">How to Calculate the Destiny Matrix</a><a href="22-arcana.html">22 Arcana</a><a href="destiny-matrix-vs-numerology.html">Destiny Matrix vs Numerology</a><a href="destiny-matrix-vs-tarot.html">Destiny Matrix vs Tarot</a><a href="destiny-matrix-for-beginners.html">Destiny Matrix for Beginners</a><a href="destiny-matrix-faq.html">Destiny Matrix FAQ</a><a href="destiny-matrix-meaning-of-7-chariot.html">The Chariot — Arcana 7 of the Destiny Matrix</a><a href="destiny-matrix-meaning-of-8-justice.html">Justice — Arcana 8 of the Destiny Matrix</a><a href="about.html">About</a><a href="contact.html">Contact</a><a href="privacy.html">Privacy</a><a href="terms.html">Terms of Use</a><a href="disclaimer.html">Disclaimer</a></nav>
+<p class="small">The Destiny Matrix is self-reflection, created by Natalia Ladini in 2006. Entertainment, not prediction — and not medical, financial, or legal advice.</p>
 </div></footer>
 <script src="assets/matrix.js"></script>
-
-<script>
-(function(){
-  var DM = window.DestinyMatrix;
-  document.querySelectorAll('.lt-form').forEach(function(form){
-    form.addEventListener('submit', function(e){
-      e.preventDefault();
-      var iso = form.querySelector('.lt-dob').value; if(!iso) return;
-      var p = iso.split('-').map(Number);
-      var r = DM.calcMatrix(p[0], p[1], p[2]);
-      var kind = form.getAttribute('data-kind');
-      var out = form.parentElement.querySelector('.lt-result');
-      var html = '';
-      if (kind === 'portrait-zone.html') {
-        html = '<h3>Your portrait zone</h3>' + DM.tableHTML({A:r.A,B:r.B,C:r.C,D:r.D,E:r.D,F:r.F,G:r.G,H:r.H,I:r.I}) +
-        '<p>Your portrait zone is the upper part of your chart: day ' + r.A + ' (' + DM.arcana(r.A).name + '), month ' + r.B + ' (' + DM.arcana(r.B).name + '), year ' + r.C + ' (' + DM.arcana(r.C).name + '), with heritage ' + r.F + ' and talents ' + r.G + '. Read these five together: they describe how you come across to the world.</p>';
-      } else if (kind === 'money-line.html') {
-        html = '<h3>Your money line</h3><p><strong>C — Year ' + r.C + ' · ' + DM.arcana(r.C).name + '</strong> — direction and purpose.</p>' +
-        '<p><strong>G — Talents ' + r.G + ' · ' + DM.arcana(r.G).name + '</strong> — what earns well for you.</p>' +
-        '<p><strong>H — Material ' + r.H + ' · ' + DM.arcana(r.H).name + '</strong> — how money behaves in your life.</p>' +
-        '<p>Money focus arcana: ' + DM.arcana(r.G).name + ' (' + r.G + '). Read C, G, and H together: direction, talent, and material result.</p>';
-      } else if (kind === 'karmic-tail.html') {
-        html = '<h3>Your karmic tail</h3><p><strong>D — Centre ' + r.D + ' · ' + DM.arcana(r.D).name + '</strong> — the central lesson.</p>' +
-        '<p><strong>H — Material ' + r.H + ' · ' + DM.arcana(r.H).name + '</strong> and <strong>I — Spiritual task ' + r.I + ' · ' + DM.arcana(r.I).name + '</strong> complete the tail.</p>' +
-        '<p>Read D, H, and I together. They describe the pattern this system says repeats until it is faced honestly.</p>';
-      }
-      out.innerHTML = html;
-    });
-  });
-})();
-</script>
-
+<script src="assets/longtail.js" defer></script>
 </body>
 </html>

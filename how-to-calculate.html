@@ -3,19 +3,43 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>How to Calculate the Destiny Matrix by Hand — With Worked Examples</title>
-<meta name="description" content="How to calculate the Destiny Matrix by hand: one reduction rule, worked examples for 14 June 1995, 14 March 1990, and 29 November 2000, and why calculators disagree.">
+<title>How to Calculate the Destiny Matrix by Hand</title>
+<meta name="description" content="Calculate your Destiny Matrix by hand in 5 minutes — worked example, every step shown, free calculator to check.">
 <link rel="canonical" href="https://soulocta.me/how-to-calculate.html">
-<meta property="og:type" content="website">
-<meta property="og:title" content="How to Calculate the Destiny Matrix by Hand — With Worked Examples">
-<meta property="og:description" content="How to calculate the Destiny Matrix by hand: one reduction rule, worked examples for 14 June 1995, 14 March 1990, and 29 November 2000, and why calculators disagree.">
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:title" content="How to Calculate the Destiny Matrix by Hand">
+<meta property="og:description" content="Calculate your Destiny Matrix by hand in 5 minutes — worked example, every step shown, free calculator to check.">
 <meta property="og:url" content="https://soulocta.me/how-to-calculate.html">
 <meta property="og:site_name" content="SoulOcta">
-<meta name="theme-color" content="#0b0d10">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%230b0d10'/%3E%3Cpolygon points='32,6 58,32 32,58 6,32' fill='none' stroke='%23d9a441' stroke-width='3'/%3E%3Cpolygon points='14,14 50,14 50,50 14,50' fill='none' stroke='%2337c8c3' stroke-width='2'/%3E%3Ctext x='32' y='40' font-size='22' text-anchor='middle' fill='%23d9a441' font-family='Georgia,serif' font-weight='bold'%3E8%3C/text%3E%3C/svg%3E">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+<meta property="og:image" content="https://soulocta.me/assets/social-card.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="How to Calculate the Destiny Matrix by Hand">
+<meta name="twitter:description" content="Calculate your Destiny Matrix by hand in 5 minutes — worked example, every step shown, free calculator to check.">
+<meta name="twitter:image" content="https://soulocta.me/assets/social-card.png">
+<meta property="article:published_time" content="2026-11-15">
+<meta property="article:modified_time" content="2026-11-15">
+<meta property="article:author" content="Shahzaib Asif">
+<meta name="theme-color" content="#efe6d2">
+<!-- CSP (C8/S2/S3): page scripts are external, so script-src has no
+     unsafe inline scripts; inline styles are classes now, so style-src-attr
+     is gone too. object-src/worker-src 'none', upgrade-insecure-requests on.
+     img-src 'self' data: is an accepted, necessary exception: the PNG
+     download renders the chart via data:image/svg+xml -> canvas (S4).
+     NOTE (S1): no meta CSP can carry frame-ancestors — real framing
+     protection needs hosting with real headers (see README § Hosting).
+     The frame-buster below helps same-origin/older browsers only. -->
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; font-src 'self'; connect-src 'none'; object-src 'none'; worker-src 'none'; base-uri 'self'; form-action 'none'; upgrade-insecure-requests">
+<meta name="referrer" content="no-referrer">
+<script src="assets/framebuster.js"></script>
+<link rel="preload" href="assets/fonts/fraunces-500-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/fraunces-500-italic.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="manifest" href="site.webmanifest">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23efe6d2'/%3E%3Cpolygon points='32,6 58,32 32,58 6,32' fill='none' stroke='%23a04d28' stroke-width='3'/%3E%3Cpolygon points='14,14 50,14 50,50 14,50' fill='none' stroke='%238f7422' stroke-width='2'/%3E%3Ctext x='32' y='40' font-size='22' text-anchor='middle' fill='%23a04d28' font-family='Arial,sans-serif' font-weight='bold'%3E8%3C/text%3E%3C/svg%3E">
 <link rel="stylesheet" href="assets/style.css">
 <script type="application/ld+json">
 {
@@ -23,26 +47,31 @@
   "@type": "HowTo",
   "name": "How to Calculate the Destiny Matrix by Hand",
   "description": "Calculate your Destiny Matrix chart from your birth date using one reduction rule.",
+  "totalTime": "PT10M",
   "step": [
     {
       "@type": "HowToStep",
       "name": "Reduce any number to 1–22",
-      "text": "If a number is over 22, add its digits together and repeat until it is 22 or less. 22 stays 22 and 0 becomes 22."
+      "text": "If a number is over 22, add its digits together and repeat until it is 22 or less. 22 stays 22 and 0 becomes 22.",
+      "image": "https://soulocta.me/assets/arcana-01.webp"
     },
     {
       "@type": "HowToStep",
       "name": "Find A, B, and C",
-      "text": "A is your day, B is your month, and C is the digit sum of your year, each reduced to 22 or less."
+      "text": "A is your day, B is your month, and C is the digit sum of your year, each reduced to 22 or less.",
+      "image": "https://soulocta.me/assets/arcana-02.webp"
     },
     {
       "@type": "HowToStep",
       "name": "Find the centre, D",
-      "text": "Add A, B, and C together and reduce the total to 22 or less."
+      "text": "Add A, B, and C together and reduce the total to 22 or less.",
+      "image": "https://soulocta.me/assets/arcana-08.webp"
     },
     {
       "@type": "HowToStep",
       "name": "Find the four corners",
-      "text": "F is A plus B, G is B plus C, H is C plus D, and I is D plus A, each reduced to 22 or less."
+      "text": "F is A plus B, G is B plus C, H is C plus D, and I is D plus A, each reduced to 22 or less.",
+      "image": "https://soulocta.me/assets/arcana-07.webp"
     }
   ]
 }
@@ -57,7 +86,7 @@
       "name": "How do you calculate the Destiny Matrix by hand?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "One rule: reduce any number over 22 by adding its digits until it is 22 or less. Day is A, month is B, year digit sum is C. Centre is A plus B plus C, reduced. Corners: F is A plus B, G is B plus C, H is C plus D, I is D plus A."
+        "text": "One rule: reduce any number over 22 by adding its digits until it is 22 or less. Day is A, month is B, year digit sum is C."
       }
     },
     {
@@ -65,7 +94,7 @@
       "name": "What is the formula for the Destiny Matrix centre?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "On this site the centre is reduce(A + B + C), where A is your day, B is your month, and C is your year digit sum. For 14 June 1995 that is 14 + 6 + 6 = 26, which reduces to 8. Some schools add D again; this site states its rule so you can verify every number."
+        "text": "The centre is reduce(A + B + C). For 14 June 1995 that is 14 + 6 + 6 = 26, which reduces to 8."
       }
     },
     {
@@ -73,7 +102,7 @@
       "name": "Why is 22 kept as 22 in the Destiny Matrix?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Because 22 is the Fool, the last of the 22 Major Arcana. Reducing it to 4 would erase an arcana from the system and change every sum it is part of. This site keeps 22 as 22 and never reduces with modulo 9, which would also break the 1 to 22 range."
+        "text": "Because 22 is the Fool, the last of the 22 Major Arcana. Reducing it to 4 would erase an arcana from the system."
       }
     },
     {
@@ -81,7 +110,7 @@
       "name": "Can I calculate the Destiny Matrix without my birth time?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Yes. The Destiny Matrix uses only your date of birth: day, month, and year. No birth time or birthplace is needed at all. That is what makes it different from astrology, which needs an exact birth time and place to draw a chart."
+        "text": "Yes — the Destiny Matrix uses only your date of birth. No birth time or birthplace is needed at all."
       }
     },
     {
@@ -89,74 +118,135 @@
       "name": "How do I check if a Destiny Matrix calculator is correct?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Calculate one date by hand and compare. For 14 June 1995 the correct result under this site's stated rule is A 14, B 6, C 6, centre 8, F 20, G 12, H 14, I 22. If a calculator gives different numbers without explaining its rule, it is using a different method or it has a bug."
+        "text": "Calculate one date by hand and compare. For 14 June 1995 the correct result here is A 14, B 6, C 6, centre 8, F 20, G 12, H 14, I 22."
       }
     }
   ]
 }
 </script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "How to Calculate the Destiny Matrix by Hand",
+  "description": "Calculate your Destiny Matrix by hand in 5 minutes — worked example, every step shown, free calculator to check.",
+  "author": {
+    "@type": "Person",
+    "name": "Shahzaib Asif",
+    "url": "https://soulocta.me/about.html"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "SoulOcta",
+    "url": "https://soulocta.me/"
+  },
+  "datePublished": "2026-11-15",
+  "dateModified": "2026-11-15",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://soulocta.me/how-to-calculate.html"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://soulocta.me/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "How to Calculate the Destiny Matrix by Hand",
+      "item": "https://soulocta.me/how-to-calculate.html"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "How to Calculate the Destiny Matrix by Hand",
+  "url": "https://soulocta.me/how-to-calculate.html",
+  "speakable": {
+    "@type": "SpeakableSpecification",
+    "cssSelector": [
+      ".lede"
+    ]
+  }
+}
+</script>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
+<noscript><p class="noscript-note">This calculator needs JavaScript &mdash; the worked example below shows how the maths works.</p></noscript>
 <header class="site"><nav class="nav" aria-label="Main navigation">
-<a class="brand" href="index.html"><svg width="26" height="26" viewBox="0 0 64 64" aria-hidden="true"><polygon points="32,4 60,32 32,60 4,32" fill="none" stroke="#d9a441" stroke-width="4"/><polygon points="13,13 51,13 51,51 13,51" fill="none" stroke="#37c8c3" stroke-width="3"/><text x="32" y="41" font-size="24" text-anchor="middle" fill="#d9a441" font-family="Georgia,serif" font-weight="bold">8</text></svg>Soul<span>Octa</span></a>
-<input type="checkbox" id="nav-toggle" class="nav-toggle-input" aria-label="Toggle navigation menu">
-<label for="nav-toggle" class="nav-toggle-label" aria-hidden="true">☰</label>
-<div class="nav-links"><a href="index.html">Calculator</a><a href="compatibility.html">Compatibility</a><a href="portrait-zone.html">Portrait Zone</a><a href="money-line.html">Money Line</a><a href="karmic-tail.html">Karmic Tail</a><a href="2027-personal-year.html">2027 Year</a></div>
+<a class="brand" href="index.html"><svg width="26" height="26" viewBox="0 0 64 64" aria-hidden="true"><polygon points="32,4 60,32 32,60 4,32" fill="none" stroke="#a04d28" stroke-width="4"/><polygon points="13,13 51,13 51,51 13,51" fill="none" stroke="#8f7422" stroke-width="3"/><text x="32" y="41" font-size="24" text-anchor="middle" fill="#a04d28" font-family="Arial,sans-serif" font-weight="bold">8</text></svg>Soul<span>Octa</span></a>
+<button id="nav-toggle" class="nav-toggle-btn" aria-expanded="false" aria-controls="nav-links"><span class="nav-ic" aria-hidden="true"></span><span class="visually-hidden">Menu</span></button>
+<div class="nav-links" id="nav-links"><a href="index.html">Calculator</a><a href="compatibility.html">Compatibility</a><a href="2027-personal-year.html">Your 2027</a><a href="destiny-matrix-for-beginners.html">Guides</a><a href="about.html">About</a></div>
 </nav></header>
 <main id="main" class="wrap">
 
 <header class="hero"><p class="kicker">Guide · With worked examples</p>
 <h1>How to Calculate the Destiny Matrix by Hand</h1>
-<p class="lede">You need only your birth date and one rule: any number over 22 is reduced by adding its digits until it is 22 or less. 22 stays 22, and 0 becomes 22. That is the whole method — no birth time, no birthplace, no lookup table.</p></header>
+<p class="lede">You need only your birth date and one rule: any number over 22 is reduced by adding its digits until it is 22 or less.</p>
+<figure class="content-img"><img src="assets/arcana-01.webp" width="600" height="900" loading="lazy" alt="I — The Magician, Destiny Matrix arcana card"><figcaption>The Magician, the arcana of beginning.</figcaption></figure>
+<p class="small byline">Written by <a href="about.html">Shahzaib Asif</a> &mdash; built in Lahore, November 2026. Updated 15 November 2026.</p></header>
 
 <h2>Step 1: Reduce any number to 1–22</h2>
-<p>Take a number. If it is 22 or less, leave it alone. If it is over 22, add its digits together. Repeat until the result is 22 or less. For example, 26 becomes 2 + 6 = 8, 36 becomes 3 + 6 = 9, and 29 becomes 2 + 9 = 11. Never reduce with modulo 9: that turns 18 into 0 and breaks the 1–22 range the system needs.</p>
+<p>If a number is over 22, add its digits. Repeat until it is 22 or less. For example, 26 becomes 2 + 6 = 8.</p>
 
-<h2>Step 2: Find A, B, and C from your birth date</h2>
-<p>Take the day, month, and year separately. A is your day, reduced if it is over 22. B is your month, which is never over 12, so it never needs reducing. C is your year: first add all four digits of the year, then reduce the result if it is over 22. For 1995, the digit sum is 1 + 9 + 9 + 5 = 24, which reduces to 2 + 4 = 6.</p>
+<h2>Step 2: Find A, B, and C</h2>
+<p>A is your day, B is your month, C is your year digit-sum. For 1995: 1 + 9 + 9 + 5 = 24 → 6.</p>
 
 <h2>Step 3: Find the centre, D</h2>
-<p>Add A, B, and C together and reduce the total to 22 or less. That is the centre of your chart. For 14 June 1995: A is 14, B is 6, C is 6, so the centre is 14 + 6 + 6 = 26, which reduces to 8, Justice.</p>
+<p>Add A, B, and C and reduce. For 14 June 1995: 14 + 6 + 6 = 26 → 8, Justice.</p>
 
 <h2>Step 4: Find the four corners</h2>
-<p>Each corner is the sum of its two neighbouring positions, reduced to 22 or less. Top left (F) is A + B. Top right (G) is B + C. Bottom right (H) is C + D. Bottom left (I) is D + A. For 14 June 1995: F is 14 + 6 = 20, G is 6 + 6 = 12, H is 6 + 8 = 14, and I is 8 + 14 = 22.</p>
+<p>F = A + B, G = B + C, H = C + D, I = D + A — each reduced to 22 or less.</p>
 
 <h2>Worked example: 14 June 1995</h2>
 <div class="steps">A = day 14 → 14 (Temperance)<br>B = month 6 → 6 (Lovers)<br>C = year 1995: 1+9+9+5 = 24 → 6 (Lovers)<br>Centre D = 14 + 6 + 6 = 26 → 8 (Justice)<br>F = 14 + 6 = 20 (Judgement)<br>G = 6 + 6 = 12 (Hanged Man)<br>H = 6 + 8 = 14 (Temperance)<br>I = 8 + 14 = 22 (Fool)</div>
 
-<h2>Worked example: 14 March 1990</h2>
-<div class="steps">A = day 14 → 14<br>B = month 3 → 3<br>C = year 1990: 1+9+9+0 = 19 → 19<br>Centre D = 14 + 3 + 19 = 36 → 9 (Hermit)<br>F = 14 + 3 = 17 (Star)<br>G = 3 + 19 = 22 (Fool)<br>H = 19 + 9 = 28 → 10 (Wheel of Fortune)<br>I = 9 + 14 = 23 → 5 (Hierophant)</div>
-
-<h2>Worked example: 29 November 2000</h2>
-<div class="steps">A = day 29 → 2+9 = 11 (Strength)<br>B = month 11 → 11 (Strength)<br>C = year 2000: 2+0+0+0 = 2 → 2 (High Priestess)<br>Centre D = 11 + 11 + 2 = 24 → 6 (Lovers)</div>
-<p>Try the same date on the <a href="index.html">calculator</a> and check every number. If a number differs, the other calculator is using a different rule — ask it to show its working.</p>
-
 <h2>Why do different calculators disagree?</h2>
-<p>Two details vary between schools. The first is the centre: this site defines the centre as reduce(A + B + C). Some calculators define it as reduce(A + B + C + D), adding the centre to itself once more. The two agree on 14 June 1995 (both give 8) and on 14 March 1990 (both give 9), but they differ on 29 November 2000: this site gives 6, the other rule gives 3. Neither is wrong in an absolute sense, because the system is a tradition, not a science. What matters is that a calculator states its rule, so you can check it.</p>
-<p>The second detail is the number 22. Some calculators reduce 22 to 4 (2 + 2). This site keeps 22 as 22, the Fool, following the method in the DEV implementation and the GitHub guide. It also never reduces with modulo 9, which would break the range.</p>
-
-<h2>How long does it take to calculate by hand?</h2>
-<p>About one minute, once you know the rule. The year digit sum is the only step that takes thought, and the rest is simple addition. That is the point of the system: it is simple enough to check, which is why a calculator that hides its arithmetic should be treated with suspicion.</p>
+<p>Two details vary: some schools define the centre as reduce(A + B + C + D), and some reduce 22 to 4. This site uses reduce(A + B + C) and keeps 22 as 22 — and states it, so you can check every number.</p>
+<h2>Worked example two: 14 March 1990</h2>
+<p>Day 14 is A, month 3 is B, and the year 1990 has a digit sum of 1 plus 9 plus 9 plus 0, which is 19, so C is 19. The centre is 14 plus 3 plus 19, which is 36, and 3 plus 6 is 9, the Hermit. The corners are F, A plus B, 14 plus 3, which is 17, the Star; G, B plus C, 3 plus 19, which is 22, the Fool; H, C plus D, 19 plus 9, which is 28, reduced to 10, the Wheel of Fortune; and I, D plus A, 9 plus 14, which is 23, reduced to 5, the Hierophant. The full chart is A 14, B 3, C 19, centre 9, F 17, G 22, H 10, I 5. Notice that G is 22, the Fool, and it stays 22, because this system never reduces 22 to 4. If another calculator gives you a different G here, that is the first thing to check.</p>
+<h2>Worked example three: 29 November 2000, the disputed date</h2>
+<p>Day 29 reduces first: 2 plus 9 is 11, so A is 11, Strength. Month 11 is B, also 11. The year 2000 has a digit sum of 2, so C is 2, the High Priestess. The centre on this site is 11 plus 11 plus 2, which is 24, reduced to 6, the Lovers. The corners are F, 11 plus 11, which is 22, the Fool; G, 11 plus 2, which is 13, Death; H, 2 plus 6, which is 8, Justice; and I, 6 plus 11, which is 17, the Star. Some sources give centre 3 for this date, because they define the centre as reduce(A plus B plus C plus D), which here is 11 plus 11 plus 2 plus 6, which is 30, reduced to 3, the Empress. Both methods are defensible, and neither is proven, because the system is not scientific. What matters is that a calculator states its method, and this site does, on this page and in its llms.txt file. If you use a different calculator, ask it the same question, and compare the answers before you trust either one.</p>
+<h2>Common mistakes, and how to avoid them</h2>
+<p>The first mistake is forgetting to reduce the day. A day of 29 is not 29 in the chart, it is 11, because 2 plus 9 is 11. A day of 31 is 4. The second mistake is adding the year itself instead of its digit sum. For 1995, C is not 1995, it is 1 plus 9 plus 9 plus 5, which is 24, reduced to 6. The third mistake is reducing 22 to 4. The Fool is arcana 22, and it stays 22, because reducing it would erase a card from the system. The fourth mistake is calculating the corners from the raw numbers instead of the reduced ones. F is A plus B, where A and B are already reduced, not day plus month. The fifth mistake is using a different centre rule without noticing. If your centre does not match this site's, check the rule first, then the 8 and 11 swap, and only then the arithmetic. Most disagreements are one of those three, not a calculation error.</p>
+<h2>Your printable checklist</h2>
+<p>Print this, or copy it into a notebook. One, write down your birth date as day, month and year. Two, reduce the day to 22 or less and call it A. Three, reduce the month and call it B. Four, add the digits of the year, reduce the total, and call it C. Five, add A, B and C, reduce the total, and call it D, your centre. Six, calculate F as A plus B, G as B plus C, H as C plus D, and I as D plus A, reducing each one. Seven, look up each number in <a href="22-arcana.html">the 22 arcana guide</a>. Eight, read the centre first, then the day and month. Nine, check your answer against the <a href="index.html">Destiny Matrix calculator</a>. If the two disagree, work through the checklist again, slowly, because the error is almost always in step two, three or four. Ten, when the numbers match, save the chart link, and read the <a href="destiny-matrix-for-beginners.html">destiny matrix for beginners</a> guide next. The whole job takes about five minutes, and the checklist is the same every time.</p>
+<h2>What to do after you calculate</h2>
+<p>Read your centre in the arcana guide, and write down in one sentence whether it fits, and why. Then calculate a chart for one person you know well, and ask them whether their centre fits, because watching someone else react to their chart will teach you more than reading about your own. Then read the <a href="destiny-matrix-faq.html">destiny matrix FAQ</a>, which answers every question people actually ask, including why different calculators disagree. If you want to compare this system with others, the <a href="destiny-matrix-vs-numerology.html">destiny matrix vs numerology</a> guide and the <a href="destiny-matrix-vs-tarot.html">destiny matrix vs tarot</a> guide explain the differences plainly. And if you want the year ahead, your <a href="2027-personal-year.html">2027 personal year</a> is a separate, one-number calculation from the same date.</p>
 <section class="faq" aria-label="Frequently asked questions"><h2>Frequently asked questions</h2>
-<h3>How do you calculate the Destiny Matrix by hand?</h3>
-<p>One rule: reduce any number over 22 by adding its digits until it is 22 or less. Day is A, month is B, year digit sum is C. Centre is A plus B plus C, reduced. Corners: F is A plus B, G is B plus C, H is C plus D, I is D plus A.</p>
-<h3>What is the formula for the Destiny Matrix centre?</h3>
-<p>On this site the centre is reduce(A + B + C), where A is your day, B is your month, and C is your year digit sum. For 14 June 1995 that is 14 + 6 + 6 = 26, which reduces to 8. Some schools add D again; this site states its rule so you can verify every number.</p>
-<h3>Why is 22 kept as 22 in the Destiny Matrix?</h3>
-<p>Because 22 is the Fool, the last of the 22 Major Arcana. Reducing it to 4 would erase an arcana from the system and change every sum it is part of. This site keeps 22 as 22 and never reduces with modulo 9, which would also break the 1 to 22 range.</p>
-<h3>Can I calculate the Destiny Matrix without my birth time?</h3>
-<p>Yes. The Destiny Matrix uses only your date of birth: day, month, and year. No birth time or birthplace is needed at all. That is what makes it different from astrology, which needs an exact birth time and place to draw a chart.</p>
-<h3>How do I check if a Destiny Matrix calculator is correct?</h3>
-<p>Calculate one date by hand and compare. For 14 June 1995 the correct result under this site's stated rule is A 14, B 6, C 6, centre 8, F 20, G 12, H 14, I 22. If a calculator gives different numbers without explaining its rule, it is using a different method or it has a bug.</p>
+<details><summary>How do you calculate the Destiny Matrix by hand?</summary>
+<p>One rule: reduce any number over 22 by adding its digits until it is 22 or less. Day is A, month is B, year digit sum is C.</p></details>
+<details><summary>What is the formula for the Destiny Matrix centre?</summary>
+<p>The centre is reduce(A + B + C). For 14 June 1995 that is 14 + 6 + 6 = 26, which reduces to 8.</p></details>
+<details><summary>Why is 22 kept as 22 in the Destiny Matrix?</summary>
+<p>Because 22 is the Fool, the last of the 22 Major Arcana. Reducing it to 4 would erase an arcana from the system.</p></details>
+<details><summary>Can I calculate the Destiny Matrix without my birth time?</summary>
+<p>Yes — the Destiny Matrix uses only your date of birth. No birth time or birthplace is needed at all.</p></details>
+<details><summary>How do I check if a Destiny Matrix calculator is correct?</summary>
+<p>Calculate one date by hand and compare. For 14 June 1995 the correct result here is A 14, B 6, C 6, centre 8, F 20, G 12, H 14, I 22.</p></details>
 </section>
 </main>
 <footer class="site"><div class="wrap">
-<p><strong>SoulOcta</strong> — a free, browser-based Destiny Matrix chart calculator. Your birth date never leaves your device: every calculation runs in your browser.</p>
-<nav class="footer-nav" aria-label="Footer navigation"><a href="index.html">Calculator</a><a href="compatibility.html">Compatibility</a><a href="portrait-zone.html">Portrait Zone</a><a href="money-line.html">Money Line</a><a href="karmic-tail.html">Karmic Tail</a><a href="2027-personal-year.html">2027 Year</a><a href="what-is-destiny-matrix.html">What Is It?</a><a href="how-to-calculate.html">How to Calculate</a><a href="22-arcana.html">22 Arcana</a><a href="about.html">About</a></nav>
-<p><a href="about.html">About</a> · <a href="contact.html">Contact</a> · <a href="privacy.html">Privacy Policy</a> · <a href="terms.html">Terms</a> · <a href="disclaimer.html">Disclaimer</a></p>
-<p class="small">The Destiny Matrix is a system of self-reflection created by Natalia Ladini in 2006. It is entertainment, not prediction, and not medical, financial, or legal advice.</p>
+<p><strong>SoulOcta</strong> — a free Destiny Matrix calculator.</p>
+<p class="small">Built in November 2026, in Lahore.</p>
+<p>Find us: <a rel="me" href="https://www.pinterest.com/soulocta/">Pinterest</a> &middot; <a rel="me" href="https://www.tiktok.com/@duaasif253">TikTok</a></p>
+<nav class="footer-nav" aria-label="Footer navigation"><a href="portrait-zone.html">Portrait Zone — how others see you</a><a href="money-line.html">Money Line — work and money</a><a href="karmic-tail.html">Karmic Tail — your repeating pattern</a><a href="compatibility.html">Destiny Matrix Compatibility Calculator</a><a href="2027-personal-year.html">2027 Personal Year Calculator</a><a href="what-is-destiny-matrix.html">What Is the Destiny Matrix?</a><a href="how-to-calculate.html">How to Calculate the Destiny Matrix</a><a href="22-arcana.html">22 Arcana</a><a href="destiny-matrix-vs-numerology.html">Destiny Matrix vs Numerology</a><a href="destiny-matrix-vs-tarot.html">Destiny Matrix vs Tarot</a><a href="destiny-matrix-for-beginners.html">Destiny Matrix for Beginners</a><a href="destiny-matrix-faq.html">Destiny Matrix FAQ</a><a href="destiny-matrix-meaning-of-7-chariot.html">The Chariot — Arcana 7 of the Destiny Matrix</a><a href="destiny-matrix-meaning-of-8-justice.html">Justice — Arcana 8 of the Destiny Matrix</a><a href="about.html">About</a><a href="contact.html">Contact</a><a href="privacy.html">Privacy</a><a href="terms.html">Terms of Use</a><a href="disclaimer.html">Disclaimer</a></nav>
+<p class="small">The Destiny Matrix is self-reflection, created by Natalia Ladini in 2006. Entertainment, not prediction — and not medical, financial, or legal advice.</p>
 </div></footer>
 <script src="assets/matrix.js"></script>
+
 </body>
 </html>
