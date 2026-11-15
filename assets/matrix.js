@@ -18,6 +18,10 @@ function renderChart(svgId, r, selected){
   ["A","B","C","D","E","F","G","H","I"].forEach(function(k){
     var g=svg.querySelector('[data-pos="'+k+'"]'); if(!g) return;
     var t=g.querySelector("text.num"); if(t) t.textContent=r[k];
+    // Keep the screen-reader label in sync with the visible number: without
+    // this, after Calculate the aria-label still described the example chart
+    // (e.g. F read "arcana 20, Judgement" while the circle showed 6).
+    g.setAttribute("aria-label","Position "+k+": arcana "+r[k]+", "+arcana(r[k]).name);
     g.classList.toggle("selected", k===selected);
   });
 }

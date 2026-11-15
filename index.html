@@ -253,7 +253,7 @@
     document.getElementById('centre-line').innerHTML = 'Centre arcana: <strong>' + r.D + ' · ' + centre.name + '</strong>. Day ' + r.A + ' · Month ' + r.B + ' · Year ' + r.C + '.';
     document.getElementById('pos-detail').innerHTML = DM.detailHTML(r, 'D');
     var hero = document.getElementById('hero-centre');
-    if (hero) hero.innerHTML = '<span class="num">' + r.D + '</span><span class="name">' + centre.name + ' — centre, ' + fmtDateLong(iso) + '</span>';
+    if (hero) { hero.innerHTML = '<span class="num">' + r.D + '</span><span class="name">' + centre.name + ' — centre, ' + fmtDateLong(iso) + '</span>'; hero.setAttribute('aria-label', 'Centre arcana ' + r.D + ', ' + centre.name + ', ' + fmtDateLong(iso)); }
     var tables = document.querySelectorAll('section table');
     if (tables.length) { var wrap = document.createElement('div'); wrap.innerHTML = DM.tableHTML(r); tables[0].replaceWith(wrap.firstChild); }
     var steps = document.getElementById('steps');
