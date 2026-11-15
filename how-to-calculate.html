@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>How to Calculate the Destiny Matrix by Hand — With Worked Examples</title>
+<meta name="description" content="How to calculate the Destiny Matrix by hand: one reduction rule, worked examples for 14 June 1995, 14 March 1990, and 29 November 2000, and why calculators disagree.">
+<link rel="canonical" href="https://soulocta.me/how-to-calculate.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="How to Calculate the Destiny Matrix by Hand — With Worked Examples">
+<meta property="og:description" content="How to calculate the Destiny Matrix by hand: one reduction rule, worked examples for 14 June 1995, 14 March 1990, and 29 November 2000, and why calculators disagree.">
+<meta property="og:url" content="https://soulocta.me/how-to-calculate.html">
+<meta property="og:site_name" content="Destiny Matrix Chart">
+<meta name="theme-color" content="#0b0d10">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": "How to Calculate the Destiny Matrix by Hand",
+  "description": "Calculate your Destiny Matrix chart from your birth date using one reduction rule.",
+  "step": [
+    {
+      "@type": "HowToStep",
+      "name": "Reduce any number to 1–22",
+      "text": "If a number is over 22, add its digits together and repeat until it is 22 or less. 22 stays 22 and 0 becomes 22."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Find A, B, and C",
+      "text": "A is your day, B is your month, and C is the digit sum of your year, each reduced to 22 or less."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Find the centre, D",
+      "text": "Add A, B, and C together and reduce the total to 22 or less."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Find the four corners",
+      "text": "F is A plus B, G is B plus C, H is C plus D, and I is D plus A, each reduced to 22 or less."
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How do you calculate the Destiny Matrix by hand?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "One rule: reduce any number over 22 by adding its digits until it is 22 or less. Day is A, month is B, year digit sum is C. Centre is A plus B plus C, reduced. Corners: F is A plus B, G is B plus C, H is C plus D, I is D plus A."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the formula for the Destiny Matrix centre?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "On this site the centre is reduce(A + B + C), where A is your day, B is your month, and C is your year digit sum. For 14 June 1995 that is 14 + 6 + 6 = 26, which reduces to 8. Some schools add D again; this site states its rule so you can verify every number."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why is 22 kept as 22 in the Destiny Matrix?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Because 22 is the Fool, the last of the 22 Major Arcana. Reducing it to 4 would erase an arcana from the system and change every sum it is part of. This site keeps 22 as 22 and never reduces with modulo 9, which would also break the 1 to 22 range."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I calculate the Destiny Matrix without my birth time?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. The Destiny Matrix uses only your date of birth: day, month, and year. No birth time or birthplace is needed at all. That is what makes it different from astrology, which needs an exact birth time and place to draw a chart."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I check if a Destiny Matrix calculator is correct?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Calculate one date by hand and compare. For 14 June 1995 the correct result under this site's stated rule is A 14, B 6, C 6, centre 8, F 20, G 12, H 14, I 22. If a calculator gives different numbers without explaining its rule, it is using a different method or it has a bug."
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site"><nav class="nav" aria-label="Main navigation">
+<a class="brand" href="index.html">Destiny <span>Matrix</span> Chart</a>
+<a href="index.html">Calculator</a><a href="compatibility.html">Compatibility</a><a href="portrait-zone.html">Portrait Zone</a><a href="money-line.html">Money Line</a><a href="karmic-tail.html">Karmic Tail</a><a href="2027-personal-year.html">2027 Year</a><a href="what-is-destiny-matrix.html">What Is It?</a><a href="how-to-calculate.html" class="active">How to Calculate</a><a href="22-arcana.html">22 Arcana</a><a href="about.html">About</a>
+</nav></header>
+<main id="main" class="wrap">
+
+<header class="hero"><p class="kicker">Guide · With worked examples</p>
+<h1>How to Calculate the Destiny Matrix by Hand</h1>
+<p class="lede">You need only your birth date and one rule: any number over 22 is reduced by adding its digits until it is 22 or less. 22 stays 22, and 0 becomes 22. That is the whole method — no birth time, no birthplace, no lookup table.</p></header>
+
+<h2>Step 1: Reduce any number to 1–22</h2>
+<p>Take a number. If it is 22 or less, leave it alone. If it is over 22, add its digits together. Repeat until the result is 22 or less. For example, 26 becomes 2 + 6 = 8, 36 becomes 3 + 6 = 9, and 29 becomes 2 + 9 = 11. Never reduce with modulo 9: that turns 18 into 0 and breaks the 1–22 range the system needs.</p>
+
+<h2>Step 2: Find A, B, and C from your birth date</h2>
+<p>Take the day, month, and year separately. A is your day, reduced if it is over 22. B is your month, which is never over 12, so it never needs reducing. C is your year: first add all four digits of the year, then reduce the result if it is over 22. For 1995, the digit sum is 1 + 9 + 9 + 5 = 24, which reduces to 2 + 4 = 6.</p>
+
+<h2>Step 3: Find the centre, D</h2>
+<p>Add A, B, and C together and reduce the total to 22 or less. That is the centre of your chart. For 14 June 1995: A is 14, B is 6, C is 6, so the centre is 14 + 6 + 6 = 26, which reduces to 8, Justice.</p>
+
+<h2>Step 4: Find the four corners</h2>
+<p>Each corner is the sum of its two neighbouring positions, reduced to 22 or less. Top left (F) is A + B. Top right (G) is B + C. Bottom right (H) is C + D. Bottom left (I) is D + A. For 14 June 1995: F is 14 + 6 = 20, G is 6 + 6 = 12, H is 6 + 8 = 14, and I is 8 + 14 = 22.</p>
+
+<h2>Worked example: 14 June 1995</h2>
+<div class="steps">A = day 14 → 14 (Temperance)<br>B = month 6 → 6 (Lovers)<br>C = year 1995: 1+9+9+5 = 24 → 6 (Lovers)<br>Centre D = 14 + 6 + 6 = 26 → 8 (Justice)<br>F = 14 + 6 = 20 (Judgement)<br>G = 6 + 6 = 12 (Hanged Man)<br>H = 6 + 8 = 14 (Temperance)<br>I = 8 + 14 = 22 (Fool)</div>
+
+<h2>Worked example: 14 March 1990</h2>
+<div class="steps">A = day 14 → 14<br>B = month 3 → 3<br>C = year 1990: 1+9+9+0 = 19 → 19<br>Centre D = 14 + 3 + 19 = 36 → 9 (Hermit)<br>F = 14 + 3 = 17 (Star)<br>G = 3 + 19 = 22 (Fool)<br>H = 19 + 9 = 28 → 10 (Wheel of Fortune)<br>I = 9 + 14 = 23 → 5 (Hierophant)</div>
+
+<h2>Worked example: 29 November 2000</h2>
+<div class="steps">A = day 29 → 2+9 = 11 (Strength)<br>B = month 11 → 11 (Strength)<br>C = year 2000: 2+0+0+0 = 2 → 2 (High Priestess)<br>Centre D = 11 + 11 + 2 = 24 → 6 (Lovers)</div>
+<p>Try the same date on the <a href="index.html">calculator</a> and check every number. If a number differs, the other calculator is using a different rule — ask it to show its working.</p>
+
+<h2>Why do different calculators disagree?</h2>
+<p>Two details vary between schools. The first is the centre: this site defines the centre as reduce(A + B + C). Some calculators define it as reduce(A + B + C + D), adding the centre to itself once more. The two agree on 14 June 1995 (both give 8) and on 14 March 1990 (both give 9), but they differ on 29 November 2000: this site gives 6, the other rule gives 3. Neither is wrong in an absolute sense, because the system is a tradition, not a science. What matters is that a calculator states its rule, so you can check it.</p>
+<p>The second detail is the number 22. Some calculators reduce 22 to 4 (2 + 2). This site keeps 22 as 22, the Fool, following the method in the DEV implementation and the GitHub guide. It also never reduces with modulo 9, which would break the range.</p>
+
+<h2>How long does it take to calculate by hand?</h2>
+<p>About one minute, once you know the rule. The year digit sum is the only step that takes thought, and the rest is simple addition. That is the point of the system: it is simple enough to check, which is why a calculator that hides its arithmetic should be treated with suspicion.</p>
+<section class="faq" aria-label="Frequently asked questions"><h2>Frequently asked questions</h2>
+<h3>How do you calculate the Destiny Matrix by hand?</h3>
+<p>One rule: reduce any number over 22 by adding its digits until it is 22 or less. Day is A, month is B, year digit sum is C. Centre is A plus B plus C, reduced. Corners: F is A plus B, G is B plus C, H is C plus D, I is D plus A.</p>
+<h3>What is the formula for the Destiny Matrix centre?</h3>
+<p>On this site the centre is reduce(A + B + C), where A is your day, B is your month, and C is your year digit sum. For 14 June 1995 that is 14 + 6 + 6 = 26, which reduces to 8. Some schools add D again; this site states its rule so you can verify every number.</p>
+<h3>Why is 22 kept as 22 in the Destiny Matrix?</h3>
+<p>Because 22 is the Fool, the last of the 22 Major Arcana. Reducing it to 4 would erase an arcana from the system and change every sum it is part of. This site keeps 22 as 22 and never reduces with modulo 9, which would also break the 1 to 22 range.</p>
+<h3>Can I calculate the Destiny Matrix without my birth time?</h3>
+<p>Yes. The Destiny Matrix uses only your date of birth: day, month, and year. No birth time or birthplace is needed at all. That is what makes it different from astrology, which needs an exact birth time and place to draw a chart.</p>
+<h3>How do I check if a Destiny Matrix calculator is correct?</h3>
+<p>Calculate one date by hand and compare. For 14 June 1995 the correct result under this site's stated rule is A 14, B 6, C 6, centre 8, F 20, G 12, H 14, I 22. If a calculator gives different numbers without explaining its rule, it is using a different method or it has a bug.</p>
+</section>
+</main>
+<footer class="site"><div class="wrap">
+<p><strong>Destiny Matrix Chart</strong> — a free, browser-based chart calculator. Your birth date never leaves your device: every calculation runs in your browser.</p>
+<p><a href="about.html">About</a> · <a href="contact.html">Contact</a> · <a href="privacy.html">Privacy Policy</a> · <a href="terms.html">Terms</a> · <a href="disclaimer.html">Disclaimer</a></p>
+<p class="small">The Destiny Matrix is a system of self-reflection created by Natalia Ladini in 2006. It is entertainment, not prediction, and not medical, financial, or legal advice.</p>
+</div></footer>
+<script src="assets/matrix.js"></script>
+</body>
+</html>
