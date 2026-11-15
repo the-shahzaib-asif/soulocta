@@ -47,7 +47,7 @@
     var cap = document.getElementById('arcana-card-caption');
     if (cap) cap.innerHTML = '<strong>VIII — Justice</strong>The example centre. Born on 14 June 1995? Your centre is 8.';
   }
-  function run(){
+  function run(fromUser){
     var iso = DM.parseDateInput(dobEl.value);
     var note = document.getElementById('form-note');
     if (!dobEl.value) { note.textContent = 'Enter your birth date first.'; showGhost(); return; }
@@ -108,12 +108,17 @@
       document.getElementById('open-loop').innerHTML = 'Your 2027 is ' + DM.articleFor(py) + ' ' + py + ' — ' + DM.escapeHTML(pa.name) + '. <a href="2027-personal-year.html?dob=' + iso + '">See your 2027 &rarr;</a>';
     }
     history.replaceState(null, '', DM.shareURL(iso));
-    // S2: the payoff must be WHOLE in frame — scroll the identity line
-    // itself into the middle of the viewport, desktop and mobile.
-    idText.scrollIntoView({behavior: reducedMotion ? 'auto' : 'smooth', block:'center'});
+    // v12 A2: scroll the CALCULATOR card into view (block:start + 84px
+    // scroll-margin for the sticky nav) — ONLY on a user submit, never
+    // on a ?dob= load. The old code centred the identity line, which
+    // pushed the calculator below the fold (95% below it at 360px).
+    if (fromUser) { document.getElementById('calculator').scrollIntoView({behavior: reducedMotion ? 'auto' : 'smooth', block:'start'}); }
   }
-  form.addEventListener('submit', function(e){ e.preventDefault(); run(); });
-  document.getElementById('show-example').addEventListener('click', function(){ dobEl.value = '1995-06-14'; run(); });
+  form.addEventListener('submit', function(e){ e.preventDefault(); run(true); });
+  // v12 H2: the hero mini-form feeds the same calculator.
+  var heroForm = document.getElementById('hero-form');
+  if (heroForm) { heroForm.addEventListener('submit', function(e){ e.preventDefault(); var hv = document.getElementById('hero-dob').value; if (hv) { dobEl.value = hv; } run(true); }); }
+  document.getElementById('show-example').addEventListener('click', function(){ dobEl.value = '1995-06-14'; run(true); });
   document.getElementById('copy-link').addEventListener('click', function(){
     var btn = this;
     var url = DM.shareURL(dobEl.value);
@@ -136,7 +141,7 @@
   document.getElementById('download-png').addEventListener('click', function(){ DM.downloadPNG('chart', 'destiny-matrix-chart.png'); });
   var qp = params.get('dob');
   if (qp) {
-    if (DM.validISO(qp)) { dobEl.value = qp; run(); }
-    else { document.getElementById('form-note').textContent = 'That date is not valid — enter a date between 1 January 1900 and 31 December ' + DM.maxYear + '.'; showGhost(); }
+    if (DM.validISO(qp)) { dobEl.value = qp; run(false); }
+    else { document.getElementById('form-note').textContent = 'That date is not valid — enter a date between 1 January 1900 and 31 December ' + DM.maxYear + '.'; history.replaceState(null, '', window.location.pathname); showGhost(); }
   }
 })();

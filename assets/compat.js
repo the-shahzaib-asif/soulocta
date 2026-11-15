@@ -39,17 +39,22 @@
       resetStale(); return false;
     }
     if(!r1 || !r2){ if(note) note.textContent = 'Enter both dates to calculate compatibility.'; resetStale(); return false; }
+    var iso1 = DM.parseDateInput(document.getElementById('dob1').value);
+    var iso2 = DM.parseDateInput(document.getElementById('dob2').value);
     var comb = {}; ['A','B','C','D','E','F','G','H','I'].forEach(function(k){ comb[k] = DM.reduce22(r1[k] + r2[k]); });
     currentComb = comb;
     DM.renderChart('chart2', comb, 'D');
     var c = DM.arcana(comb.D);
     document.getElementById('compat-line').textContent = 'Combined centre: ' + comb.D + ' · ' + c.name + '. Person one centre ' + r1.D + ' (' + DM.arcana(r1.D).name + '), person two centre ' + r2.D + ' (' + DM.arcana(r2.D).name + ').';
     var h = document.getElementById('compat-heading');
-    if (h) h.textContent = 'Combined chart — ' + DM.fmtDateLong(document.getElementById('dob1').value) + ' and ' + DM.fmtDateLong(document.getElementById('dob2').value);
-    if (note) note.textContent = 'Chart shown: ' + DM.fmtDateLong(document.getElementById('dob1').value) + ' and ' + DM.fmtDateLong(document.getElementById('dob2').value) + '. Both dates are calculated in your browser and never leave your device.';
+    if (h) h.textContent = 'Combined chart — ' + DM.fmtDateLong(iso1) + ' and ' + DM.fmtDateLong(iso2);
+    if (note) note.textContent = 'Chart shown: ' + DM.fmtDateLong(iso1) + ' and ' + DM.fmtDateLong(iso2) + '. Both dates are calculated in your browser and never leave your device.';
     document.getElementById('compat-detail').innerHTML = DM.detailHTML(comb, 'D');
     var tbl = document.getElementById('compat-table');
     if (tbl) { var wrap = document.createElement('div'); wrap.innerHTML = DM.tableHTML(comb); var n = wrap.firstChild; n.id = 'compat-table'; tbl.replaceWith(n); }
+    // v12 A3: scroll the result heading into view after submit.
+    var _h = document.getElementById('compat-heading');
+    if (_h) { _h.scrollIntoView({behavior:'smooth', block:'start'}); }
     return true;
   }
   document.getElementById('compat-form').addEventListener('submit', function(e){ e.preventDefault(); compute(); });

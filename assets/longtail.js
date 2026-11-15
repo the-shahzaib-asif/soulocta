@@ -28,6 +28,11 @@
         '<p>Read D, H, and I together. They describe the pattern this system says repeats until it is faced honestly.</p>';
       }
       out.innerHTML = html;
+      // v12 A3: scroll the result into view after submit.
+      out.scrollIntoView({behavior:'smooth', block:'start'});
     });
   });
+  // v12 H2: the hero mini-form feeds the same calculator.
+  var heroForm = document.querySelector('.hero-form');
+  if (heroForm) { heroForm.addEventListener('submit', function(e){ e.preventDefault(); var mainForm = document.querySelector('.lt-form'); var hv = heroForm.querySelector('.hero-dob').value; if (hv && mainForm) { mainForm.querySelector('.lt-dob').value = hv; } if (mainForm) { mainForm.dispatchEvent(new Event('submit', {cancelable:true})); } }); }
 })();

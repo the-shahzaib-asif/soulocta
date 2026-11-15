@@ -31,7 +31,7 @@ function parseDateInput(s){
   if(!s) return null; s=String(s).trim();
   if(validISO(s)) return s;
   var m=s.match(/^(\d{1,2})[\/\-. ](\d{1,2})[\/\-. ](\d{4})$/);
-  if(m){var iso=m[3]+"-"+("0"+m[2]).slice(-2)+"-"+("0"+m[1]).slice(-2); return validISO(iso)?iso:null;}
+  if(m){var d1=+m[1],d2=+m[2]; if(d2>12&&d1<=12){var _t=d1;d1=d2;d2=_t;} /* v12 C2: MM/DD/YYYY when the second number cannot be a month; DD/MM otherwise */ var iso=m[3]+"-"+("0"+d2).slice(-2)+"-"+("0"+d1).slice(-2); return validISO(iso)?iso:null;}
   var m2=s.match(/^(\d{1,2})\s+([A-Za-z]+)\s+(\d{4})$/);
   if(m2){var mi=MONTHS.findIndex(function(x){return x.toLowerCase()===m2[2].toLowerCase();});
     if(mi>=0){var iso2=m2[3]+"-"+("0"+(mi+1)).slice(-2)+"-"+("0"+m2[1]).slice(-2); return validISO(iso2)?iso2:null;}}
