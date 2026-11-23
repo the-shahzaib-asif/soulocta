@@ -59,6 +59,53 @@ GitHub Pages CANNOT set real response headers. That means, on GitHub Pages:
   branch protection on main, and use a GitHub noreply email for future
   commits (M3 — the owner's personal Gmail is in all past commits).
 
+## v12 (15 Nov 2026) — Round-5 fixes (PSYCHOLOGY-AUDIT-5, SECURITY-AUDIT-5,
+## CODE-AUDIT-4, SEO-AUDIT-V11 — all fixed in build.py, re-tested, NOT deployed)
+- Personal info: ZERO personal info anywhere on the site — no name, no city,
+  no university, no employer, no GitHub handle, in visible text, JSON-LD or
+  meta tags. Author is Organization "SoulOcta" everywhere; NO Person schema
+  anywhere. About is written entirely in brand voice. (User override, 15 Nov
+  2026: "meri sari info ha yhn — mojhy reveal ni krna".)
+- Calculator buried (A1): the mobile flex-order block is DELETED — DOM order
+  is hero -> calculator -> article on every page. 360px card offset gate:
+  < 1,200px on every tool page.
+- Payoff scroll (A2/A3/H6): scrolls the #calculator card / result into view
+  (block:start, scroll-margin-top 84px) ONLY on a user submit, never on a
+  ?dob= load. 2027.js renders NOTHING on load.
+- First screen (H2): a compact date input + Calculate button lives inside
+  the hero on index + every single-date tool page; tool-page heroes shrunk
+  (H1 max 54px, hero padding 48px, arcana image 140px).
+- ads.txt: NOT in the build and NOT in the deploy zip. The live placeholder
+  (pub-0000000000000000) survives only in the GitHub repo — DELETE it from
+  the repo (git rm ads.txt) at the next deploy; re-add only with a real
+  AdSense publisher ID.
+- _headers ships in the deploy zip (HSTS, frame-ancestors 'none', nosniff,
+  Referrer-Policy, Permissions-Policy, real CSP header). It does NOTHING on
+  GitHub Pages — it takes effect at the Cloudflare Workers cutover.
+- Cloudflare Web Analytics beacon: TURN IT OFF. Dashboard -> Websites ->
+  soulocta.me -> Analytics & Logs -> Web Analytics -> Disable. The site's
+  meta CSP (script-src 'self') blocks the beacon anyway, so leaving it on
+  only adds a blocked external request + a console violation on every page.
+  Do NOT whitelist the beacon in the CSP.
+
+## CLEAN-URL MIGRATION — QUEUED FOR THE CLOUDFLARE WORKERS CUTOVER (not v12)
+- The user is right that .html URLs look dated. Do NOT change them on GitHub
+  Pages: it has no redirects, so renaming would leave .html duplicates live
+  (or 404s) and break every Pinterest pin / TikTok link already published.
+- At the Workers cutover, in ONE deploy: (1) add a _redirects file — one 301
+  per page, /<slug>.html -> /<slug> (20 rules) + a *.html catch-all if the
+  platform supports it; (2) swap ALL internal links, canonicals, sitemap
+  <loc>s, og:url, JSON-LD @ids and llms.txt links to the clean form — never
+  run a mixed state; (3) ship _headers in the same deploy; (4) verify live:
+  .html -> 301 -> clean (curl -I per page), clean -> 200, sitemap lists
+  clean URLs only; (5) submit the new sitemap in Search Console + Bing and
+  request indexing on the 5 priority pages; (6) update every external link
+  controlled by SoulOcta the same week (Pinterest pins 1-5 link to .html
+  URLs — edit the pin links; TikTok bio stays soulocta.me).
+- Cost today is zero: 0 indexed URLs, 0 backlinks, so nothing is lost by
+  waiting for the cutover — and everything is lost by doing it wrong on
+  GitHub Pages.
+
 ## BEFORE DEPLOYMENT — do these, in order
 1. Domain is live: soulocta.me (registered 15 Nov 2026, expires 15 Nov 2027,
    GitHub Pages). SITE in build.py is already https://soulocta.me. The contact
