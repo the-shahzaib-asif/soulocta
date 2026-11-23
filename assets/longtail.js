@@ -5,10 +5,13 @@
     form.addEventListener('submit', function(e){
       e.preventDefault();
       var out = form.parentElement.querySelector('.lt-result');
-      var raw = form.querySelector('.lt-dob').value;
-      if(!raw){ out.innerHTML = '<p>Enter your birth date first.</p>'; return; }
-      var iso = DM.parseDateInput(raw);
-      if(!iso){ out.innerHTML = '<p>That date is not valid — enter a date between 1 January 1900 and 31 December ' + DM.maxYear + ' (e.g. 14 June 1995).</p>'; return; }
+      var iso = DM.dateFromSelects('lt');
+      if(!iso){
+        var d=document.getElementById('lt-day').value, m=document.getElementById('lt-month').value, y=document.getElementById('lt-year').value;
+        var msg = 'Choose a day, month and year.';
+        if(d&&m&&y){ var dim=DM.daysInMonth(+y,+m); var mn=['January','February','March','April','May','June','July','August','September','October','November','December'][+m-1]; msg = d+' '+mn+' '+y+' is not a real date — '+mn+' '+y+' has '+dim+' days.'; }
+        out.innerHTML = '<p>' + DM.escapeHTML(msg) + '</p>'; return;
+      }
       var p = iso.split('-').map(Number);
       var r = DM.calcMatrix(p[0], p[1], p[2]);
       var kind = form.getAttribute('data-kind');
@@ -28,11 +31,9 @@
         '<p>Read D, H, and I together. They describe the pattern this system says repeats until it is faced honestly.</p>';
       }
       out.innerHTML = html;
-      // v12 A3: scroll the result into view after submit.
       out.scrollIntoView({behavior:'smooth', block:'start'});
     });
   });
-  // v12 H2: the hero mini-form feeds the same calculator.
   var heroForm = document.querySelector('.hero-form');
-  if (heroForm) { heroForm.addEventListener('submit', function(e){ e.preventDefault(); var mainForm = document.querySelector('.lt-form'); var hv = heroForm.querySelector('.hero-dob').value; if (hv && mainForm) { mainForm.querySelector('.lt-dob').value = hv; } if (mainForm) { mainForm.dispatchEvent(new Event('submit', {cancelable:true})); } }); }
+  if (heroForm) { heroForm.addEventListener('submit', function(e){ e.preventDefault(); var mainForm = document.querySelector('.lt-form'); var hv = DM.dateFromSelects('hero'); if (hv && mainForm) { DM.setDateSelects('lt', hv); } if (mainForm) { mainForm.dispatchEvent(new Event('submit', {cancelable:true})); } }); }
 })();

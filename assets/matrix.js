@@ -1,5 +1,5 @@
 var ARCANA_DATA = {"1": {"name": "The Magician", "keywords": "will, skill, beginning", "short": "You start things with your own hands — an idea becomes a plan, and a plan becomes a first step."}, "2": {"name": "The High Priestess", "keywords": "intuition, patience, inner knowledge", "short": "You often know things before you can explain how — you notice what is not being said."}, "3": {"name": "The Empress", "keywords": "growth, care, abundance", "short": "You make things grow: people, projects, and rooms you walk into feel warmer with you in them."}, "4": {"name": "The Emperor", "keywords": "structure, order, authority", "short": "You are at your best when life has clear rules, honest limits, and a plan that actually holds."}, "5": {"name": "The Hierophant", "keywords": "tradition, learning, guidance", "short": "You learn best from a teacher, a method, and doing things properly — then you pass it on."}, "6": {"name": "The Lovers", "keywords": "choice, love, values", "short": "You live by what you value, and the people closest to you help you see yourself clearly."}, "7": {"name": "The Chariot", "keywords": "drive, focus, victory", "short": "You move forward by choosing one direction and staying on it, even when the road gets rough."}, "8": {"name": "Justice", "keywords": "balance, truth, fairness", "short": "You weigh things honestly — you want a fair outcome, even when it is uncomfortable."}, "9": {"name": "The Hermit", "keywords": "solitude, wisdom, search", "short": "You find your answers in quiet: a walk, a book, time alone with your own thoughts."}, "10": {"name": "Wheel of Fortune", "keywords": "change, cycles, luck", "short": "Your life moves in turns — good periods follow hard ones, and nothing stays the same for long."}, "11": {"name": "Strength", "keywords": "courage, patience, inner power", "short": "Your strength is quiet: you stay calm, keep going, and carry more than people realise."}, "12": {"name": "The Hanged Man", "keywords": "pause, new view, surrender", "short": "You are in a pause right now — pushing harder will not help, and looking at it differently will."}, "13": {"name": "Death", "keywords": "ending, change, rebirth", "short": "Something in your life has finished, and this arcana is about letting it end cleanly so something new can begin."}, "14": {"name": "Temperance", "keywords": "balance, patience, blending", "short": "You do your best work in the middle path — not too much, not too little, steady over time."}, "15": {"name": "The Devil", "keywords": "desire, attachment, shadow", "short": "You want something badly enough that it is starting to own you — and you know exactly what it is."}, "16": {"name": "The Tower", "keywords": "sudden change, truth, rebuilding", "short": "Something false in your life is collapsing, and once it falls you will finally see clearly."}, "17": {"name": "The Star", "keywords": "hope, healing, guidance", "short": "You are coming out of a hard period, and hope is returning — quietly, but for real."}, "18": {"name": "The Moon", "keywords": "dreams, fear, illusion", "short": "You feel things deeply and sense what others miss — but right now, not everything you feel is true."}, "19": {"name": "The Sun", "keywords": "joy, clarity, success", "short": "You are at your brightest when you are direct, warm, and willing to be seen."}, "20": {"name": "Judgement", "keywords": "awakening, calling, renewal", "short": "You are hearing something clearly about yourself — a truth, a call, a second chance."}, "21": {"name": "The World", "keywords": "completion, wholeness, arrival", "short": "You have come full circle: something long is finished, and you understand how the pieces fit."}, "22": {"name": "The Fool", "keywords": "freedom, new start, trust", "short": "You are standing at the start of something new, and the brave move is to take the first step."}};
-var POSITIONS_DATA = {"A": {"label": "Day", "desc": "Your day energy: character and natural talents."}, "B": {"label": "Month", "desc": "Your month energy: emotional nature and inner world."}, "C": {"label": "Year", "desc": "Your year energy: life purpose and direction."}, "D": {"label": "Centre", "desc": "Your centre: the lesson that ties the chart together."}, "E": {"label": "Centre", "desc": "The centre, repeated at the heart of the chart — the same arcana as D."}, "F": {"label": "Heritage", "desc": "Past heritage: what you bring with you."}, "G": {"label": "Talents", "desc": "Talents: what comes naturally to you."}, "H": {"label": "Material corner", "desc": "Material side: work, money and the physical world."}, "I": {"label": "Spiritual task", "desc": "Spiritual task: the quieter work of a lifetime."}};
+var POSITIONS_DATA = {"A": {"label": "Day", "desc": "Your day energy: character and natural talents."}, "B": {"label": "Month", "desc": "Your month energy: emotional nature and inner world."}, "C": {"label": "Year", "desc": "Your year energy: life purpose and direction."}, "D": {"label": "Centre — bottom point", "desc": "Your centre value, shown at the bottom point: the lesson that ties the chart together."}, "E": {"label": "Centre — heart", "desc": "The centre, repeated at the heart of the chart — the same arcana as D."}, "F": {"label": "Heritage", "desc": "Past heritage: what you bring with you."}, "G": {"label": "Talents", "desc": "Talents: what comes naturally to you."}, "H": {"label": "Material corner", "desc": "Material side: work, money and the physical world."}, "I": {"label": "Spiritual task", "desc": "Spiritual task: the quieter work of a lifetime."}};
 var ROMAN_DATA = {"1": "I", "2": "II", "3": "III", "4": "IV", "5": "V", "6": "VI", "7": "VII", "8": "VIII", "9": "IX", "10": "X", "11": "XI", "12": "XII", "13": "XIII", "14": "XIV", "15": "XV", "16": "XVI", "17": "XVII", "18": "XVIII", "19": "XIX", "20": "XX", "21": "XXI", "22": "XXII"};
 /* Destiny Matrix calculation engine — same maths as the server pages.
    reduce22: digit-sum while > 22; 0 becomes 22; 22 stays 22.
@@ -28,13 +28,16 @@ function fmtDateLong(iso){if(!validISO(iso)) throw new Error("fmtDateLong: inval
 function parseDateInput(s){
   // S13: accept what the page's own examples say — "14 June 1995",
   // "14/06/1995" and ISO "1995-06-14" — and return ISO, or null.
+  // v13: also "29 Feb 2000" (3-letter month) and compact "19950614".
   if(!s) return null; s=String(s).trim();
   if(validISO(s)) return s;
   var m=s.match(/^(\d{1,2})[\/\-. ](\d{1,2})[\/\-. ](\d{4})$/);
   if(m){var d1=+m[1],d2=+m[2]; if(d2>12&&d1<=12){var _t=d1;d1=d2;d2=_t;} /* v12 C2: MM/DD/YYYY when the second number cannot be a month; DD/MM otherwise */ var iso=m[3]+"-"+("0"+d2).slice(-2)+"-"+("0"+d1).slice(-2); return validISO(iso)?iso:null;}
   var m2=s.match(/^(\d{1,2})\s+([A-Za-z]+)\s+(\d{4})$/);
-  if(m2){var mi=MONTHS.findIndex(function(x){return x.toLowerCase()===m2[2].toLowerCase();});
+  if(m2){var _w=m2[2].toLowerCase(); var mi=MONTHS.findIndex(function(x){var _l=x.toLowerCase(); return _l===_w||_l.slice(0,3)===_w;});
     if(mi>=0){var iso2=m2[3]+"-"+("0"+(mi+1)).slice(-2)+"-"+("0"+m2[1]).slice(-2); return validISO(iso2)?iso2:null;}}
+  var m3=s.match(/^(\d{4})(\d{2})(\d{2})$/);
+  if(m3){var iso3=m3[1]+"-"+m3[2]+"-"+m3[3]; return validISO(iso3)?iso3:null;}
   return null;
 }
 function validISO(s){
@@ -126,6 +129,30 @@ function renderSharePreview(svgId, imgId){
     catch(err){pngError("Chart preview could not be made — the link still works.");}
   }, function(){pngError("Chart preview could not be made — the link still works.");});
 }
+function daysInMonth(y,m){return new Date(Date.UTC(y,m,0)).getUTCDate();}
+function dateFromSelects(prefix){
+  // Reads Day/Month/Year dropdowns (ids: prefix-day, prefix-month, prefix-year).
+  // Returns an ISO date string, or null when the combination is not a real date
+  // (e.g. 31 February) or a field is missing. Never throws on user input.
+  var d=document.getElementById(prefix+"-day"), m=document.getElementById(prefix+"-month"), y=document.getElementById(prefix+"-year");
+  if(!d||!m||!y||!d.value||!m.value||!y.value) return null;
+  var iso=y.value+"-"+("0"+m.value).slice(-2)+"-"+("0"+d.value).slice(-2);
+  return validISO(iso)?iso:null;
+}
+function setDateSelects(prefix, iso){
+  if(!validISO(iso)) return false;
+  var p=iso.split("-");
+  var d=document.getElementById(prefix+"-day"), m=document.getElementById(prefix+"-month"), y=document.getElementById(prefix+"-year");
+  if(!d||!m||!y) return false;
+  d.value=String(parseInt(p[2],10)); m.value=String(parseInt(p[1],10)); y.value=p[0];
+  return true;
+}
+function showFormError(id, msg){
+  var e=document.getElementById(id);
+  if(!e) return;
+  if(msg){ e.textContent=msg; e.classList.add("show"); e.setAttribute("role","alert"); }
+  else { e.textContent=""; e.classList.remove("show"); e.removeAttribute("role"); }
+}
 function initNav(){
   var btn=el("nav-toggle"); var links=el("nav-links");
   if(!btn||!links) return;
@@ -138,5 +165,6 @@ initNav();
 window.DestinyMatrix={maxYear:MAX_YEAR,reduce22:reduce22,sumDigits:sumDigits,calcMatrix:calcMatrix,arcana:arcana,roman:roman,parseDateInput:parseDateInput,
   articleFor:articleFor,fmtDateLong:fmtDateLong,validISO:validISO,renderChart:renderChart,renderNeutral:renderNeutral,
   detailHTML:detailHTML,tableHTML:tableHTML,escapeHTML:escapeHTML,stepsHTML:stepsHTML,
-  shareURL:shareURL,downloadPNG:downloadPNG,renderSharePreview:renderSharePreview};
+  shareURL:shareURL,downloadPNG:downloadPNG,renderSharePreview:renderSharePreview,
+  dateFromSelects:dateFromSelects,setDateSelects:setDateSelects,showFormError:showFormError,daysInMonth:daysInMonth};
 })();
