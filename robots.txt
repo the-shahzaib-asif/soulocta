@@ -22,6 +22,9 @@ Allow: /
 User-agent: Applebot
 Allow: /
 
+User-agent: Mediapartners-Google
+Allow: /
+
 User-agent: *
 Allow: /
 

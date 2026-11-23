@@ -20,6 +20,12 @@ reduce22(n): digit-sum while n > 22; 0 becomes 22; 22 stays 22. A = day, B = mon
 - https://soulocta.me/destiny-matrix-for-beginners.html — Destiny Matrix for beginners: your first chart in 10 minutes.
 - https://soulocta.me/destiny-matrix-meaning-of-7-chariot.html — The Chariot, arcana 7: drive, focus and victory in every position.
 - https://soulocta.me/destiny-matrix-meaning-of-8-justice.html — Justice, arcana 8: balance, truth and fairness in every position.
+- https://soulocta.me/destiny-matrix-meaning-of-6-lovers.html — The Lovers, arcana 6: choice, love and values in every position.
+- https://soulocta.me/destiny-matrix-meaning-of-15-devil.html — The Devil, arcana 15: desire, attachment and freedom in every position.
+- https://soulocta.me/destiny-matrix-meaning-of-19-sun.html — The Sun, arcana 19: joy, clarity and success in every position.
+- https://soulocta.me/destiny-matrix-karmic-tail-18-6-6-love-magic.html — Karmic tail 18-6-6, Love Magic: why intense love repeats, and how to choose with open eyes.
+- https://soulocta.me/destiny-matrix-karmic-tail-15-20-5-rebel.html — Karmic tail 15-20-5, the Rebel: breaking rules you did not choose, then building your own values.
+- https://soulocta.me/destiny-matrix-karmic-tail-9-9-18-magical-knowledge.html — Karmic tail 9-9-18, Magical Knowledge: solitude, intuition and hidden learning.
 - https://soulocta.me/destiny-matrix-faq.html — Destiny Matrix FAQ: every question people actually ask, answered plainly.
 - https://soulocta.me/methodology.html — Methodology: the exact maths, worked examples, and how this site differs from other calculators.
 - https://soulocta.me/about.html — About SoulOcta: a free calculator, built to be checkable.
