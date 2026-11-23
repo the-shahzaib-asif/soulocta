@@ -88,29 +88,23 @@ GitHub Pages CANNOT set real response headers. That means, on GitHub Pages:
   only adds a blocked external request + a console violation on every page.
   Do NOT whitelist the beacon in the CSP.
 
-## CLEAN-URL MIGRATION — QUEUED FOR THE CLOUDFLARE WORKERS CUTOVER (not v12)
-- The user is right that .html URLs look dated. Do NOT change them on GitHub
-  Pages: it has no redirects, so renaming would leave .html duplicates live
+## CLEAN-URL MIGRATION — CLOSED / SKIPPED (Phase 0 U4, decision 23 Nov 2026)
+- The user decided: keep .html canonicals as-is. The Workers migration was
+  cancelled permanently, so there is no cutover that could carry clean URLs;
+  GitHub Pages has no redirects, so renaming would leave .html duplicates live
   (or 404s) and break every Pinterest pin / TikTok link already published.
-- At the Workers cutover, in ONE deploy: (1) add a _redirects file — one 301
-  per page, /<slug>.html -> /<slug> (20 rules) + a *.html catch-all if the
-  platform supports it; (2) swap ALL internal links, canonicals, sitemap
-  <loc>s, og:url, JSON-LD @ids and llms.txt links to the clean form — never
-  run a mixed state; (3) ship _headers in the same deploy; (4) verify live:
-  .html -> 301 -> clean (curl -I per page), clean -> 200, sitemap lists
-  clean URLs only; (5) submit the new sitemap in Search Console + Bing and
-  request indexing on the 5 priority pages; (6) update every external link
-  controlled by SoulOcta the same week (Pinterest pins 1-5 link to .html
-  URLs — edit the pin links; TikTok bio stays soulocta.me).
-- Cost today is zero: 0 indexed URLs, 0 backlinks, so nothing is lost by
-  waiting for the cutover — and everything is lost by doing it wrong on
-  GitHub Pages.
+- Do NOT list this as pending anywhere. If clean URLs are ever revisited, it
+  needs a host with real 301 redirects and a one-deploy swap of links,
+  canonicals, sitemap, og:url, JSON-LD @ids and llms.txt — never a mixed state.
+- DECISION 23 Nov 2026 (accepted, no work): http://www.soulocta.me 301s to
+  https://www.soulocta.me/ (2 hops to apex). Do not spend cycles on Cloudflare
+  redirect rules for this.
 
 ## BEFORE DEPLOYMENT — do these, in order
 1. Domain is live: soulocta.me (registered 15 Nov 2026, expires 15 Nov 2027,
    GitHub Pages). SITE in build.py is already https://soulocta.me. The contact
-   email hello@soulocta.me has no mailbox yet — set that up before publishing
-   an email address on the contact page. ads.txt is NOT in the deploy: add it
+   email hello@soulocta.me is live via Cloudflare Email Routing (verified
+   23 Nov 2026). ads.txt is NOT in the deploy: add it
    only after AdSense gives you a real publisher ID — never with a fake ID.
 2. Host the files as static hosting (any static host; no server code needed).
    Check the site loads over HTTPS and that /sitemap.xml and /robots.txt work.

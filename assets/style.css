@@ -260,6 +260,8 @@ footer.site a{color:var(--muted)}
 .content-img figcaption{font-size:13px;color:var(--faint);margin-top:8px}
 .byline{font-size:13px;color:var(--faint);border-bottom:1px solid var(--line-soft);padding-bottom:14px}
 .guide-table{width:100%;border-collapse:collapse;margin:20px 0;font-size:15px}
+.table-scroll{overflow-x:auto;margin:20px 0}.table-scroll .guide-table{margin:0;min-width:520px}
+.pilot-badge{margin:24px 0}.pilot-badge svg{max-width:100%;height:auto;display:block}.pilot-badge figcaption{font-size:13px;color:var(--faint);margin-top:8px}
 .guide-table th,.guide-table td{border:1px solid var(--line);padding:10px 12px;text-align:left;vertical-align:top}
 .guide-table th{background:var(--surface);font-family:var(--serif)}
 .hero-poetic{font-family:var(--serif);font-size:clamp(28px,3.4vw,36px);line-height:1.2;margin:0 0 18px}
