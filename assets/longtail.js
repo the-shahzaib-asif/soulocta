@@ -29,6 +29,8 @@
         html = '<h3>' + (nm ? nm + "'s karmic tail" : 'Your karmic tail') + '</h3><p><strong>D — Centre ' + r.D + ' · ' + DM.escapeHTML(DM.arcana(r.D).name) + '</strong> — the central lesson.</p>' +
         '<p><strong>H — Material ' + r.H + ' · ' + DM.escapeHTML(DM.arcana(r.H).name) + '</strong> and <strong>I — Spiritual task ' + r.I + ' · ' + DM.escapeHTML(DM.arcana(r.I).name) + '</strong> complete the tail.</p>' +
         '<p>Read D, H, and I together. They describe the pattern this system says repeats until it is faced honestly.</p>';
+        var _tg = DM.guideURLForTail(r);
+        if (_tg) { html += '<p class="guide-link">Your karmic tail is ' + r.D + '-' + r.H + '-' + r.I + ' — <a href="' + _tg.url + '">Read the ' + DM.escapeHTML(_tg.label) + ' guide &rarr;</a></p>'; }
       }
       out.innerHTML = html;
       out.scrollIntoView({behavior:'smooth', block:'start'});

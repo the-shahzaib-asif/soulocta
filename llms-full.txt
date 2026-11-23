@@ -26,6 +26,18 @@ reduce22(n): digit-sum while n > 22; 0 becomes 22; 22 stays 22. A = day, B = mon
 - https://soulocta.me/destiny-matrix-karmic-tail-18-6-6-love-magic.html — Karmic tail 18-6-6, Love Magic: why intense love repeats, and how to choose with open eyes.
 - https://soulocta.me/destiny-matrix-karmic-tail-15-20-5-rebel.html — Karmic tail 15-20-5, the Rebel: breaking rules you did not choose, then building your own values.
 - https://soulocta.me/destiny-matrix-karmic-tail-9-9-18-magical-knowledge.html — Karmic tail 9-9-18, Magical Knowledge: solitude, intuition and hidden learning.
+- https://soulocta.me/destiny-matrix-meaning-of-1-magician.html — The Magician, arcana 1: will, skill and beginning in every position.
+- https://soulocta.me/destiny-matrix-meaning-of-3-empress.html — The Empress, arcana 3: growth, care and abundance in every position.
+- https://soulocta.me/destiny-matrix-meaning-of-4-emperor.html — The Emperor, arcana 4: structure, order and authority in every position.
+- https://soulocta.me/destiny-matrix-meaning-of-10-wheel-of-fortune.html — The Wheel of Fortune, arcana 10: change, cycles and luck in every position.
+- https://soulocta.me/destiny-matrix-meaning-of-11-strength.html — Strength, arcana 11: courage, patience and inner power in every position.
+- https://soulocta.me/destiny-matrix-meaning-of-21-world.html — The World, arcana 21: completion, wholeness and arrival in every position.
+- https://soulocta.me/destiny-matrix-karmic-tail-15-8-11-physical-suffering.html — Karmic tail 15-8-11, Physical Suffering: when the body carries what the mind will not face.
+- https://soulocta.me/destiny-matrix-karmic-tail-21-4-10-oppressed-soul.html — Karmic tail 21-4-10, Oppressed Soul: a finished life that still feels like a cage.
+- https://soulocta.me/destiny-matrix-karmic-tail-12-19-7-warrior.html — Karmic tail 12-19-7, Warrior: fighting for others, and learning when to rest.
+- https://soulocta.me/destiny-matrix-karmic-tail-6-17-11-wasted-talent.html — Karmic tail 6-17-11, Wasted Talent: a gift kept hidden, and how to show it.
+- https://soulocta.me/destiny-matrix-arcana-meanings.html — All 22 arcana meanings: every Major Arcana in the Destiny Matrix, with links to the full guides.
+- https://soulocta.me/destiny-matrix-karmic-tails.html — All karmic tail guides: every tail with a full guide on this site, and how a tail is calculated.
 - https://soulocta.me/destiny-matrix-faq.html — Destiny Matrix FAQ: every question people actually ask, answered plainly.
 - https://soulocta.me/methodology.html — Methodology: the exact maths, worked examples, and how this site differs from other calculators.
 - https://soulocta.me/about.html — About SoulOcta: a free calculator, built to be checkable.
