@@ -3,6 +3,7 @@
   var DM = window.DestinyMatrix;
   DM.initDatePicker('hero');
   DM.initDatePicker('lt');
+  DM.syncDatePickers('hero', 'lt'); /* v16: hero + main pickers stay in sync live */
   document.querySelectorAll('.lt-form').forEach(function(form){
     form.addEventListener('submit', function(e){
       e.preventDefault();

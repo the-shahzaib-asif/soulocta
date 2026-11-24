@@ -283,13 +283,40 @@ footer.site a{color:var(--muted)}
 .premium-card h2{margin-top:0}
 .premium-card ul{margin:14px 0}
 .premium-card .btn-accent{display:inline-block}
-/* v15: print — a clean 1-page chart sheet via window.print(), zero server cost */
+/* v16: print — a clean 1-page chart sheet via window.print(), zero server cost.
+   v15 printed 4 pages / 12.2 MB because only a few blocks were hidden: the
+   long "nine positions" prose, editorial sections and FAQ-adjacent sections
+   still printed. v16 hides EVERYTHING except the chart sheet itself:
+   the hero octagram (chart only — form, arcana image and copy hidden),
+   the result band (centre line + position detail), and the adjacent
+   nine-positions table section. @page A4 with 10mm margins, compact type,
+   no action buttons, no share card, no sponsored slot. */
 @media print{
-  header.site,footer.site,.hero,.btn-row,#sponsored-slot,#premium-card,.pull-quote-sec,.maths-note,.faq,.skip,.noscript-note,.calc-confirm{display:none !important}
-  body{background:var(--card)}
-  .result-band{margin:0;padding:0;border:0}
-  section{margin:24px 0}
+  @page{size:A4;margin:10mm}
+  header.site,footer.site,.skip,.noscript-note{display:none !important}
+  body{font-size:11pt;line-height:1.35}
+  main{max-width:none !important;padding:0 !important}
+  main>*{display:none !important}
+  main>.hero,main>#result-section,main>#result-section+section{display:block !important}
+  .hero-grid{display:block !important}
+  .hero .hero-copy,.hero .arcana-card,.hero .example-label,.hero .chart-legend{display:none !important}
+  .hero .hero-chart{margin:0;text-align:center;overflow:visible}
+  .hero .hero-chart svg{width:180px !important;max-width:180px;height:auto;margin:0 auto}
+  .result-band{margin:0;padding:0;border:0;background:none}
+  #result-section h2{font-size:15pt;margin:4px 0 2px}
+  #centre-line{font-size:12pt;margin:0 0 4px}
+  #pos-detail{padding:6px 10px;margin:0 0 6px;font-size:10.5pt}
+  #pos-detail h3{margin:0 0 2px;font-size:12pt}
+  #pos-detail p{margin:1px 0}
+  #share-block .action-bar,#share-block .share-card,#share-block #share-note,#share-block #png-error,#share-block #open-loop,#share-block .calc-confirm,#sponsored-slot{display:none !important}
+  #result-section+section{margin:0;padding:0;border:0}
+  #result-section+section h2{font-size:12pt;margin:6px 0 2px}
+  #result-section+section .sec-kicker{margin:0}
+  .pos-table{font-size:10pt}
+  .pos-row{break-inside:avoid;padding:2px;gap:10px}
+  .pos-row .pos-letter{font-size:13pt}
+  .pos-row .pos-head{font-size:10.5pt;line-height:1.25}
+  .pos-row .pos-kw{font-size:9.5pt;line-height:1.25}
   a{color:var(--ink);text-decoration:none}
   .card{border:1px solid var(--hairline)}
-  .pos-row{break-inside:avoid}
 }

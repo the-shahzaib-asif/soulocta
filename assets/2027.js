@@ -3,6 +3,7 @@
   var DM = window.DestinyMatrix;
   DM.initDatePicker('hero-py');
   DM.initDatePicker('py');
+  DM.syncDatePickers('hero-py', 'py'); /* v16: hero + main pickers stay in sync live */
   function invalidMessage(){
     var d=document.getElementById('py-day').value, m=document.getElementById('py-month').value, y=document.getElementById('py-year').value;
     if(!d||!m||!y) return 'Choose a day, month and year.';
@@ -26,7 +27,7 @@
   var qp = new URLSearchParams(window.location.search);
   var dob = qp.get('dob');
   if (dob) {
-    if (DM.validISO(dob)) { DM.setDateSelects('py', dob); show(false); document.getElementById('py-form').scrollIntoView({behavior:'auto', block:'start'}); }
+    if (DM.validISO(dob)) { DM.setDateSelects('py', dob); DM.setDateSelects('hero-py', dob); show(false); document.getElementById('py-form').scrollIntoView({behavior:'auto', block:'start'}); }
     else { document.getElementById('py-result').innerHTML = '<p>That date is not valid — enter a date between 1 January 1900 and 31 December ' + DM.maxYear + '.</p>'; }
   }
 })();
