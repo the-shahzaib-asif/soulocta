@@ -231,6 +231,31 @@ function setDateSelects(prefix, iso){
   syncDayOptions(prefix);
   return true;
 }
+/* v16: live two-way sync between a hero picker and a main picker on the
+   same page (2027 + long-tail tool pages). Changing any Day/Month/Year
+   select in either group copies the full date to the other group, so
+   Calculate always uses the date the visitor last touched, in both
+   places. Feb/leap clamping is honoured: if the copy clamps the day
+   (31 Jan -> Feb -> 28), the clamped date is copied back to the source,
+   so the two pickers can never disagree. Guard flag stops ping-pong. */
+function syncDatePickers(a, b){
+  var guard=false;
+  function copy(from, to){
+    if(guard) return;
+    var iso=dateFromSelects(from); if(!iso) return;
+    guard=true;
+    setDateSelects(to, iso);
+    var back=dateFromSelects(to);
+    if(back && back!==iso) setDateSelects(from, back);
+    guard=false;
+  }
+  [a,b].forEach(function(p){
+    ["-day","-month","-year"].forEach(function(s){
+      var e=document.getElementById(p+s);
+      if(e) e.addEventListener("change", function(){ copy(p, p===a?b:a); });
+    });
+  });
+}
 function showFormError(id, msg){
   var e=document.getElementById(id);
   if(!e) return;
@@ -251,6 +276,6 @@ window.DestinyMatrix={maxYear:MAX_YEAR,reduce22:reduce22,sumDigits:sumDigits,cal
   detailHTML:detailHTML,tableHTML:tableHTML,escapeHTML:escapeHTML,stepsHTML:stepsHTML,
   shareURL:shareURL,downloadPNG:downloadPNG,renderSharePreview:renderSharePreview,
   downloadChartCard:downloadChartCard,chartCardCanvas:chartCardCanvas,
-  dateFromSelects:dateFromSelects,setDateSelects:setDateSelects,showFormError:showFormError,daysInMonth:daysInMonth,guideURLForArcana:guideURLForArcana,guideURLForTail:guideURLForTail,
+  dateFromSelects:dateFromSelects,setDateSelects:setDateSelects,syncDatePickers:syncDatePickers,showFormError:showFormError,daysInMonth:daysInMonth,guideURLForArcana:guideURLForArcana,guideURLForTail:guideURLForTail,
   initDatePicker:initDatePicker,syncDayOptions:syncDayOptions,premiumURL:PREMIUM_CTA_URL};
 })();
