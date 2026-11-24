@@ -3,6 +3,7 @@
   var DM = window.DestinyMatrix;
   var reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   var form = document.getElementById('calc-form');
+  DM.initDatePicker('dob');
   var nameEl = document.getElementById('pname');
   var params = new URLSearchParams(window.location.search);
   var current = null;
@@ -32,7 +33,7 @@
     var badge = document.getElementById('result-badge'); if (badge) badge.textContent = 'Example — 14 June 1995';
     var idText = document.getElementById('identity-text'); if (idText) idText.hidden = true;
     var hero = document.getElementById('hero-centre');
-    if (hero) { hero.innerHTML = '<span class="name">Your centre will appear here — enter your date below.</span>'; hero.setAttribute('aria-label', 'Your centre arcana appears here after you calculate'); }
+    if (hero) { hero.innerHTML = '<span class="name">Your centre will appear here — choose your birth date in the form above, then press Calculate.</span>'; hero.setAttribute('aria-label', 'Your centre arcana appears here after you calculate'); }
     document.getElementById('centre-line').textContent = 'Centre 8 · Day 14 · Month 6 · Year 6 — 14 June 1995 (example).';
     document.getElementById('pos-detail').innerHTML = DM.detailHTML(EXAMPLE, 'D');
     var tbl = document.getElementById('pos-table');
@@ -41,6 +42,7 @@
     if (steps) steps.innerHTML = DM.stepsHTML(1995, 6, 14, EXAMPLE);
     var pqs = document.getElementById('pull-quote-sec'); if (pqs) pqs.hidden = true;
     var share = document.getElementById('share-block'); if (share) share.hidden = true;
+    var cf0 = document.getElementById('calc-confirm'); if (cf0) cf0.hidden = true;
     var ol = document.getElementById('open-loop'); if (ol) ol.textContent = '';
     var img = document.getElementById('arcana-card-img');
     if (img) { img.src = 'assets/arcana-justice.webp'; img.alt = 'VIII — Justice, the centre arcana of the example chart'; }
@@ -72,12 +74,10 @@
     document.getElementById('centre-line').textContent = 'Centre ' + r.D + ' · Day ' + r.A + ' · Month ' + r.B + ' · Year ' + r.C + ' — ' + DM.fmtDateLong(iso);
     document.getElementById('pos-detail').innerHTML = DM.detailHTML(r, 'D');
     var hero = document.getElementById('hero-centre');
-    if (hero) { var isExample = (iso === '1995-06-14');
-      hero.innerHTML = (isExample ? '<span class="example-tag">Example</span>' : '') + '<span class="num">' + DM.escapeHTML(DM.roman(r.D)) + '</span> <span class="name">' + DM.escapeHTML(centre.name) + ' — centre, ' + DM.escapeHTML(DM.fmtDateLong(iso)) + '</span>';
-      hero.setAttribute('aria-label', (isExample ? 'Example centre arcana' : 'Centre arcana ' + r.D + ', ' + centre.name + ', ' + DM.fmtDateLong(iso))); }
-    if (note) { note.textContent = (iso === '1995-06-14')
-      ? 'Example shown: 14 June 1995. Change the date and press Calculate. Or open a link someone shared with you.'
-      : 'Chart shown: ' + DM.fmtDateLong(iso) + '. Change the date and press Calculate. Or open a link someone shared with you.'; }
+    if (hero) {
+      hero.innerHTML = '<span class="num">' + DM.escapeHTML(DM.roman(r.D)) + '</span> <span class="name">' + DM.escapeHTML(centre.name) + ' — centre, ' + DM.escapeHTML(DM.fmtDateLong(iso)) + '</span>';
+      hero.setAttribute('aria-label', 'Centre arcana ' + r.D + ', ' + centre.name + ', ' + DM.fmtDateLong(iso)); }
+    if (note) { note.textContent = 'Chart shown: ' + DM.fmtDateLong(iso) + '. Change the date and press Calculate. Or open a link someone shared with you.'; }
     var tbl = document.getElementById('pos-table');
     if (tbl) { var wrap = document.createElement('div'); wrap.innerHTML = DM.tableHTML(r); var n = wrap.firstChild; n.id = 'pos-table'; tbl.replaceWith(n); }
     var steps = document.getElementById('steps');
@@ -102,8 +102,10 @@
       document.getElementById('open-loop').innerHTML = 'Your 2027 is ' + DM.articleFor(py) + ' ' + py + ' — ' + DM.escapeHTML(pa.name) + '. <a href="2027-personal-year.html?dob=' + iso + '">See your 2027 &rarr;</a>';
     }
     history.replaceState(null, '', DM.shareURL(iso));
+    var cf = document.getElementById('calc-confirm');
+    if (cf) { cf.hidden = false; cf.textContent = '✓ Your personal chart is ready — ' + DM.fmtDateLong(iso) + '.'; }
     var badge = document.getElementById('result-badge');
-    if (badge) badge.textContent = 'Your Destiny Matrix Chart · ' + DM.fmtDateLong(iso);
+    if (badge) badge.textContent = 'YOUR PERSONAL CHART · ' + DM.fmtDateLong(iso).toUpperCase();
     var rs = document.getElementById('result-section');
     if (rs) { rs.classList.remove('result-flash'); void rs.offsetWidth; rs.classList.add('result-flash'); }
     if (fromUser) { rs.scrollIntoView({behavior: reducedMotion ? 'auto' : 'smooth', block:'start'}); }
@@ -114,7 +116,7 @@
     var btn = this;
     var url = DM.shareURL(currentISO || DM.dateFromSelects('dob') || '1995-06-14');
     var shareNote = document.getElementById('share-note');
-    function done(){ btn.textContent = 'Copied ✓'; if (shareNote) shareNote.textContent = 'Link copied: ' + url; setTimeout(function(){ btn.textContent = 'Copy your chart link'; }, 2000); }
+    function done(){ btn.textContent = 'Copied ✓'; if (shareNote) shareNote.textContent = 'Link copied: ' + url; setTimeout(function(){ btn.textContent = 'Copy Share Link'; }, 2000); }
     function fallback(){
       if (shareNote) { shareNote.textContent = 'Copy this link: '; }
       var inp = document.createElement('input');
@@ -130,6 +132,11 @@
     else { fallback(); }
   });
   document.getElementById('download-png').addEventListener('click', function(){ DM.downloadPNG('chart', 'destiny-matrix-chart.png'); });
+  document.getElementById('download-card').addEventListener('click', function(){
+    if(!current || !currentISO) return;
+    DM.downloadChartCard('chart', {name: nameEl.value.trim(), dateLabel: DM.fmtDateLong(currentISO), r: current}, 'destiny-matrix-chart-card.png');
+  });
+  document.getElementById('print-summary').addEventListener('click', function(){ window.print(); });
   var qp = params.get('dob');
   if (qp) {
     if (DM.validISO(qp)) { DM.setDateSelects('dob', qp); run(false); }

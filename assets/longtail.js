@@ -1,6 +1,8 @@
 
 (function(){
   var DM = window.DestinyMatrix;
+  DM.initDatePicker('hero');
+  DM.initDatePicker('lt');
   document.querySelectorAll('.lt-form').forEach(function(form){
     form.addEventListener('submit', function(e){
       e.preventDefault();

@@ -31,13 +31,55 @@
      The frame-buster below helps same-origin/older browsers only. -->
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; font-src 'self'; connect-src 'none'; object-src 'none'; worker-src 'none'; base-uri 'self'; form-action 'none'; upgrade-insecure-requests">
 <meta name="referrer" content="no-referrer">
-<script src="assets/framebuster.js"></script>
+<script src="assets/framebuster.js?v=d207868e"></script>
 <link rel="preload" href="assets/fonts/fraunces-500-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="assets/fonts/fraunces-500-italic.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
 <link rel="manifest" href="site.webmanifest">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23efe6d2'/%3E%3Cpolygon points='32,6 58,32 32,58 6,32' fill='none' stroke='%23a04d28' stroke-width='3'/%3E%3Cpolygon points='14,14 50,14 50,50 14,50' fill='none' stroke='%238f7422' stroke-width='2'/%3E%3Ctext x='32' y='40' font-size='22' text-anchor='middle' fill='%23a04d28' font-family='Arial,sans-serif' font-weight='bold'%3E8%3C/text%3E%3C/svg%3E">
-<link rel="stylesheet" href="assets/style.css">
+<link rel="stylesheet" href="assets/style.css?v=c7982750">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://soulocta.me/#org",
+      "name": "SoulOcta",
+      "url": "https://soulocta.me/",
+      "logo": "https://soulocta.me/assets/apple-touch-icon.png",
+      "email": "hello@soulocta.me",
+      "sameAs": [
+        "https://www.pinterest.com/soulocta/"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://soulocta.me/#website",
+      "name": "SoulOcta",
+      "url": "https://soulocta.me/",
+      "inLanguage": "en-GB",
+      "publisher": {
+        "@id": "https://soulocta.me/#org"
+      }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://soulocta.me/index.html#webpage",
+      "name": "Destiny Matrix Calculator — Free Chart by Date of Birth",
+      "url": "https://soulocta.me/index.html",
+      "description": "Free Destiny Matrix calculator — enter your birth date and get your full 22-arcana chart: centre, money line, portrait zone and 2027 year.",
+      "inLanguage": "en-GB",
+      "isPartOf": {
+        "@id": "https://soulocta.me/#website"
+      },
+      "about": {
+        "@id": "https://soulocta.me/#org"
+      }
+    }
+  ]
+}
+</script>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -95,7 +137,7 @@
       "name": "Can I share my chart with someone?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Yes — press Copy your chart link and send it to anyone. The link carries only the birth date, for example ?dob=1995-06-14."
+        "text": "Yes — press Copy Share Link in the action bar under your chart and send it to anyone. The link carries only the birth date, for example ?dob=1995-06-14."
       }
     },
     {
@@ -183,7 +225,7 @@
 <p class="hero-poetic">Your birth date <em>knows</em> you.</p>
 <p class="lede">Find the number that explains why you keep doing the same thing.</p>
 <p class="muted">Free, in ten seconds &mdash; every step shown so you can check it yourself.</p>
-<ul class="trust-badges"><li>100% Free</li><li>Instant Calculation</li><li>Private (Runs Locally in Your Browser)</li></ul>
+<ul class="trust-badges"><li>100% Free</li><li>Instant Calculation</li><li>Private</li></ul>
 <section class="card" id="calculator" aria-label="Destiny Matrix calculator">
 <p class="sec-kicker">01 &middot; Enter your birth date</p>
 <form id="calc-form">
@@ -207,7 +249,7 @@
 <img id="arcana-card-img" src="assets/arcana-justice.webp" width="600" height="900" alt="VIII — Justice, the centre arcana of the example chart">
 <figcaption id="arcana-card-caption"><strong>VIII — Justice</strong>The example centre. Born on 14 June 1995? Your centre is 8.</figcaption>
 </figure>
-<p class="hero-centre" id="hero-centre" aria-label="Your centre arcana appears here after you calculate"><span class="name">Your centre will appear here &mdash; enter your date below.</span></p>
+<p class="hero-centre" id="hero-centre" aria-label="Your centre arcana appears here after you calculate"><span class="name">Your centre will appear here &mdash; choose your birth date in the form above, then press Calculate.</span></p>
 <p class="identity-line" id="identity-text" hidden></p>
 </div>
 <div class="hero-chart">
@@ -226,9 +268,9 @@
 <line x1="299" y1="299" x2="200" y2="340" stroke="#c9b78f" stroke-width="0.6" opacity="0.5"></line>
 <line x1="200" y1="340" x2="101" y2="299" stroke="#c9b78f" stroke-width="0.6" opacity="0.5"></line>
 <line x1="101" y1="299" x2="60" y2="200" stroke="#c9b78f" stroke-width="0.6" opacity="0.5"></line>
-<g class="pos-btn" data-pos="A" tabindex="0" role="button" aria-label="Position A: example arcana 14, Temperance"><circle class="hit" cx="60" cy="200" r="45" fill="transparent"></circle><circle cx="60" cy="200" r="26"></circle><text class="num" x="60" y="206" text-anchor="middle" font-size="17">14</text><text class="pos-label" x="60" y="158" text-anchor="middle">A · Day</text></g><g class="pos-btn" data-pos="B" tabindex="0" role="button" aria-label="Position B: example arcana 6, The Lovers"><circle class="hit" cx="200" cy="60" r="45" fill="transparent"></circle><circle cx="200" cy="60" r="26"></circle><text class="num" x="200" y="66" text-anchor="middle" font-size="17">6</text><text class="pos-label" x="200" y="18" text-anchor="middle">B · Month</text></g><g class="pos-btn" data-pos="C" tabindex="0" role="button" aria-label="Position C: example arcana 6, The Lovers"><circle class="hit" cx="340" cy="200" r="45" fill="transparent"></circle><circle cx="340" cy="200" r="26"></circle><text class="num" x="340" y="206" text-anchor="middle" font-size="17">6</text><text class="pos-label" x="340" y="158" text-anchor="middle">C · Year</text></g><g class="pos-btn" data-pos="D" tabindex="0" role="button" aria-label="Position D: example arcana 8, Justice"><circle class="hit" cx="200" cy="340" r="45" fill="transparent"></circle><circle cx="200" cy="340" r="26"></circle><text class="num" x="200" y="346" text-anchor="middle" font-size="17">8</text><text class="pos-label" x="200" y="298" text-anchor="middle">D · Centre — bottom</text></g>
-<g class="pos-btn" data-pos="F" tabindex="0" role="button" aria-label="Position F: example arcana 20, Judgement"><circle class="hit" cx="101" cy="101" r="45" fill="transparent"></circle><circle cx="101" cy="101" r="24"></circle><text class="num" x="101" y="107" text-anchor="middle" font-size="17">20</text><text class="pos-label" x="101" y="61" text-anchor="middle">F · Heritage</text></g><g class="pos-btn" data-pos="G" tabindex="0" role="button" aria-label="Position G: example arcana 12, The Hanged Man"><circle class="hit" cx="299" cy="101" r="45" fill="transparent"></circle><circle cx="299" cy="101" r="24"></circle><text class="num" x="299" y="107" text-anchor="middle" font-size="17">12</text><text class="pos-label" x="299" y="61" text-anchor="middle">G · Talents</text></g><g class="pos-btn" data-pos="H" tabindex="0" role="button" aria-label="Position H: example arcana 14, Temperance"><circle class="hit" cx="299" cy="299" r="45" fill="transparent"></circle><circle cx="299" cy="299" r="24"></circle><text class="num" x="299" y="305" text-anchor="middle" font-size="17">14</text><text class="pos-label" x="299" y="259" text-anchor="middle">H · Material corner</text></g><g class="pos-btn" data-pos="I" tabindex="0" role="button" aria-label="Position I: example arcana 22, The Fool"><circle class="hit" cx="101" cy="299" r="45" fill="transparent"></circle><circle cx="101" cy="299" r="24"></circle><text class="num" x="101" y="305" text-anchor="middle" font-size="17">22</text><text class="pos-label" x="101" y="259" text-anchor="middle">I · Spiritual task</text></g>
-<g class="pos-btn" data-pos="E" tabindex="0" role="button" aria-label="Position E: example arcana 8, Justice"><circle class="hit" cx="200" cy="200" r="45" fill="transparent"></circle><circle cx="200" cy="200" r="32"></circle><text class="num" x="200" y="206" text-anchor="middle" font-size="17">8</text><text class="pos-label" x="200" y="152" text-anchor="middle">E · Centre — heart</text></g>
+<g class="pos-btn" data-pos="A" tabindex="0" role="button" aria-label="Position A: example arcana 14, Temperance"><circle class="hit" cx="60" cy="200" r="32" fill="transparent"></circle><circle cx="60" cy="200" r="26"></circle><text class="num" x="60" y="206" text-anchor="middle" font-size="17">14</text><text class="pos-label" x="60" y="156" text-anchor="middle">A · Day</text></g><g class="pos-btn" data-pos="B" tabindex="0" role="button" aria-label="Position B: example arcana 6, The Lovers"><circle class="hit" cx="200" cy="60" r="32" fill="transparent"></circle><circle cx="200" cy="60" r="26"></circle><text class="num" x="200" y="66" text-anchor="middle" font-size="17">6</text><text class="pos-label" x="200" y="16" text-anchor="middle">B · Month</text></g><g class="pos-btn" data-pos="C" tabindex="0" role="button" aria-label="Position C: example arcana 6, The Lovers"><circle class="hit" cx="340" cy="200" r="32" fill="transparent"></circle><circle cx="340" cy="200" r="26"></circle><text class="num" x="340" y="206" text-anchor="middle" font-size="17">6</text><text class="pos-label" x="340" y="156" text-anchor="middle">C · Year</text></g><g class="pos-btn" data-pos="D" tabindex="0" role="button" aria-label="Position D: example arcana 8, Justice"><circle class="hit" cx="200" cy="340" r="32" fill="transparent"></circle><circle cx="200" cy="340" r="26"></circle><text class="num" x="200" y="346" text-anchor="middle" font-size="17">8</text><text class="pos-label" x="200" y="296" text-anchor="middle">D · Centre — bottom</text></g>
+<g class="pos-btn" data-pos="F" tabindex="0" role="button" aria-label="Position F: example arcana 20, Judgement"><circle class="hit" cx="101" cy="101" r="30" fill="transparent"></circle><circle cx="101" cy="101" r="24"></circle><text class="num" x="101" y="107" text-anchor="middle" font-size="17">20</text><text class="pos-label" x="101" y="59" text-anchor="middle">F · Heritage</text></g><g class="pos-btn" data-pos="G" tabindex="0" role="button" aria-label="Position G: example arcana 12, The Hanged Man"><circle class="hit" cx="299" cy="101" r="30" fill="transparent"></circle><circle cx="299" cy="101" r="24"></circle><text class="num" x="299" y="107" text-anchor="middle" font-size="17">12</text><text class="pos-label" x="299" y="59" text-anchor="middle">G · Talents</text></g><g class="pos-btn" data-pos="H" tabindex="0" role="button" aria-label="Position H: example arcana 14, Temperance"><circle class="hit" cx="299" cy="299" r="30" fill="transparent"></circle><circle cx="299" cy="299" r="24"></circle><text class="num" x="299" y="305" text-anchor="middle" font-size="17">14</text><text class="pos-label" x="299" y="257" text-anchor="middle">H · Material corner</text></g><g class="pos-btn" data-pos="I" tabindex="0" role="button" aria-label="Position I: example arcana 22, The Fool"><circle class="hit" cx="101" cy="299" r="30" fill="transparent"></circle><circle cx="101" cy="299" r="24"></circle><text class="num" x="101" y="305" text-anchor="middle" font-size="17">22</text><text class="pos-label" x="101" y="257" text-anchor="middle">I · Spiritual task</text></g>
+<g class="pos-btn" data-pos="E" tabindex="0" role="button" aria-label="Position E: example arcana 8, Justice"><circle class="hit" cx="200" cy="200" r="38" fill="transparent"></circle><circle cx="200" cy="200" r="32"></circle><text class="num" x="200" y="206" text-anchor="middle" font-size="17">8</text><text class="pos-label" x="200" y="150" text-anchor="middle">E · Centre — heart</text></g>
 </svg>
 <p class="chart-legend">A day &middot; B month &middot; C year &middot; D centre (bottom) &middot; E centre (heart) &middot; F heritage &middot; G talents &middot; H material corner &middot; I spiritual task &mdash; tap any number.</p>
 </div>
@@ -243,6 +285,7 @@
 <h3>D &mdash; 8 &middot; Justice</h3><p class="muted">Your centre value, shown at the bottom point: the lesson that ties the chart together.</p><p>You weigh things honestly &mdash; you want a fair outcome, even when it is uncomfortable.</p>
 </div>
 <div id="share-block" hidden>
+<p class="calc-confirm" id="calc-confirm" hidden></p>
 <p class="share-line">Share your number.</p>
 <div class="share-card" id="share-card">
 <p class="share-card-num" id="share-card-num">VII</p>
@@ -250,14 +293,25 @@
 <p class="share-card-line" id="share-card-line"></p>
 <p class="share-card-who" id="share-card-who">soulocta.me</p>
 </div>
-<div class="btn-row">
-<button type="button" class="btn-accent" id="copy-link">Copy your chart link</button>
+<div class="btn-row action-bar" id="action-bar">
+<button type="button" class="btn-accent" id="copy-link">Copy Share Link</button>
+<button type="button" class="btn-ghost" id="download-card">Download Story Card (PNG)</button>
+<button type="button" class="btn-ghost" id="print-summary">Save / Print Free Summary (PDF)</button>
 <button type="button" class="btn-text" id="download-png">Download chart as PNG</button>
 </div>
 <p class="small muted" id="share-note"></p>
 <p class="small" id="png-error" hidden></p>
 <p class="open-loop" id="open-loop"></p>
 </div>
+<!-- v15: Recommended Deep Reading slot — feature-flagged OFF (data-enabled="false").
+     No sponsor is configured, so no anchor and no ad is rendered; the slot
+     stays hidden until live traffic arrives and a real $25+ affiliate or
+     $4.99 PDF offer is chosen. When enabled, the anchor must carry
+     rel="sponsored noopener" and a clear "sponsored" label. -->
+<aside id="sponsored-slot" hidden data-enabled="false" aria-label="Recommended reading">
+<p class="small"><strong>Recommended reading</strong> — sponsored</p>
+<p class="small muted">This slot is off until a sponsor is chosen. No ad is shown and nothing is tracked.</p>
+</aside>
 </section>
 
 <section>
@@ -273,6 +327,19 @@
 <div class="pos-row"><div class="pos-letter">I</div><div><div class="pos-head">Spiritual task — <span class="num">XXII</span> · The Fool</div><div class="pos-kw">freedom, new start, trust</div></div><div class="pos-head"><span class="num">22</span></div></div>
 <div class="pos-row"><div class="pos-letter">E</div><div><div class="pos-head">Centre — heart — <span class="num">VIII</span> · Justice</div><div class="pos-kw">balance, truth, fairness</div></div><div class="pos-head"><span class="num">8</span></div></div>
 </div></div></div>
+</section>
+
+<section class="premium-card" id="premium-card" aria-label="Go deeper — full personalized reading">
+<h2>Go Deeper: Full Personalized Reading</h2>
+<p>Everything above is 100% free &mdash; your full chart, all 9 positions, and every guide on this site. The optional Full Reading goes further:</p>
+<ul>
+<li>Full 20-page personalized PDF report</li>
+<li>Money Line action plan</li>
+<li>Love Compatibility deep reading</li>
+<li>Karmic Tail action plan</li>
+<li>2027 Forecast</li>
+</ul>
+<p class="premium-soon"><strong>Full PDF Dossier &mdash; Coming Soon.</strong> <a href="mailto:hello@soulocta.me?subject=Full%20PDF%20Dossier%20%E2%80%94%20notify%20me">Notify me via hello@soulocta.me</a></p>
 </section>
 
 <section class="pull-quote-sec" id="pull-quote-sec" hidden>
@@ -307,7 +374,7 @@
 <details><summary>Is the Destiny Matrix accurate or scientific?</summary>
 <p>No — it is not scientific, and no study has tested it. Treat it as entertainment and self-reflection, like tarot or numerology.</p></details>
 <details><summary>Can I share my chart with someone?</summary>
-<p>Yes — press Copy your chart link and send it to anyone. The link carries only the birth date, for example ?dob=1995-06-14.</p></details>
+<p>Yes — press Copy Share Link in the action bar under your chart and send it to anyone. The link carries only the birth date, for example ?dob=1995-06-14.</p></details>
 <details><summary>Why do different calculators give different numbers?</summary>
 <p>Schools differ on two small details. This site keeps 22 as 22, never reduces with modulo 9, and states its centre rule openly.</p></details>
 </section>
@@ -316,10 +383,10 @@
 <p><strong>SoulOcta</strong> — a free Destiny Matrix calculator.</p>
 <p class="small">Built in November 2026.</p>
 <p>Find us: <a rel="me" href="https://www.pinterest.com/soulocta/">Pinterest</a></p>
-<nav class="footer-nav" aria-label="Footer navigation"><a href="portrait-zone.html">Portrait Zone — how others see you</a><a href="money-line.html">Money Line — work and money</a><a href="karmic-tail.html">Karmic Tail — your repeating pattern</a><a href="compatibility.html">Destiny Matrix Compatibility Calculator</a><a href="2027-personal-year.html">2027 Personal Year Calculator</a><a href="what-is-destiny-matrix.html">What Is the Destiny Matrix?</a><a href="how-to-calculate.html">How to Calculate the Destiny Matrix</a><a href="22-arcana.html">22 Arcana</a><a href="destiny-matrix-arcana-meanings.html">All 22 Arcana Meanings</a><a href="destiny-matrix-karmic-tails.html">All Karmic Tail Guides</a><a href="destiny-matrix-vs-numerology.html">Destiny Matrix vs Numerology</a><a href="destiny-matrix-vs-tarot.html">Destiny Matrix vs Tarot</a><a href="destiny-matrix-for-beginners.html">Destiny Matrix for Beginners</a><a href="destiny-matrix-faq.html">Destiny Matrix FAQ</a><a href="destiny-matrix-meaning-of-7-chariot.html">The Chariot — Arcana 7 of the Destiny Matrix</a><a href="destiny-matrix-meaning-of-8-justice.html">Justice — Arcana 8 of the Destiny Matrix</a><a href="about.html">About</a><a href="contact.html">Contact</a><a href="privacy.html">Privacy</a><a href="terms.html">Terms of Use</a><a href="disclaimer.html">Disclaimer</a></nav>
+<nav class="footer-nav" aria-label="Footer navigation"><div class="footer-cols"><div class="footer-col"><h3>Tools</h3><ul><li><a href="portrait-zone.html">Portrait Zone — how others see you</a></li><li><a href="money-line.html">Money Line — work and money</a></li><li><a href="karmic-tail.html">Karmic Tail — your repeating pattern</a></li><li><a href="compatibility.html">Destiny Matrix Compatibility Calculator</a></li><li><a href="2027-personal-year.html">2027 Personal Year Calculator</a></li><li><a href="what-is-destiny-matrix.html">What Is the Destiny Matrix?</a></li><li><a href="how-to-calculate.html">How to Calculate the Destiny Matrix</a></li><li><a href="22-arcana.html">22 Arcana</a></li><li><a href="destiny-matrix-arcana-meanings.html">All 22 Arcana Meanings</a></li><li><a href="destiny-matrix-karmic-tails.html">All Karmic Tail Guides</a></li></ul></div><div class="footer-col"><h3>Popular Guides</h3><ul><li><a href="destiny-matrix-vs-numerology.html">Destiny Matrix vs Numerology</a></li><li><a href="destiny-matrix-vs-tarot.html">Destiny Matrix vs Tarot</a></li><li><a href="destiny-matrix-for-beginners.html">Destiny Matrix for Beginners</a></li><li><a href="destiny-matrix-faq.html">Destiny Matrix FAQ</a></li><li><a href="destiny-matrix-rarest-numbers-data-study.html">Rarest numbers — data study</a></li><li><a href="destiny-matrix-money-blockage-millionaire-code.html">Money blockage & millionaire code</a></li><li><a href="destiny-matrix-meaning-of-7-chariot.html">The Chariot — Arcana 7 of the Destiny Matrix</a></li><li><a href="destiny-matrix-meaning-of-8-justice.html">Justice — Arcana 8 of the Destiny Matrix</a></li></ul></div><div class="footer-col"><h3>About & Legal</h3><ul><li><a href="sitemap.html">Site map — every page</a></li><li><a href="about.html">About</a></li><li><a href="contact.html">Contact</a></li><li><a href="privacy.html">Privacy</a></li><li><a href="terms.html">Terms of Use</a></li><li><a href="disclaimer.html">Disclaimer</a></li><li><a href="methodology.html">Methodology</a></li></ul></div></div></nav>
 <p class="small">The Destiny Matrix is self-reflection, created by Natalia Ladini in 2006. Entertainment, not prediction — and not medical, financial, or legal advice.</p>
 </div></footer>
-<script src="assets/matrix.js"></script>
-<script src="assets/index.js" defer></script>
+<script src="assets/matrix.js?v=6d80449d"></script>
+<script src="assets/index.js?v=79316d57" defer></script>
 </body>
 </html>

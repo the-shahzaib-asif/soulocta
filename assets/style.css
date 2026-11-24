@@ -85,12 +85,14 @@ header.site{position:sticky;top:0;z-index:20;border-bottom:1px solid var(--line-
 /* --- hero: asymmetric editorial — headline left, chart as art right --- */
 .hero{padding:72px 0 32px;scroll-margin-top:84px}
 h1{scroll-margin-top:84px}
-.date-selects{display:grid;grid-template-columns:0.85fr 1.5fr 1.25fr;gap:10px;border:0;padding:0;margin:0}
-.date-selects select{width:100%;min-height:48px;padding:12px 6px;border-radius:var(--radius);border:1px solid var(--hairline);background:var(--bg);color:var(--ink);font-size:16px;font-family:var(--sans)}
+.date-selects{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;border:0;padding:0;margin:0}
+@media(max-width:760px){.date-selects{grid-template-columns:0.75fr 1.35fr 0.95fr}} /* v15: month needs the most room on narrow screens (September must not truncate) */
+.date-selects select{width:100%;min-height:48px;padding:12px 10px;border-radius:var(--radius);border:1px solid var(--hairline);background:var(--bg);color:var(--ink);font-size:16px;font-family:var(--sans)}
 .date-selects select:focus{outline:none;border-color:var(--accent)}
 .form-error{display:none;color:#7e3a1d;background:#f8f2e2;border:1px solid #a04d28;border-radius:var(--radius);padding:12px 14px;font-size:15px;font-weight:600;margin:14px 0 0}
 .form-error.show{display:block}
-.trust-badges{list-style:none;margin:18px 0 0;padding:0;display:flex;flex-wrap:wrap;gap:8px 18px;font-size:14px;color:var(--muted)}
+.trust-badges{list-style:none;margin:18px 0 0;padding:0;display:flex;flex-wrap:wrap;gap:8px 10px;font-size:13px;color:var(--muted)}
+.trust-badges li{border:1px solid var(--line);border-radius:999px;padding:6px 12px;background:var(--surface);white-space:nowrap}
 .trust-badges li::before{content:"✓  ";color:var(--accent);font-weight:700}
 @keyframes result-flash{from{background:#e7dcc2}to{background:transparent}}
 .result-flash{animation:result-flash 1.6s ease-out}
@@ -98,7 +100,7 @@ button,.btn-accent,.btn-gold,.btn-ghost{min-height:44px}
 .nav a{padding:12px 2px}
 .brand{display:inline-flex;align-items:center;min-height:44px}
 .nav-toggle-btn{min-width:44px;min-height:44px;padding:11px}
-.footer-nav a{display:inline-block;padding:12px 2px}
+.footer-col a{display:inline-block;padding:6px 2px}
 select{font-size:16px}
 .hero-grid{display:grid;gap:40px;align-items:center}
 .hero-copy{min-width:0}
@@ -127,7 +129,8 @@ section:first-of-type{margin-top:0}
 section + section{border-top:1px solid var(--line-soft);padding-top:64px}
 .card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:32px;margin:32px 0}
 .toolbox{display:grid;grid-template-columns:1fr;gap:20px}
-@media(min-width:760px){.toolbox{grid-template-columns:1fr 1fr}}
+/* v15: single column always — date row full width, Name below it. The old
+   2-col rule (>=760px) squeezed the dropdowns into a cramped left column. */
 /* v12 A2/H1: anchor + JS scrolls never land under the 64px sticky nav. */
 #calculator,#result-section,#py-form,#py-result,#compat-heading,.lt-result{scroll-margin-top:84px}
 /* v12 H2: compact date input inside the hero — the tool is on the first
@@ -149,6 +152,7 @@ a.btn-accent:hover,a.btn-gold:hover{text-decoration:none}
 .btn-ghost{background:transparent;color:var(--ink);border:1px solid var(--hairline);padding:11px 18px;font-size:14px;font-weight:500}
 .btn-ghost:hover{border-color:var(--accent-deep)}
 .btn-row{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px}
+#calc-form .btn-accent,#compat-form .btn-accent{display:block;width:100%;font-size:17px;font-weight:700;padding:14px 20px}
 .chart-wrap{display:flex;flex-direction:column;gap:32px;align-items:center}
 @media(min-width:860px){.chart-wrap{flex-direction:row;align-items:flex-start}}
 .chart-wrap svg{width:100%;max-width:380px;height:auto;flex:0 0 auto}
@@ -161,7 +165,7 @@ a.btn-accent:hover,a.btn-gold:hover{text-decoration:none}
 .pos-btn.selected text.num{fill:var(--accent-ink)}
 .pos-btn:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
 .pos-btn text{fill:var(--ink);font-family:var(--serif);font-weight:500}
-.pos-label{fill:var(--muted);font-size:12px;font-weight:600;font-family:var(--sans);stroke:var(--bg);stroke-width:3px;paint-order:stroke}
+.pos-label{fill:var(--muted);font-size:11px;font-weight:600;font-family:var(--sans);stroke:var(--bg);stroke-width:3px;paint-order:stroke}
 /* --- positions: editorial list rows, roman numerals, hairline rules --- */
 .pos-list{display:block;margin:8px 0 0}
 .pos-row{display:grid;grid-template-columns:52px 1fr auto;gap:16px;align-items:baseline;
@@ -186,7 +190,13 @@ a.btn-accent:hover,a.btn-gold:hover{text-decoration:none}
 .faq h3{margin-top:32px}
 footer.site{border-top:1px solid var(--line-soft);margin-top:96px;padding:48px 0 56px;color:var(--faint);font-size:13px;line-height:1.7}
 footer.site a{color:var(--muted)}
-.footer-nav{display:flex;flex-wrap:wrap;gap:6px 20px;margin:16px 0}
+.footer-nav{margin:16px 0}
+.footer-cols{display:grid;gap:28px}
+@media(min-width:760px){.footer-cols{grid-template-columns:1fr 1fr 1fr}}
+.footer-col h3{font-family:var(--sans);font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin:0 0 10px}
+.footer-col ul{list-style:none;margin:0;padding:0}
+.footer-col li{margin:0}
+.footer-col a{display:inline-block;padding:6px 2px}
 .skip{position:absolute;left:-999px}
 .skip:focus{left:8px;top:8px;background:var(--accent);color:var(--accent-ink);padding:14px 12px;min-height:44px;display:inline-flex;align-items:center;z-index:30}
 .identity-line{font-family:var(--serif);font-weight:600;font-size:clamp(46px,7.2vw,76px);line-height:1.04;margin:0 0 10px}
@@ -214,7 +224,7 @@ footer.site a{color:var(--muted)}
 .maths-details summary{cursor:pointer;font-family:var(--serif);font-size:20px;padding:14px 0;list-style:none;display:flex;justify-content:space-between;gap:16px;align-items:baseline}
 .maths-details summary::-webkit-details-marker{display:none}
 .maths-details summary::after{content:"+";color:var(--muted);font-size:22px}
-.maths-details[open ] summary::after{content:"3"}
+.maths-details[open ] summary::after{content:"–"}
 .share-line{font-family:var(--serif);font-size:22px;margin:28px 0 0}
 .open-loop{margin:18px 0 0;font-size:15px}
 #share-block{margin-top:8px}
@@ -266,3 +276,20 @@ footer.site a{color:var(--muted)}
 .guide-table th{background:var(--surface);font-family:var(--serif)}
 .hero-poetic{font-family:var(--serif);font-size:clamp(28px,3.4vw,36px);line-height:1.2;margin:0 0 18px}
 .noscript-note{text-align:center;padding:12px;background:var(--surface);margin:0}
+/* v15: confirmation banner after Calculate */
+.calc-confirm{background:#f8f2e2;border:1px solid var(--accent);border-radius:var(--radius);padding:12px 14px;font-size:15px;font-weight:600;margin:0 0 18px}
+/* v15: premium deep-reading card (free vs optional paid, honest Coming Soon state) */
+.premium-card{background:var(--surface);border:1px solid var(--brass);border-radius:var(--radius);padding:32px 28px}
+.premium-card h2{margin-top:0}
+.premium-card ul{margin:14px 0}
+.premium-card .btn-accent{display:inline-block}
+/* v15: print — a clean 1-page chart sheet via window.print(), zero server cost */
+@media print{
+  header.site,footer.site,.hero,.btn-row,#sponsored-slot,#premium-card,.pull-quote-sec,.maths-note,.faq,.skip,.noscript-note,.calc-confirm{display:none !important}
+  body{background:var(--card)}
+  .result-band{margin:0;padding:0;border:0}
+  section{margin:24px 0}
+  a{color:var(--ink);text-decoration:none}
+  .card{border:1px solid var(--hairline)}
+  .pos-row{break-inside:avoid}
+}

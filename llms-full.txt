@@ -38,6 +38,18 @@ reduce22(n): digit-sum while n > 22; 0 becomes 22; 22 stays 22. A = day, B = mon
 - https://soulocta.me/destiny-matrix-karmic-tail-6-17-11-wasted-talent.html — Karmic tail 6-17-11, Wasted Talent: a gift kept hidden, and how to show it.
 - https://soulocta.me/destiny-matrix-arcana-meanings.html — All 22 arcana meanings: every Major Arcana in the Destiny Matrix, with links to the full guides.
 - https://soulocta.me/destiny-matrix-karmic-tails.html — All karmic tail guides: every tail with a full guide on this site, and how a tail is calculated.
+- https://soulocta.me/destiny-matrix-meaning-of-2-high-priestess.html — The High Priestess, arcana 2: intuition, patience and inner knowledge in every position.
+- https://soulocta.me/destiny-matrix-meaning-of-5-hierophant.html — The Hierophant, arcana 5: tradition, learning and guidance in every position.
+- https://soulocta.me/destiny-matrix-meaning-of-9-hermit.html — The Hermit, arcana 9: solitude, wisdom and the search in every position.
+- https://soulocta.me/destiny-matrix-meaning-of-12-hanged-man.html — The Hanged Man, arcana 12: pause, a new view and surrender in every position.
+- https://soulocta.me/destiny-matrix-meaning-of-13-death.html — Death, arcana 13: ending, change and rebirth in every position — not physical death.
+- https://soulocta.me/destiny-matrix-meaning-of-14-temperance.html — Temperance, arcana 14: balance, patience and blending in every position.
+- https://soulocta.me/destiny-matrix-karmic-tail-15-5-8-betrayals.html — Karmic tail 15-5-8, Betrayals in the Family: trust broken at home, and how to rebuild it.
+- https://soulocta.me/destiny-matrix-karmic-tail-18-9-9-wizard-hermit.html — Karmic tail 18-9-9, the Wizard and the Hermit: hidden knowledge, solitude, and sharing what you know.
+- https://soulocta.me/destiny-matrix-karmic-tail-3-22-19-unborn-child.html — Karmic tail 3-22-19, the Unborn Child: deferred beginnings, and how to start what keeps being put off.
+- https://soulocta.me/destiny-matrix-money-blockage-millionaire-code.html — Money blockage and the millionaire code: all four live definitions reconciled, and five steps to unblock your money line.
+- https://soulocta.me/destiny-matrix-rarest-numbers-data-study.html — Rarest Destiny Matrix numbers: exact frequencies for all 22 centres across 73,414 birth dates, 1900–2100.
+- https://soulocta.me/sitemap.html — Site map: every page on SoulOcta in one place.
 - https://soulocta.me/destiny-matrix-faq.html — Destiny Matrix FAQ: every question people actually ask, answered plainly.
 - https://soulocta.me/methodology.html — Methodology: the exact maths, worked examples, and how this site differs from other calculators.
 - https://soulocta.me/about.html — About SoulOcta: a free calculator, built to be checkable.
