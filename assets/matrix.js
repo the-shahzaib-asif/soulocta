@@ -1,7 +1,7 @@
 var ARCANA_DATA = {"1": {"name": "The Magician", "keywords": "will, skill, beginning", "short": "You start things with your own hands — an idea becomes a plan, and a plan becomes a first step."}, "2": {"name": "The High Priestess", "keywords": "intuition, patience, inner knowledge", "short": "You often know things before you can explain how — you notice what is not being said."}, "3": {"name": "The Empress", "keywords": "growth, care, abundance", "short": "You make things grow: people, projects, and rooms you walk into feel warmer with you in them."}, "4": {"name": "The Emperor", "keywords": "structure, order, authority", "short": "You are at your best when life has clear rules, honest limits, and a plan that actually holds."}, "5": {"name": "The Hierophant", "keywords": "tradition, learning, guidance", "short": "You learn best from a teacher, a method, and doing things properly — then you pass it on."}, "6": {"name": "The Lovers", "keywords": "choice, love, values", "short": "You live by what you value, and the people closest to you help you see yourself clearly."}, "7": {"name": "The Chariot", "keywords": "drive, focus, victory", "short": "You move forward by choosing one direction and staying on it, even when the road gets rough."}, "8": {"name": "Justice", "keywords": "balance, truth, fairness", "short": "You weigh things honestly — you want a fair outcome, even when it is uncomfortable."}, "9": {"name": "The Hermit", "keywords": "solitude, wisdom, search", "short": "You find your answers in quiet: a walk, a book, time alone with your own thoughts."}, "10": {"name": "Wheel of Fortune", "keywords": "change, cycles, luck", "short": "Your life moves in turns — good periods follow hard ones, and nothing stays the same for long."}, "11": {"name": "Strength", "keywords": "courage, patience, inner power", "short": "Your strength is quiet: you stay calm, keep going, and carry more than people realise."}, "12": {"name": "The Hanged Man", "keywords": "pause, new view, surrender", "short": "You are in a pause right now — pushing harder will not help, and looking at it differently will."}, "13": {"name": "Death", "keywords": "ending, change, rebirth", "short": "Something in your life has finished, and this arcana is about letting it end cleanly so something new can begin."}, "14": {"name": "Temperance", "keywords": "balance, patience, blending", "short": "You do your best work in the middle path — not too much, not too little, steady over time."}, "15": {"name": "The Devil", "keywords": "desire, attachment, shadow", "short": "You want something badly enough that it is starting to own you — and you know exactly what it is."}, "16": {"name": "The Tower", "keywords": "sudden change, truth, rebuilding", "short": "Something false in your life is collapsing, and once it falls you will finally see clearly."}, "17": {"name": "The Star", "keywords": "hope, healing, guidance", "short": "You are coming out of a hard period, and hope is returning — quietly, but for real."}, "18": {"name": "The Moon", "keywords": "dreams, fear, illusion", "short": "You feel things deeply and sense what others miss — but right now, not everything you feel is true."}, "19": {"name": "The Sun", "keywords": "joy, clarity, success", "short": "You are at your brightest when you are direct, warm, and willing to be seen."}, "20": {"name": "Judgement", "keywords": "awakening, calling, renewal", "short": "You are hearing something clearly about yourself — a truth, a call, a second chance."}, "21": {"name": "The World", "keywords": "completion, wholeness, arrival", "short": "You have come full circle: something long is finished, and you understand how the pieces fit."}, "22": {"name": "The Fool", "keywords": "freedom, new start, trust", "short": "You are standing at the start of something new, and the brave move is to take the first step."}};
 var POSITIONS_DATA = {"A": {"label": "Day", "desc": "Your day energy: character and natural talents."}, "B": {"label": "Month", "desc": "Your month energy: emotional nature and inner world."}, "C": {"label": "Year", "desc": "Your year energy: life purpose and direction."}, "D": {"label": "Centre — bottom point", "desc": "Your centre value, shown at the bottom point: the lesson that ties the chart together."}, "E": {"label": "Centre — heart", "desc": "The centre, repeated at the heart of the chart — the same arcana as D."}, "F": {"label": "Heritage", "desc": "Past heritage: what you bring with you."}, "G": {"label": "Talents", "desc": "Talents: what comes naturally to you."}, "H": {"label": "Material corner", "desc": "Material side: work, money and the physical world."}, "I": {"label": "Spiritual task", "desc": "Spiritual task: the quieter work of a lifetime."}};
 var ROMAN_DATA = {"1": "I", "2": "II", "3": "III", "4": "IV", "5": "V", "6": "VI", "7": "VII", "8": "VIII", "9": "IX", "10": "X", "11": "XI", "12": "XII", "13": "XIII", "14": "XIV", "15": "XV", "16": "XVI", "17": "XVII", "18": "XVIII", "19": "XIX", "20": "XX", "21": "XXI", "22": "XXII"};
-var GUIDE_MAP = {"arcana": {"1": "destiny-matrix-meaning-of-1-magician.html", "3": "destiny-matrix-meaning-of-3-empress.html", "4": "destiny-matrix-meaning-of-4-emperor.html", "6": "destiny-matrix-meaning-of-6-lovers.html", "7": "destiny-matrix-meaning-of-7-chariot.html", "8": "destiny-matrix-meaning-of-8-justice.html", "10": "destiny-matrix-meaning-of-10-wheel-of-fortune.html", "11": "destiny-matrix-meaning-of-11-strength.html", "15": "destiny-matrix-meaning-of-15-devil.html", "19": "destiny-matrix-meaning-of-19-sun.html", "21": "destiny-matrix-meaning-of-21-world.html"}, "tails": {"18-6-6": {"url": "destiny-matrix-karmic-tail-18-6-6-love-magic.html", "label": "Love Magic"}, "15-20-5": {"url": "destiny-matrix-karmic-tail-15-20-5-rebel.html", "label": "The Rebel"}, "9-9-18": {"url": "destiny-matrix-karmic-tail-9-9-18-magical-knowledge.html", "label": "Magical Knowledge"}, "15-8-11": {"url": "destiny-matrix-karmic-tail-15-8-11-physical-suffering.html", "label": "Physical Suffering"}, "21-4-10": {"url": "destiny-matrix-karmic-tail-21-4-10-oppressed-soul.html", "label": "Oppressed Soul"}, "12-19-7": {"url": "destiny-matrix-karmic-tail-12-19-7-warrior.html", "label": "Warrior"}, "6-17-11": {"url": "destiny-matrix-karmic-tail-6-17-11-wasted-talent.html", "label": "Wasted Talent"}}};
+var GUIDE_MAP = {"arcana": {"1": "destiny-matrix-meaning-of-1-magician.html", "2": "destiny-matrix-meaning-of-2-high-priestess.html", "3": "destiny-matrix-meaning-of-3-empress.html", "4": "destiny-matrix-meaning-of-4-emperor.html", "5": "destiny-matrix-meaning-of-5-hierophant.html", "6": "destiny-matrix-meaning-of-6-lovers.html", "7": "destiny-matrix-meaning-of-7-chariot.html", "8": "destiny-matrix-meaning-of-8-justice.html", "9": "destiny-matrix-meaning-of-9-hermit.html", "10": "destiny-matrix-meaning-of-10-wheel-of-fortune.html", "11": "destiny-matrix-meaning-of-11-strength.html", "12": "destiny-matrix-meaning-of-12-hanged-man.html", "13": "destiny-matrix-meaning-of-13-death.html", "14": "destiny-matrix-meaning-of-14-temperance.html", "15": "destiny-matrix-meaning-of-15-devil.html", "19": "destiny-matrix-meaning-of-19-sun.html", "21": "destiny-matrix-meaning-of-21-world.html"}, "tails": {"18-6-6": {"url": "destiny-matrix-karmic-tail-18-6-6-love-magic.html", "label": "Love Magic"}, "15-20-5": {"url": "destiny-matrix-karmic-tail-15-20-5-rebel.html", "label": "The Rebel"}, "9-9-18": {"url": "destiny-matrix-karmic-tail-9-9-18-magical-knowledge.html", "label": "Magical Knowledge"}, "15-8-11": {"url": "destiny-matrix-karmic-tail-15-8-11-physical-suffering.html", "label": "Physical Suffering"}, "21-4-10": {"url": "destiny-matrix-karmic-tail-21-4-10-oppressed-soul.html", "label": "Oppressed Soul"}, "12-19-7": {"url": "destiny-matrix-karmic-tail-12-19-7-warrior.html", "label": "Warrior"}, "6-17-11": {"url": "destiny-matrix-karmic-tail-6-17-11-wasted-talent.html", "label": "Wasted Talent"}, "15-5-8": {"url": "destiny-matrix-karmic-tail-15-5-8-betrayals.html", "label": "Betrayals in the Family"}, "18-9-9": {"url": "destiny-matrix-karmic-tail-18-9-9-wizard-hermit.html", "label": "The Wizard and the Hermit"}, "3-22-19": {"url": "destiny-matrix-karmic-tail-3-22-19-unborn-child.html", "label": "The Unborn Child"}}};
 /* Destiny Matrix calculation engine — same maths as the server pages.
    reduce22: digit-sum while > 22; 0 becomes 22; 22 stays 22.
    A=day, B=month, C=digit-sum(year) reduced, centre D=reduce22(A+B+C).
@@ -15,6 +15,10 @@ var ARCANA = ARCANA_DATA; // injected per page from matrix.js data file
 var POSITIONS = POSITIONS_DATA;
 var ROMAN = ROMAN_DATA;
 var MONTHS = ['January','February','March','April','May','June','July','August','September','October','November','December'];
+/* v15: premium deep-reading CTA. Empty = honest Coming Soon state (no fake
+   checkout). Paste a Gumroad / LemonSqueezy / affiliate URL into the ONE
+   PREMIUM_CTA_URL constant in build.py and the CTA goes live on rebuild. */
+var PREMIUM_CTA_URL = "";
 function reduce22(n){if(typeof n!=="number"||!isFinite(n)) throw new Error("reduce22: non-finite input");var v=Math.abs(Math.trunc(n));while(v>22){v=String(v).split("").reduce(function(s,d){return s+Number(d);},0);}return v===0?22:v;}
 function sumDigits(n){if(typeof n!=="number"||!isFinite(n)) throw new Error("sumDigits: non-finite input");return String(Math.abs(Math.trunc(n))).split("").reduce(function(s,d){return s+Number(d);},0);}
 function calcMatrix(y,m,d){
@@ -106,7 +110,7 @@ function chartCanvas(svgId, onOk, onErr){
     ".pos-btn.selected circle{fill:#a04d28}"+
     ".pos-btn text{fill:#2a2115;font-family:system-ui,sans-serif;font-weight:650}"+
     ".pos-btn.selected text.num{fill:#f8f2e2}"+
-    ".pos-label{fill:#6e6046;font-size:13px;font-weight:600;font-family:system-ui,sans-serif;stroke:#efe6d2;stroke-width:3px;paint-order:stroke}";
+    ".pos-label{fill:#6e6046;font-size:11px;font-weight:600;font-family:system-ui,sans-serif;stroke:#efe6d2;stroke-width:3px;paint-order:stroke}";
   clone.insertBefore(st, clone.firstChild);
   var xml=new XMLSerializer().serializeToString(clone);
   var img=new Image();
@@ -135,7 +139,80 @@ function renderSharePreview(svgId, imgId){
     catch(err){pngError("Chart preview could not be made — the link still works.");}
   }, function(){pngError("Chart preview could not be made — the link still works.");});
 }
+/* v15: share-ready chart card, 1080x1350, 100% client-side. Reuses the
+   same SVG->canvas path as downloadPNG: the chart is drawn from the
+   page's own octagram SVG, then composed onto a parchment card with the
+   name, birth date, centre and key lines. No network request is made. */
+function wrapText(ctx, text, maxW){
+  var words=String(text).split(" "), lines=[], cur="";
+  words.forEach(function(w){ var t=cur?cur+" "+w:w; if(ctx.measureText(t).width>maxW&&cur){lines.push(cur);cur=w;} else cur=t; });
+  if(cur) lines.push(cur); return lines;
+}
+function chartCardCanvas(svgId, data, onOk, onErr){
+  chartCanvas(svgId, function(chart){
+    try{
+      var W=1080, H=1350;
+      var c=document.createElement("canvas"); c.width=W; c.height=H;
+      var ctx=c.getContext("2d");
+      ctx.fillStyle="#efe6d2"; ctx.fillRect(0,0,W,H);
+      ctx.strokeStyle="#8f7422"; ctx.lineWidth=6; ctx.strokeRect(36,36,W-72,H-72);
+      ctx.strokeStyle="#a04d28"; ctx.lineWidth=2; ctx.strokeRect(54,54,W-108,H-108);
+      ctx.fillStyle="#6e6046"; ctx.font="600 34px system-ui, sans-serif"; ctx.textAlign="center";
+      ctx.fillText("S O U L O C T A", W/2, 128);
+      ctx.fillStyle="#2a2115"; ctx.font="700 58px Georgia, serif";
+      ctx.fillText("Destiny Matrix Chart", W/2, 200);
+      var y=250;
+      if(data.name){ ctx.fillStyle="#a04d28"; ctx.font="700 44px Georgia, serif"; ctx.fillText(data.name, W/2, y); y+=56; }
+      ctx.fillStyle="#6e6046"; ctx.font="400 34px system-ui, sans-serif";
+      ctx.fillText(data.dateLabel, W/2, y); y+=30;
+      ctx.drawImage(chart, (W-700)/2, y, 700, 700); y+=730;
+      ctx.fillStyle="#2a2115"; ctx.font="700 46px Georgia, serif";
+      ctx.fillText("Centre " + data.r.D + " — " + arcana(data.r.D).name, W/2, y); y+=58;
+      ctx.fillStyle="#6e6046"; ctx.font="400 32px system-ui, sans-serif";
+      var lines = wrapText(ctx, arcana(data.r.D).short, 880);
+      lines.slice(0,2).forEach(function(ln){ ctx.fillText(ln, W/2, y); y+=44; });
+      y+=10;
+      ctx.fillStyle="#2a2115"; ctx.font="600 34px system-ui, sans-serif";
+      ctx.fillText("Money  C " + data.r.C + " · G " + data.r.G + " · H " + data.r.H, W/2, y); y+=48;
+      ctx.fillText("Karmic tail  " + data.r.D + "-" + data.r.H + "-" + data.r.I, W/2, y); y+=70;
+      ctx.fillStyle="#6e6046"; ctx.font="600 30px system-ui, sans-serif";
+      ctx.fillText("Free chart at soulocta.me", W/2, H-92);
+      onOk(c);
+    }catch(err){ onErr(); }
+  }, onErr);
+}
+function downloadChartCard(svgId, data, filename){
+  chartCardCanvas(svgId, data, function(c){
+    try{
+      var a=document.createElement("a"); a.download=filename; a.href=c.toDataURL("image/png");
+      document.body.appendChild(a); a.click(); a.remove();
+    }catch(err){ pngError("Chart card download failed — please try again."); }
+  }, function(){ pngError("Chart card download failed — please try again."); });
+}
 function daysInMonth(y,m){return new Date(Date.UTC(y,m,0)).getUTCDate();}
+function syncDayOptions(prefix){
+  // v15: February 31 must be unselectable. Rebuild the Day options to the
+  // exact calendar days for the chosen month+year (leap years via Date.UTC),
+  // clamping the selected day (31 Jan -> Feb 1995 -> 28 Feb). A blank
+  // placeholder (compatibility forms) stays blank until the user picks a day.
+  var d=el(prefix+"-day"), m=el(prefix+"-month"), y=el(prefix+"-year");
+  if(!d||!m||!y) return;
+  if(!m.value||!y.value) return;
+  var dim=daysInMonth(+y.value, +m.value);
+  var cur=d.value?parseInt(d.value,10):0;
+  var keepBlank=d.options.length>0&&d.options[0].value==="";
+  var sel=cur?Math.min(cur,dim):0;
+  var html=keepBlank?'<option value=""'+(sel===0?' selected':'')+'>Day</option>':"";
+  for(var i=1;i<=dim;i++){ html+='<option value="'+i+'"'+(i===sel?' selected':'')+'>'+i+'</option>'; }
+  d.innerHTML=html;
+}
+function initDatePicker(prefix){
+  var m=el(prefix+"-month"), y=el(prefix+"-year"), d=el(prefix+"-day");
+  if(!m||!y||!d) return;
+  m.addEventListener("change", function(){ syncDayOptions(prefix); });
+  y.addEventListener("change", function(){ syncDayOptions(prefix); });
+  syncDayOptions(prefix);
+}
 function dateFromSelects(prefix){
   // Reads Day/Month/Year dropdowns (ids: prefix-day, prefix-month, prefix-year).
   // Returns an ISO date string, or null when the combination is not a real date
@@ -151,6 +228,7 @@ function setDateSelects(prefix, iso){
   var d=document.getElementById(prefix+"-day"), m=document.getElementById(prefix+"-month"), y=document.getElementById(prefix+"-year");
   if(!d||!m||!y) return false;
   d.value=String(parseInt(p[2],10)); m.value=String(parseInt(p[1],10)); y.value=p[0];
+  syncDayOptions(prefix);
   return true;
 }
 function showFormError(id, msg){
@@ -172,5 +250,7 @@ window.DestinyMatrix={maxYear:MAX_YEAR,reduce22:reduce22,sumDigits:sumDigits,cal
   articleFor:articleFor,fmtDateLong:fmtDateLong,validISO:validISO,renderChart:renderChart,renderNeutral:renderNeutral,
   detailHTML:detailHTML,tableHTML:tableHTML,escapeHTML:escapeHTML,stepsHTML:stepsHTML,
   shareURL:shareURL,downloadPNG:downloadPNG,renderSharePreview:renderSharePreview,
-  dateFromSelects:dateFromSelects,setDateSelects:setDateSelects,showFormError:showFormError,daysInMonth:daysInMonth,guideURLForArcana:guideURLForArcana,guideURLForTail:guideURLForTail};
+  downloadChartCard:downloadChartCard,chartCardCanvas:chartCardCanvas,
+  dateFromSelects:dateFromSelects,setDateSelects:setDateSelects,showFormError:showFormError,daysInMonth:daysInMonth,guideURLForArcana:guideURLForArcana,guideURLForTail:guideURLForTail,
+  initDatePicker:initDatePicker,syncDayOptions:syncDayOptions,premiumURL:PREMIUM_CTA_URL};
 })();

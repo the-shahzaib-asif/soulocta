@@ -1,7 +1,10 @@
 
 (function(){
   var DM = window.DestinyMatrix;
+  DM.initDatePicker('dob1');
+  DM.initDatePicker('dob2');
   var currentComb = null;
+  var currentIso1 = null, currentIso2 = null;
   function readPerson(prefix){
     var iso = DM.dateFromSelects(prefix);
     if(!iso) return 'invalid';
@@ -48,6 +51,7 @@
     }
     DM.showFormError('compat-error', null);
     var r1 = p1.r, r2 = p2.r, iso1 = p1.iso, iso2 = p2.iso;
+    currentIso1 = iso1; currentIso2 = iso2;
     var comb = {}; ['A','B','C','D','E','F','G','H','I'].forEach(function(k){ comb[k] = DM.reduce22(r1[k] + r2[k]); });
     currentComb = comb;
     DM.renderChart('chart2', comb, 'D');
@@ -70,10 +74,17 @@
     compute();
   });
   document.getElementById('download-png2').addEventListener('click', function(){ DM.downloadPNG('chart2', 'destiny-matrix-compatibility.png'); });
+  document.getElementById('download-card2').addEventListener('click', function(){
+    if(!currentComb || !currentIso1 || !currentIso2){
+      var _e = document.getElementById('png-error');
+      if(_e){ _e.textContent = 'Calculate compatibility first, then download your chart card.'; _e.hidden = false; }
+      return;
+    }
+    DM.downloadChartCard('chart2', {name: '', dateLabel: DM.fmtDateLong(currentIso1) + '  +  ' + DM.fmtDateLong(currentIso2), r: currentComb}, 'destiny-matrix-compatibility-card.png');
+  });
   var qp = new URLSearchParams(window.location.search);
   var q1 = qp.get('dob1'), q2 = qp.get('dob2');
   if (q1 && DM.validISO(q1)) DM.setDateSelects('dob1', q1);
   if (q2 && DM.validISO(q2)) DM.setDateSelects('dob2', q2);
-  if (q1 || q2) compute();
-  resetStale();
+  if (q1 || q2) { var _ok = compute(); if (!_ok) resetStale(); }
 })();

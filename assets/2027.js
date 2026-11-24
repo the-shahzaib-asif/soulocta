@@ -1,6 +1,8 @@
 
 (function(){
   var DM = window.DestinyMatrix;
+  DM.initDatePicker('hero-py');
+  DM.initDatePicker('py');
   function invalidMessage(){
     var d=document.getElementById('py-day').value, m=document.getElementById('py-month').value, y=document.getElementById('py-year').value;
     if(!d||!m||!y) return 'Choose a day, month and year.';
